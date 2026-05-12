@@ -1,0 +1,362 @@
+[
+   {
+      "id": "3300 / 3300A",
+      "name": "Waidhaus",
+      "point_type": "NKP-GÜ",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 12.526,
+      "latitude": 49.655,
+      "description": "Der Grenzübergangspunkt Waidhaus an der deutsch-tschechischen Grenze ist ein historisch gewachsener Knotenpunkt im europäischen Gasnetz. Er verbindet das tschechische Transitsystem mit der MEGAL (Mittel-Europäische-Gasleitungsgesellschaft). Technisch und kommerziell ist Waidhaus bidirektional (Entry und Exit) ausgelegt. Während dieser Punkt lange Zeit primär als Einspeisepunkt (Entry) für ost-europäisches Pipeline-Erdgas fungierte, hat sich die physische Flussrichtung durch die geopolitischen Veränderungen seit 2022 verschoben. Heute dient Waidhaus verstärkt als Ausspeisepunkt (Exit), um Gasmengen, die über Nord- und Westeuropa anlanden, in Richtung Mittel- und Osteuropa (z. B. nach Tschechien und Österreich) zu leiten."
+   },
+   {
+      "id": "3381I / 3381P",
+      "name": "Speicher Bierwang",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 12.402,
+      "latitude": 48.128,
+      "description": "Dieser Punkt bindet den Untertage-Porenspeicher Bierwang in Bayern an das OGE-Netz an. Porenspeicher zeichnen sich durch große Volumina aus, weisen aber im Vergleich zu Kavernen langsamere Ein- und Ausspeicherungsraten auf. Netzstrategisch ist dieser Punkt für die süddeutsche Infrastruktur wichtig, da der Süden über keine direkten Importterminals verfügt. Er puffert die Leitungsflüsse aus dem Norden, wird im Sommer gefüllt und dient im Winter der Grund- und Mittellast-Absicherung für das bayerische Netzgebiet."
+   },
+   {
+      "id": "3416I / 3416P",
+      "name": "Speicher Breitbrunn",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 12.413,
+      "latitude": 47.919,
+      "description": "Dieser Punkt bindet den Untertage-Porenspeicher Breitbrunn in Bayern an das OGE-Netz an. Porenspeicher zeichnen sich durch große Volumina aus, weisen aber im Vergleich zu Kavernen langsamere Ein- und Ausspeicherungsraten auf. Netzstrategisch ist dieser Punkt für die süddeutsche Infrastruktur wichtig, da der Süden über keine direkten Importterminals verfügt. Er puffert die Leitungsflüsse aus dem Norden, wird im Sommer gefüllt und dient im Winter der Grund- und Mittellast-Absicherung für das bayerische Netzgebiet."
+   },
+   {
+      "id": "35I / 35P",
+      "name": "Speicher Hähnlein",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 8.55,
+      "latitude": 49.743,
+      "description": "Diese Speicheranbindung im Raum Südhessen koppelt den regionalen Speicher an das Kernnetz. Durch die dichte Industrieansiedlung in der Region ist das Netz lokalen Lastschwankungen unterworfen. Der Speicher dient hier als bidirektionaler Kurz- und Mittelfristpuffer. Für das Dispatching der OGE ist er nützlich, um bei Nachfrageänderungen lokal den Netzdruck zu stabilisieren, ohne Transportkapazitäten über weite Strecken anpassen zu müssen."
+   },
+   {
+      "id": "4995",
+      "name": "Remich",
+      "point_type": "NKP-GÜ",
+      "direction": "Ausspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 6.362,
+      "latitude": 49.539,
+      "description": "Dieser Grenzübergangspunkt verbindet das OGE-Netz mit dem Netz des Großherzogtums Luxemburg. Remich fungiert physisch und kommerziell fast ausschließlich als Ausspeisepunkt (Exit). Da Luxemburg über keine eigenen relevanten Förder- oder Speicherstätten verfügt, ist das Land auf den Import aus Nachbarländern angewiesen. Für die OGE ist dies ein regulärer Versorgungspunkt zur Sicherstellung der grenzüberschreitenden Versorgung, an dem kontinuierlich Gasmengen aus dem Kernnetz in das luxemburgische Verteilnetz abgegeben werden."
+   },
+   {
+      "id": "6115I / 6115P",
+      "name": "Speicher Stockstadt",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 8.506,
+      "latitude": 49.798,
+      "description": "Diese Speicheranbindung im Raum Südhessen koppelt den regionalen Speicher an das Kernnetz. Durch die dichte Industrieansiedlung in der Region ist das Netz lokalen Lastschwankungen unterworfen. Der Speicher dient hier als bidirektionaler Kurz- und Mittelfristpuffer. Für das Dispatching der OGE ist er nützlich, um bei Nachfrageänderungen lokal den Netzdruck zu stabilisieren, ohne Transportkapazitäten über weite Strecken anpassen zu müssen."
+   },
+   {
+      "id": "6250",
+      "name": "Vreden",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "L-Gas",
+      "longitude": 6.809,
+      "latitude": 51.995,
+      "description": "Vreden ist ein Grenzübergangspunkt an der niederländischen Grenze, der auf den Import von niederkalorigem L-Gas ausgelegt ist (Entry-Punkt). Dieser Punkt war lange Zeit zentral für den Import von L-Gas aus dem niederländischen Groningen-Feld nach Westdeutschland. Netzstrategisch befindet sich dieser Punkt in einer Transformationsphase: Aufgrund des Produktionsstopps in Groningen und der fortschreitenden Marktraumumstellung (L- zu H-Gas) in Deutschland sinken die hier fließenden Volumina planmäßig, bis die entsprechende L-Gas-Infrastruktur mittelfristig außer Betrieb genommen oder umgewidmet wird."
+   },
+   {
+      "id": "8400",
+      "name": "Bocholtz",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 6.022,
+      "latitude": 50.817,
+      "description": "Ein Grenzübergangspunkt an der deutsch-niederländischen Grenze (nahe Aachen), der das deutsche H-Gas-Netz mit der niederländischen Gasinfrastruktur verbindet. Bocholtz ist kommerziell bidirektional nutzbar (Entry/Exit), dient im OGE-Netzwerk aktuell jedoch primär dem Import (Entry) von H-Gas aus westlichen Märkten. Durch die niederländischen H-Gas-Importkapazitäten (u.a. LNG in Rotterdam) und die Anbindung an den TTF-Handelspunkt ist Bocholtz für die OGE ein relevanter Zuflussknoten zur Stabilisierung der Versorgung in Nordrhein-Westfalen."
+   },
+   {
+      "id": "8418",
+      "name": "Wallbach",
+      "point_type": "NKP-GÜ",
+      "direction": "Ausspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 7.897,
+      "latitude": 47.583,
+      "description": "Wallbach ist der zentrale Grenzübergangspunkt an der deutsch-schweizerischen Grenze und ein Schlüsselknoten der Trans-Europa-Naturgas-Pipeline (TENP). Physisch war Wallbach historisch überwiegend ein Ausspeisepunkt (Exit), über den H-Gas via Schweiz nach Italien transportiert wurde. Zur Erhöhung der Systemflexibilität wurden hier Reverse-Flow-Kapazitäten (Entry) etabliert. Dadurch kann im Bedarfsfall auch Gas aus dem Süden Europas (z. B. Nordafrika oder Italien) über Wallbach nach Deutschland fließen. Wallbach ist somit ein bidirektionaler Knotenpunkt für den europäischen Nord-Süd-Transit."
+   },
+   {
+      "id": "8462L",
+      "name": "Eynatten-Raeren",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 6.116,
+      "latitude": 50.722,
+      "description": "Dieser Knotenpunkt an der belgischen Grenze stellt die direkte Verbindung in das belgische Gasnetz (Fluxys) dar. Er ist an das TENP-System angebunden und bidirektional (Entry/Exit) operabel. Die Relevanz von Eynatten-Raeren ist in den letzten Jahren gestiegen. Durch die belgischen LNG-Terminals (Zeebrugge) und Verbindungen nach Großbritannien dient dieser Punkt der OGE vermehrt als Entry-Punkt für Importmengen aus dem Westen, kann aber auch als Exit genutzt werden."
+   },
+   {
+      "id": "8506E",
+      "name": "Bunder Tief",
+      "point_type": "NKP-MAP",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 7.232,
+      "latitude": 53.207,
+      "description": "Bunder Tief (nahe der NL-Grenze) ist ein relevanter inländischer Knotenpunkt in Nordwestdeutschland. An diesem Punkt werden Importmengen aus den Niederlanden, Norwegen und von den LNG-Terminals in die Nord-Süd-Achsen der OGE und benachbarter FNB eingekoppelt oder umverteilt. Er ist eine wichtige Schnittstelle für das physikalische Druckmanagement im Norden."
+   },
+   {
+      "id": "8508L",
+      "name": "Oude Statenzijl",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 7.217,
+      "latitude": 53.206,
+      "description": "Ein bedeutender Grenzübergangspunkt an der niederländischen Grenze nahe der Ems-Mündung. Oude Statenzijl ist ein Interkonnektor, an dem die Netze von Gasunie, OGE und Gascade gekoppelt sind. Die kommerzielle Nutzbarkeit ist bidirektional (Entry/Exit), physisch überwiegt jedoch der Entry in das deutsche System. Hier fließen norwegische (via Niederlande) sowie niederländische H-Gas-Mengen in das deutsche Kernnetz. Für das Engpass- und Lastmanagement im Norden ist dieser Punkt ein zentrales Element."
+   },
+   {
+      "id": "8513I / 8513P",
+      "name": "Speicher Epe H",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.006,
+      "latitude": 52.161,
+      "description": "Dieser Punkt verbindet das Fernleitungsnetz mit dem Kavernenspeicherfeld Gronau-Epe nahe der niederländischen Grenze. Kavernenspeicher können Gas zügig aufnehmen und abgeben. Für die OGE fungiert dieser Punkt als dynamisches Flexibilitätsinstrument. Er wird für die saisonale Vorsorge, den Ausgleich im Gashandel sowie zur Abfederung von Schwankungen bei der Verstromung genutzt und sichert die Stabilität im Nordwesten."
+   },
+   {
+      "id": "8516",
+      "name": "Dornum",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 7.403,
+      "latitude": 53.656,
+      "description": "Dornum in Ostfriesland ist das deutsche Anlandeterminal der norwegischen Offshore-Pipelines (Europipe I und II). Netztechnisch handelt es sich um einen reinen, hochvolumigen Einspeisepunkt (Entry). Für die OGE und das deutsche Fernleitungsnetz stellt Dornum eine wesentliche Säule der H-Gas-Grundlastversorgung dar. Das ankommende Gas wird nach der Aufbereitung in das Fernleitungsnetz eingespeist und von dort weiterverteilt."
+   },
+   {
+      "id": "8520 / 8520E",
+      "name": "Speicher Gronau-Epe H1",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.013,
+      "latitude": 52.163,
+      "description": "Dieser Punkt verbindet das Fernleitungsnetz mit dem Kavernenspeicherfeld Gronau-Epe nahe der niederländischen Grenze. Kavernenspeicher können Gas zügig aufnehmen und abgeben. Für die OGE fungiert dieser Punkt als dynamisches Flexibilitätsinstrument. Er wird für die saisonale Vorsorge, den Ausgleich im Gashandel sowie zur Abfederung von Schwankungen bei der Verstromung genutzt und sichert die Stabilität im Nordwesten."
+   },
+   {
+      "id": "8525",
+      "name": "Emden EPT",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 7.01,
+      "latitude": 53.364,
+      "description": "Das Emden Erdgas-Aufbereitungsterminal (EPT) ist ein etablierter Anlandungspunkt für norwegisches H-Gas (Norpipe-System). Als physischer Entry-Punkt liefert Emden signifikante Grundlastmengen an die OGE und weitere FNB. Zusammen mit Dornum definiert dieser Punkt die Transportflüsse im norddeutschen Gasnetz, die hier strukturell von Nord nach Süd ausgerichtet sind."
+   },
+   {
+      "id": "8531E",
+      "name": "Drohne NOWAL",
+      "point_type": "NKP-MAP",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 8.353,
+      "latitude": 52.429,
+      "description": "Der Knotenpunkt Drohne NOWAL in Nordrhein-Westfalen verbindet Ost-West-Magistralen (wie die NOWAL) mit dem OGE-System. Er bedient H-Gas-Infrastruktur. Als Verteilerknoten steuert er Gasmengen aus dem Norden in die Industriezentren in NRW und weiter nach Süden."
+   },
+   {
+      "id": "8536I / 8536P",
+      "name": "Friedeburg-Etzel, Schienenstrang, EGL",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.901,
+      "latitude": 53.45,
+      "description": "Dieser Punkt bindet einen Teil des Etzel-Kavernenfelds in Niedersachsen an. Aufgrund der geografischen Nähe zu den norwegischen Anlandepunkten (Dornum) und den LNG-Terminals (Wilhelmshaven) ist dieser Speicher für das Systemgleichgewicht von hoher Bedeutung. Importmengen, die nicht unmittelbar im nachgelagerten Netz abgenommen werden, können hier eingespeichert werden. Er fungiert als zentraler Puffer für norddeutsche Importe."
+   },
+   {
+      "id": "8541I / 8541P",
+      "name": "Etzel (Speicher Crystal), Bitzenlander Weg 10",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.909,
+      "latitude": 53.448,
+      "description": "Dieser Punkt bindet einen Teil des Etzel-Kavernenfelds in Niedersachsen an. Aufgrund der geografischen Nähe zu den norwegischen Anlandepunkten (Dornum) und den LNG-Terminals (Wilhelmshaven) ist dieser Speicher für das Systemgleichgewicht von hoher Bedeutung. Importmengen, die nicht unmittelbar im nachgelagerten Netz abgenommen werden, können hier eingespeichert werden. Er fungiert als zentraler Puffer für norddeutsche Importe."
+   },
+   {
+      "id": "8542I / 8542P",
+      "name": "Friedeburg-Etzel, Bitzenlander Weg 2",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.908,
+      "latitude": 53.449,
+      "description": "Dieser Punkt bindet einen Teil des Etzel-Kavernenfelds in Niedersachsen an. Aufgrund der geografischen Nähe zu den norwegischen Anlandepunkten (Dornum) und den LNG-Terminals (Wilhelmshaven) ist dieser Speicher für das Systemgleichgewicht von hoher Bedeutung. Importmengen, die nicht unmittelbar im nachgelagerten Netz abgenommen werden, können hier eingespeichert werden. Er fungiert als zentraler Puffer für norddeutsche Importe."
+   },
+   {
+      "id": "8543I / 8543P",
+      "name": "Etzel (Speicher ESE),Bitzenlander Weg 3",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.914,
+      "latitude": 53.449,
+      "description": "Dieser Punkt bindet einen Teil des Etzel-Kavernenfelds in Niedersachsen an. Aufgrund der geografischen Nähe zu den norwegischen Anlandepunkten (Dornum) und den LNG-Terminals (Wilhelmshaven) ist dieser Speicher für das Systemgleichgewicht von hoher Bedeutung. Importmengen, die nicht unmittelbar im nachgelagerten Netz abgenommen werden, können hier eingespeichert werden. Er fungiert als zentraler Puffer für norddeutsche Importe."
+   },
+   {
+      "id": "8560",
+      "name": "Wilhelmshaven, LNG-Terminal 1",
+      "point_type": "LNG",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 8.089,
+      "latitude": 53.636,
+      "description": "Dieser Punkt markiert die netztechnische Anbindung des ersten schwimmenden LNG-Terminals (FSRU) über die Wilhelmshaven-Anbindungsleitung (WAL). Es handelt sich um einen reinen Einspeisepunkt (Entry). Das regasifizierte Flüssigerdgas wird direkt in das OGE-Netz eingespeist. Der Punkt hat die Versorgungsstruktur verändert, da er H-Gas-Grundlast unabhängig von den bisherigen Pipelinerouten aus dem Osten zur Verfügung stellt."
+   },
+   {
+      "id": "8586",
+      "name": "Wilhelmshaven, LNG-Terminal 2",
+      "point_type": "LNG",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 8.104,
+      "latitude": 53.623,
+      "description": "Dies ist die zweite LNG-Einspeisekapazität am Standort Wilhelmshaven. Auch hierbei handelt es sich um einen Entry-Punkt für H-Gas. Die Konzentration dieser Einspeisekapazitäten in der Region erfordert Anpassungen und Ausbaumaßnahmen im Netz der OGE, um die anlandenden Gasmengen in die südlichen Verbrauchszentren transportieren zu können."
+   },
+   {
+      "id": "8720E",
+      "name": "Wardenburg",
+      "point_type": "NKP-MAP",
+      "direction": "Einspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 8.174,
+      "latitude": 53.075,
+      "description": "Die Verdichterstation Wardenburg ist ein relevanter inländischer Knotenpunkt in Nordwestdeutschland. An diesem Punkt werden Importmengen aus den Niederlanden, Norwegen und von den LNG-Terminals in die Nord-Süd-Achsen der OGE und benachbarter FNB eingekoppelt oder umverteilt. Er ist eine wichtige Schnittstelle für das physikalische Druckmanagement im Norden."
+   },
+   {
+      "id": "8806A",
+      "name": "Oberkappel",
+      "point_type": "NKP-GÜ",
+      "direction": "Ausspeisung",
+      "gas_type": "H-Gas",
+      "longitude": 13.748,
+      "latitude": 48.556,
+      "description": "Oberkappel liegt an der deutsch-österreichischen Grenze und bildet das südöstliche Ende des MEGAL-Pipelinesystems. Der Punkt ist bidirektional (Entry/Exit) konzipiert und spielt eine Rolle im Gastransit nach Österreich und weiter nach Südeuropa. Abhängig von der Marktlage und den Füllständen der österreichischen Speicher wird hier Gas ausgespeist oder in das OGE-Netz eingespeist."
+   },
+   {
+      "id": "8814AGRTD / 8814EGRTD",
+      "name": "Gernsheim Midal GRTD",
+      "point_type": "NKP-MAP",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 8.552,
+      "latitude": 49.747,
+      "description": "Dieser Punkt in Südhessen koppelt das OGE-System an die MIDAL-Pipeline (Gascade). Als bidirektionaler MAP ermöglicht Gernsheim den Gasaustausch zwischen verschiedenen Fernleitungsnetzen. Dies bietet der OGE betriebliche Flexibilität: Bei Engpässen auf eigenen Achsen können hier Mengen verschoben werden, um die Lastflüsse im System zu optimieren."
+   },
+   {
+      "id": "8821 / 8821E",
+      "name": "Medelsheim",
+      "point_type": "NKP-GÜ",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.279,
+      "latitude": 49.123,
+      "description": "Dieser Grenzübergangspunkt im Saarland verbindet das MEGAL-System der OGE mit dem französischen Fernleitungsnetz (GRTgaz). Medelsheim ist ein bidirektionaler (Entry/Exit) Punkt. Während historisch häufig Gas Richtung Frankreich floss, wird der Punkt aktuell auch als Entry genutzt, um im Rahmen europäischer Solidaritätsmechanismen Gas nach Deutschland zu importieren. Die lokale Verdichterstation ermöglicht eine Steuerung der Flüsse entsprechend der Druckverhältnisse."
+   },
+   {
+      "id": "9000",
+      "name": "Elten",
+      "point_type": "NKP-GÜ",
+      "direction": "Einspeisung",
+      "gas_type": "L-Gas",
+      "longitude": 6.14,
+      "latitude": 51.902,
+      "description": "Elten an der niederländischen Grenze ist ein dedizierter Entry-Punkt für niederländisches L-Gas. Wie Vreden unterliegt dieser Punkt den strategischen Auswirkungen der Marktraumumstellung. Solange Teile des westdeutschen Verteilnetzes noch auf L-Gas angewiesen sind, bleibt dieser Punkt für die Aufrechterhaltung der Versorgungssicherheit relevant. Die Kapazitäten werden entsprechend der Netzentwicklungspläne (NEP) jedoch schrittweise reduziert."
+   },
+   {
+      "id": "9098 / 9098A",
+      "name": "Lampertheim I",
+      "point_type": "NKP-MAP",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 8.502,
+      "latitude": 49.582,
+      "description": "Ein inländischer Kopplungspunkt in Südhessen in der Nähe des MEGAL- und TENP-Systems. Er dient der Vermaschung von Transitachsen und fungiert für die OGE als Drehkreuz für das Lastmanagement im Südwesten. Hier können Gasflüsse aufgespalten und regional oder in weiterführende Transitlinien eingespeist werden."
+   },
+   {
+      "id": "9199I / 9199P",
+      "name": "Speicher Epe L",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "L-Gas",
+      "longitude": 7.007,
+      "latitude": 52.161,
+      "description": "Dieser Punkt stellt die Anbindung des L-Gas-Teils im Epe-Kavernenfeld dar. Da die L-Gas-Fördermengen sinken, übernimmt dieser Speicher in der aktuellen Übergangsphase eine wichtige Absicherungsfunktion. Er stellt sicher, dass Netzgebiete, die noch nicht auf H-Gas umgestellt sind, während der Heizperiode verlässlich versorgt werden können."
+   },
+   {
+      "id": "DROHNE",
+      "name": "Drohne",
+      "point_type": "NKP-MAP",
+      "direction": "Einspeisung",
+      "gas_type": "L-Gas",
+      "longitude": 8.353,
+      "latitude": 52.429,
+      "description": "Der Knotenpunkt Drohne in Nordrhein-Westfalen verbindet Ost-West-Magistralen mit dem OGE-System. Er bedient L-Gas-Infrastruktur. Als Verteilerknoten steuert er Gasmengen aus dem Norden in die verbleibenden L-Gas-Gebiete in NRW."
+   },
+   {
+      "id": "9860 / 9860E",
+      "name": "Reckrod I",
+      "point_type": "NKP-MAP",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 9.789,
+      "latitude": 50.785,
+      "description": "Die Verdichterstation und der Kopplungspunkt Reckrod in Osthessen ist ein zentraler Netzknoten, an dem die Nord-Süd-Achse (MIDAL) und Ost-West-Verbindungen (STEGAL) aufeinandertreffen. Als MAP ermöglicht Reckrod der OGE die Steuerung von Gasströmen in der Mitte Deutschlands und den Ausgleich zwischen verschiedenen Transportrouten."
+   },
+   {
+      "id": "9880A / 9880E",
+      "name": "Vitzeroda MÜP",
+      "point_type": "NKP-MAP",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 10.06,
+      "latitude": 50.881,
+      "description": "Vitzeroda ist ein Mess- und Übergabepunkt an der hessisch-thüringischen Grenze. Er verbindet das OGE-Netz mit dem ostdeutschen Leitungsnetz (z. B. der STEGAL-Pipeline). Er ermöglicht den bidirektionalen Gasaustausch zwischen den Netzgebieten und dient dem Mengenausgleich über die historischen Systemgrenzen hinweg."
+   },
+   {
+      "id": "EMX",
+      "name": "Emsbüren",
+      "point_type": "NKP-MAP",
+      "direction": "Einspeisung",
+      "gas_type": "L-Gas",
+      "longitude": 7.254,
+      "latitude": 52.389,
+      "description": "Emsbüren in Niedersachsen ist ein spezifischer inländischer Verteilpunkt im L-Gas-Netz. Er dient der Einspeisung oder Übergabe von L-Gas an nachgelagerte Verteilnetzbetreiber oder angrenzende FNB-Gebiete. Im Zuge der L-H-Gas-Umstellung wird dieser Punkt perspektivisch technisch auf H-Gas umgerüstet oder stillgelegt."
+   },
+   {
+      "id": "EPEH1 / EPEH1E",
+      "name": "Speicher Gronau-Epe H4",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "H-Gas",
+      "longitude": 7.013,
+      "latitude": 52.163,
+      "description": "Dieser Punkt verbindet das Fernleitungsnetz mit dem Kavernenspeicherfeld Gronau-Epe nahe der niederländischen Grenze. Kavernenspeicher können Gas zügig aufnehmen und abgeben. Für die OGE fungiert dieser Punkt als dynamisches Flexibilitätsinstrument. Er wird für die saisonale Vorsorge, den Ausgleich im Gashandel sowie zur Abfederung von Schwankungen bei der Verstromung genutzt und sichert die Stabilität im Nordwesten."
+   },
+   {
+      "id": "EPEL2 / EPEL2E",
+      "name": "Speicher Gronau-Epe L2",
+      "point_type": "Speicher",
+      "direction": null,
+      "gas_type": "L-Gas",
+      "longitude": 7.013,
+      "latitude": 52.163,
+      "description": "Dieser Punkt stellt die Anbindung des L-Gas-Teils im Epe-Kavernenfeld dar. Da die L-Gas-Fördermengen sinken, übernimmt dieser Speicher in der aktuellen Übergangsphase eine wichtige Absicherungsfunktion. Er stellt sicher, dass Netzgebiete, die noch nicht auf H-Gas umgestellt sind, während der Heizperiode verlässlich versorgt werden können."
+   }
+]
