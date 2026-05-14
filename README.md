@@ -17,7 +17,7 @@ pnpm build
 pnpm preview
 ```
 
-`pnpm build` führt zuerst die Datenvalidierung aus und baut danach die Vite-App.
+`pnpm build` führt zuerst die Datenvalidierung aus und baut danach die Vite-App. Die CI nutzt denselben Befehl.
 
 ## Struktur
 

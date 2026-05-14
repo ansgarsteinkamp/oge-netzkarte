@@ -52,7 +52,7 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
          });
       }
       if (layerVisibility.showPoints) {
-         filteredPoints.forEach(point => latLngs.push(pointOffsets.get(point.id)));
+         filteredPoints.forEach(point => latLngs.push(pointOffsets.get(point.id) ?? [point.latitude, point.longitude]));
       }
 
       return latLngs;
@@ -97,7 +97,6 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
       hasActiveSearch,
       layerVisibility,
       pipelineLayerKey,
-      query,
       resetFilters,
       results,
       searchBounds,

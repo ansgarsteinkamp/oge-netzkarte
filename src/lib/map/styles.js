@@ -1,13 +1,15 @@
-import { RELATION_COLORS, THEME } from "./theme.js";
+import { OGE_PARTICIPATION_RELATION_TYPES } from "../domain/constants.js";
+import { PARTICIPATION_LINE_PATTERN, RELATION_COLORS, THEME } from "./theme.js";
+
+const DASHED_RELATION_TYPES = new Set(OGE_PARTICIPATION_RELATION_TYPES);
 
 export const pipelineStyle = item => {
    const props = item.properties;
-   const isRoute = Boolean(props.route_group);
    return {
       color: RELATION_COLORS[props.relation_type] ?? THEME.foreground,
-      weight: isRoute ? 4.2 : 2.6,
-      opacity: isRoute ? 0.94 : 0.66,
-      dashArray: props.relation_type === "joint_venture" || props.relation_type === "oge_owned_affiliate" ? "7 5" : null,
+      weight: 4.2,
+      opacity: 0.94,
+      dashArray: DASHED_RELATION_TYPES.has(props.relation_type) ? PARTICIPATION_LINE_PATTERN.dashArray : null,
       lineCap: "round",
       lineJoin: "round"
    };

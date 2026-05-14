@@ -1,3 +1,4 @@
+import { Minus, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useMap } from "react-leaflet";
 
@@ -24,7 +25,7 @@ export default function MapZoomControls() {
             onClick={() => map.zoomIn()}
             type="button"
          >
-            +
+            <Plus aria-hidden="true" className="size-4" />
          </button>
          <button
             aria-label="Karte verkleinern"
@@ -33,7 +34,7 @@ export default function MapZoomControls() {
             onClick={() => map.zoomOut()}
             type="button"
          >
-            −
+            <Minus aria-hidden="true" className="size-4" />
          </button>
       </div>
    );

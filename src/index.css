@@ -50,51 +50,31 @@
    --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-@layer base {
-   @font-face {
-      font-family: "DM Mono";
-      font-display: swap;
-      font-style: normal;
-      font-weight: 300;
-      src: url("./assets/fonts/dm-mono-normal-300.woff2") format("woff2");
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-   }
-
-   @font-face {
-      font-family: "DM Mono";
-      font-display: swap;
-      font-style: normal;
-      font-weight: 400;
-      src: url("./assets/fonts/dm-mono-normal-400.woff2") format("woff2");
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-   }
-
-   @font-face {
-      font-family: "DM Mono";
-      font-display: swap;
-      font-style: normal;
-      font-weight: 500;
-      src: url("./assets/fonts/dm-mono-normal-500.woff2") format("woff2");
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-   }
+@font-face {
+   font-family: "DM Mono";
+   font-display: swap;
+   font-style: normal;
+   font-weight: 300;
+   src: url("./assets/fonts/dm-mono-normal-300.woff2") format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@layer base {
-   html {
-      -webkit-tap-highlight-color: transparent;
-   }
+@font-face {
+   font-family: "DM Mono";
+   font-display: swap;
+   font-style: normal;
+   font-weight: 400;
+   src: url("./assets/fonts/dm-mono-normal-400.woff2") format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
-   html,
-   body,
-   #root {
-      min-height: 100%;
-      margin: 0;
-   }
-
-   button:not(:disabled),
-   [role="button"]:not(:disabled) {
-      cursor: pointer;
-   }
+@font-face {
+   font-family: "DM Mono";
+   font-display: swap;
+   font-style: normal;
+   font-weight: 500;
+   src: url("./assets/fonts/dm-mono-normal-500.woff2") format("woff2");
+   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
@@ -112,6 +92,7 @@
    --secondary-foreground: #30302e;
    --muted: #1b1b19;
    --muted-foreground: #b7b5a9;
+   --map-background: #20201d;
    --accent: #1a1915;
    --accent-foreground: #f5f4ee;
    --destructive: #ef4444;
@@ -144,6 +125,7 @@
    --color-secondary-foreground: var(--secondary-foreground);
    --color-muted: var(--muted);
    --color-muted-foreground: var(--muted-foreground);
+   --color-map-background: var(--map-background);
    --color-accent: var(--accent);
    --color-accent-foreground: var(--accent-foreground);
    --color-destructive: var(--destructive);
@@ -169,6 +151,22 @@
 }
 
 @layer base {
+   html {
+      -webkit-tap-highlight-color: transparent;
+   }
+
+   html,
+   body,
+   #root {
+      min-height: 100%;
+      margin: 0;
+   }
+
+   button:not(:disabled),
+   [role="button"]:not(:disabled) {
+      cursor: pointer;
+   }
+
    * {
       @apply border-border outline-ring/50;
       scrollbar-color: color-mix(in srgb, var(--primary) 36%, var(--border)) var(--accent);
@@ -207,10 +205,14 @@
    }
 }
 
+.app-shell {
+   background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 8%, transparent), transparent 34%), var(--background);
+}
+
 .leaflet-container {
    font: inherit;
    color: var(--foreground);
-   background: #20201d;
+   background: var(--map-background);
 }
 
 .leaflet-control-zoom {
@@ -232,6 +234,10 @@
    box-shadow: none;
    font-family: "DM Mono", monospace;
    font-size: 0.74rem;
+   max-width: min(20rem, calc(100vw - 2rem));
+   width: max-content;
+   overflow-wrap: break-word;
+   white-space: normal;
 }
 
 .map-tooltip strong {

@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 
-import { POINT_TYPE_ORDER, RELATION_FILTERS, RELATION_LABELS, ROUTE_GROUP_ORDER, VALID_PIPELINE_GAS_QUALITIES } from "../src/lib/mapData.js";
+import { GAS_TYPE_ORDER, MAIN_DIRECTION_ORDER, POINT_TYPE_ORDER, RELATION_FILTERS, RELATION_LABELS, VALID_PIPELINE_GAS_QUALITIES } from "../src/lib/domain/constants.js";
 
 const files = {
    points: "public/data/punkte.json",
@@ -9,15 +9,14 @@ const files = {
 };
 
 const requiredPointFields = ["id", "name", "point_type", "gas_type", "latitude", "longitude"];
-const validPointDirections = new Set(["Einspeisung", "Ausspeisung", null]);
+const validPointDirections = new Set(MAIN_DIRECTION_ORDER);
 const nullableDirectionPointTypes = new Set(["Speicher", "NKP-GÜ", "NKP-MAP"]);
 const validPointTypes = new Set(POINT_TYPE_ORDER);
-const validPointGasTypes = new Set(["H-Gas", "L-Gas"]);
+const validPointGasTypes = new Set(GAS_TYPE_ORDER);
 const validPipelineRelationTypes = new Set(Object.keys(RELATION_LABELS));
 const filterRelationTypes = RELATION_FILTERS.flatMap(filter => filter.relationTypes);
 const validFilterRelationTypes = new Set(filterRelationTypes);
-const validRouteGroups = new Set(ROUTE_GROUP_ORDER);
-const requiredPipelineFields = ["id", "relation_type", "length_km", "gas_quality", "source", "source_license"];
+const requiredPipelineFields = ["id", "relation_type", "route_label", "length_km", "gas_quality", "source", "source_license"];
 const mojibakePattern = /[\u00C3\u00C2\uFFFD]/;
 
 Object.keys(RELATION_LABELS).forEach(type => assert(validFilterRelationTypes.has(type), `Relation ${type}: fehlt in RELATION_FILTERS`));
@@ -54,6 +53,14 @@ function assertOptionalFiniteNumber(value, message) {
    assert(value === null || value === undefined || Number.isFinite(value), message);
 }
 
+function assertOptionalNonEmptyString(value, message) {
+   assert(value === null || value === undefined || (typeof value === "string" && value.trim() !== ""), message);
+}
+
+function assertOptionalStringArray(value, message) {
+   assert(value === null || value === undefined || (Array.isArray(value) && value.every(item => typeof item === "string" && item.trim() !== "")), message);
+}
+
 function assertUniqueIds(items, getter, label) {
    const ids = items.map(getter).filter(Boolean);
    const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -77,6 +84,7 @@ function validatePoints(points) {
       assertFiniteNumber(point.latitude, `Punkt ${point.id}: latitude ist ungültig`);
       assertFiniteNumber(point.longitude, `Punkt ${point.id}: longitude ist ungültig`);
       assert(point.latitude >= 45 && point.latitude <= 56 && point.longitude >= 3 && point.longitude <= 17, `Punkt ${point.id}: Koordinaten liegen außerhalb des erwarteten Kartenraums`);
+      assertOptionalNonEmptyString(point.description, `Punkt ${point.id}: description ist ungültig`);
    });
 }
 
@@ -94,11 +102,19 @@ function validatePipelines(collection) {
       assert(Array.isArray(feature.geometry.coordinates) && feature.geometry.coordinates.length >= 2, `Leitung ${feature.properties?.id}: Geometrie ist zu kurz`);
       requiredPipelineFields.forEach(field => assert(feature.properties?.[field] !== undefined && feature.properties?.[field] !== null && feature.properties?.[field] !== "", `Leitung ${feature.properties?.id ?? "ohne ID"}: Feld ${field} fehlt`));
       assertNonEmptyString(feature.properties.id, `Leitung ${feature.properties?.id ?? "ohne ID"}: id muss ein Text sein`);
+      assertNonEmptyString(feature.properties.route_label, `Leitung ${feature.properties.id}: route_label muss ein Text sein`);
       assert(validPipelineRelationTypes.has(feature.properties.relation_type), `Leitung ${feature.properties.id}: relation_type ist ungültig`);
       assert(VALID_PIPELINE_GAS_QUALITIES.has(feature.properties.gas_quality), `Leitung ${feature.properties.id}: gas_quality ist ungültig`);
       assertFiniteNumber(feature.properties.length_km, `Leitung ${feature.properties.id}: length_km ist ungültig`);
       assert(feature.properties.length_km > 0, `Leitung ${feature.properties.id}: length_km muss größer als 0 sein`);
-      assert(feature.properties.route_group === undefined || validRouteGroups.has(feature.properties.route_group), `Leitung ${feature.properties.id}: route_group ist ungültig`);
+      assertNonEmptyString(feature.properties.source, `Leitung ${feature.properties.id}: source muss ein Text sein`);
+      assertNonEmptyString(feature.properties.source_license, `Leitung ${feature.properties.id}: source_license muss ein Text sein`);
+      assertOptionalNonEmptyString(feature.properties.operator, `Leitung ${feature.properties.id}: operator ist ungültig`);
+      assertOptionalNonEmptyString(feature.properties.source_operator, `Leitung ${feature.properties.id}: source_operator ist ungültig`);
+      assertOptionalNonEmptyString(feature.properties.participation_note, `Leitung ${feature.properties.id}: participation_note ist ungültig`);
+      assertOptionalStringArray(feature.properties.owners, `Leitung ${feature.properties.id}: owners ist ungültig`);
+      assertOptionalStringArray(feature.properties.co_owners, `Leitung ${feature.properties.id}: co_owners ist ungültig`);
+      assertOptionalStringArray(feature.properties.source_references, `Leitung ${feature.properties.id}: source_references ist ungültig`);
       ["diameter_mm", "pressure_bar", "capacity_m_m3_per_d"].forEach(field => assertOptionalFiniteNumber(feature.properties[field], `Leitung ${feature.properties.id}: ${field} ist ungültig`));
       feature.geometry.coordinates.forEach(([longitude, latitude]) => {
          assertFiniteNumber(latitude, `Leitung ${feature.properties.id}: ungültige Latitude`);

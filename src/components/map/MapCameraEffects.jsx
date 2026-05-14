@@ -13,18 +13,18 @@ function FitBounds({ resetKey }) {
    return null;
 }
 
-function FitSearchResults({ bounds, query }) {
+function FitSearchResults({ bounds }) {
    const map = useMap();
 
    useEffect(() => {
-      if (query.length < 2 || !bounds.length) return;
+      if (!bounds.length) return;
 
       if (bounds.length === 1) {
          map.setView(bounds[0], Math.max(map.getZoom(), 8), { animate: true });
       } else {
          map.fitBounds(bounds, { animate: true, maxZoom: 8, padding: [48, 48] });
       }
-   }, [bounds, map, query]);
+   }, [bounds, map]);
 
    return null;
 }
@@ -36,7 +36,8 @@ function FitSelection({ pointOffsets, selection }) {
       if (!selection) return;
 
       if (selection.kind === "point") {
-         map.setView(pointOffsets.get(selection.item.id), Math.max(map.getZoom(), 8), { animate: true });
+         const center = pointOffsets.get(selection.item.id) ?? [selection.item.latitude, selection.item.longitude];
+         map.setView(center, Math.max(map.getZoom(), 8), { animate: true });
       } else {
          map.fitBounds(selection.item.geometry.coordinates.map(([longitude, latitude]) => [latitude, longitude]), { animate: true, maxZoom: 8, padding: [48, 48] });
       }
@@ -45,11 +46,11 @@ function FitSelection({ pointOffsets, selection }) {
    return null;
 }
 
-export default function MapCameraEffects({ pointOffsets, query, resetViewKey, searchBounds, selection }) {
+export default function MapCameraEffects({ pointOffsets, resetViewKey, searchBounds, selection }) {
    return (
       <>
          <FitBounds resetKey={resetViewKey} />
-         <FitSearchResults bounds={searchBounds} query={query} />
+         <FitSearchResults bounds={searchBounds} />
          <FitSelection pointOffsets={pointOffsets} selection={selection} />
       </>
    );

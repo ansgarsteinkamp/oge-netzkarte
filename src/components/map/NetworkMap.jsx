@@ -16,14 +16,13 @@ export default function NetworkMap({
    onSelectPoint,
    pipelineLayerKey,
    pointOffsets,
-   query,
    resetViewKey,
    searchBounds,
    selection
 }) {
    return (
       <MapViewport>
-         <MapCameraEffects pointOffsets={pointOffsets} query={query} resetViewKey={resetViewKey} searchBounds={searchBounds} selection={selection} />
+         <MapCameraEffects pointOffsets={pointOffsets} resetViewKey={resetViewKey} searchBounds={searchBounds} selection={selection} />
          <MapZoomControls />
          <CountryLayers europeContext={europeContext} germany={germany} />
          <PipelineLayer visible={layerVisibility.showPipelines} pipelines={filteredPipelines} layerKey={pipelineLayerKey} onSelectPipeline={onSelectPipeline} />

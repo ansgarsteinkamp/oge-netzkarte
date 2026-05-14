@@ -30,3 +30,17 @@ export const POINT_COLORS = {
    Speicher: "#86b7a7",
    LNG: "#d2a766"
 };
+
+const PARTICIPATION_LINE_DASH = 7;
+const PARTICIPATION_LINE_GAP = 5;
+
+export const PARTICIPATION_LINE_PATTERN = {
+   dash: PARTICIPATION_LINE_DASH,
+   gap: PARTICIPATION_LINE_GAP,
+   dashArray: `${PARTICIPATION_LINE_DASH} ${PARTICIPATION_LINE_GAP}`
+};
+
+export const COUNTRY_STYLES = {
+   context: { color: "#74746a", weight: 1.1, fillColor: THEME.popover, fillOpacity: 0.84 },
+   germany: { color: THEME.secondary, weight: 2.1, fillColor: "#22221f", fillOpacity: 0.9 }
+};

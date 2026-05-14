@@ -1,6 +1,11 @@
 import { ALL_VALUE, RELATION_FILTERS } from "./constants.js";
 
-export const getPipelineGasFilterValue = value => (typeof value === "string" && value.includes("L-Gas") ? "L-Gas" : value);
+const PIPELINE_GAS_FILTER_VALUES = {
+   "H-Gas": "H-Gas",
+   "unbekannt / L-Gas-nahe Rohdatenkodierung": "L-Gas"
+};
+
+export const getPipelineGasFilterValue = value => PIPELINE_GAS_FILTER_VALUES[value] ?? value;
 
 export const matchesPipelineGas = (gasQuality, selectedGasType) => selectedGasType === ALL_VALUE || getPipelineGasFilterValue(gasQuality) === selectedGasType;
 

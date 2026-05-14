@@ -1,24 +1,33 @@
+import { pointTypeLabel, relationLabel } from "@/lib/domain/formatters";
+import { PARTICIPATION_LINE_PATTERN, POINT_COLORS, RELATION_COLORS } from "@/lib/map/theme";
+
+const participationLineBackground = `repeating-linear-gradient(
+   90deg,
+   ${RELATION_COLORS.joint_venture} 0 ${PARTICIPATION_LINE_PATTERN.dash}px,
+   transparent ${PARTICIPATION_LINE_PATTERN.dash}px ${PARTICIPATION_LINE_PATTERN.dash + PARTICIPATION_LINE_PATTERN.gap}px
+)`;
+
 const entries = [
-   { label: "OGE direkt", kind: "line", className: "bg-primary" },
-   { label: "Gemeinsam", kind: "line", className: "bg-secondary" },
-   { label: "OGE-Beteiligung", kind: "line", style: { background: "repeating-linear-gradient(90deg, #86b7a7 0 7px, transparent 7px 12px)" } },
-   { label: "Speicher", kind: "dot", style: { background: "#86b7a7" } },
-   { label: "GÜP", kind: "dot", className: "bg-primary" },
-   { label: "MAP", kind: "dot", className: "bg-secondary" },
-   { label: "LNG", kind: "dot", style: { background: "#d2a766" } }
+   { label: relationLabel("direct_operator"), kind: "line", style: { background: RELATION_COLORS.direct_operator } },
+   { label: relationLabel("joint_operator"), kind: "line", style: { background: RELATION_COLORS.joint_operator } },
+   { label: relationLabel("joint_venture"), kind: "line", style: { background: participationLineBackground } },
+   { label: pointTypeLabel("Speicher"), kind: "dot", style: { background: POINT_COLORS.Speicher } },
+   { label: pointTypeLabel("NKP-GÜ"), kind: "dot", style: { background: POINT_COLORS["NKP-GÜ"] } },
+   { label: pointTypeLabel("NKP-MAP"), kind: "dot", style: { background: POINT_COLORS["NKP-MAP"] } },
+   { label: pointTypeLabel("LNG"), kind: "dot", style: { background: POINT_COLORS.LNG } }
 ];
 
 export default function MapLegend() {
    return (
-      <div className="absolute right-3.5 bottom-3.5 left-3.5 z-[500] flex flex-wrap gap-x-3.5 gap-y-2 border border-border bg-muted/90 px-3 py-2.5 text-[0.72rem] text-muted-foreground backdrop-blur-md max-[560px]:max-h-[34%] max-[560px]:overflow-auto max-[560px]:text-[0.66rem]">
+      <div className="absolute right-3.5 bottom-3.5 left-3.5 z-[500] flex flex-wrap gap-x-3.5 gap-y-2 border border-border bg-muted/90 px-3 py-2.5 text-[0.72rem] text-muted-foreground backdrop-blur-md max-sm:hidden">
          {entries.map(entry => (
             <span key={entry.label} className="inline-flex items-center gap-2">
-               <i
+               <span
                   aria-hidden="true"
                   className={
                      entry.kind === "line"
-                        ? `h-0.75 w-6 ${entry.className ?? ""}`
-                        : `size-2.5 rounded-full border-2 border-background ${entry.className ?? ""}`
+                        ? "h-0.75 w-6"
+                        : "size-2.5 rounded-full border-2 border-background"
                   }
                   style={entry.style}
                />

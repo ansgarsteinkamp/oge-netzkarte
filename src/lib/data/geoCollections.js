@@ -1,6 +1,6 @@
 import { EUROPE_CONTEXT_IDS, GERMANY_ID } from "../domain/constants.js";
 
-export const parseCountryId = id => String(id).padStart(3, "0");
+const parseCountryId = id => String(id).padStart(3, "0");
 
 export const buildGermanyCollection = countries => ({
    type: "FeatureCollection",

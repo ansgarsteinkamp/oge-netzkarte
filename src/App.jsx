@@ -63,9 +63,9 @@ function LoadedApp({ countries, pipelineCollection, points }) {
    };
 
    return (
-      <main className="min-h-svh bg-background p-4 text-foreground max-[840px]:p-3" style={{ background: "linear-gradient(180deg, rgba(217, 119, 87, 0.08), transparent 34%), var(--background)" }}>
+      <main className="app-shell min-h-svh bg-background p-4 text-foreground max-lg:p-3">
          <Topbar />
-         <section className="mx-auto grid min-h-[calc(100svh-128px)] max-w-[1700px] grid-cols-[22.5rem_minmax(420px,1fr)_minmax(240px,280px)] gap-4 xl:h-[calc(100svh-128px)] max-[1180px]:h-auto max-[1180px]:min-h-0 max-[1180px]:grid-cols-[22.5rem_minmax(430px,1fr)] max-[840px]:grid-cols-1">
+         <section className="mx-auto grid min-h-[calc(100svh-128px)] max-w-[1700px] grid-cols-[22.5rem_minmax(420px,1fr)_minmax(240px,280px)] gap-4 xl:h-[calc(100svh-128px)] max-xl:h-auto max-xl:min-h-0 max-xl:grid-cols-[22.5rem_minmax(430px,1fr)] max-lg:grid-cols-1">
             <ControlPanel
                gasTypes={filters.filterOptions.gasTypes}
                layerVisibility={filters.layerVisibility}
@@ -98,13 +98,12 @@ function LoadedApp({ countries, pipelineCollection, points }) {
                onSelectPoint={selection.selectPoint}
                pipelineLayerKey={filters.pipelineLayerKey}
                pointOffsets={pointOffsets}
-               query={filters.query}
                resetViewKey={resetViewKey}
                searchBounds={filters.searchBounds}
                selection={selection.selection}
             />
 
-            <div className="flex min-h-0 flex-col gap-3.5 overflow-auto max-[1180px]:col-span-full max-[1180px]:grid max-[1180px]:grid-cols-2 max-[840px]:order-3 max-[840px]:grid-cols-1">
+            <div className="flex min-h-0 flex-col gap-3.5 overflow-auto max-xl:col-span-full max-xl:grid max-xl:grid-cols-2 max-lg:order-3 max-lg:grid-cols-1">
                <SelectionPanel selection={selection.selection} onClose={selection.clearSelection} />
                <QualityPanel />
             </div>

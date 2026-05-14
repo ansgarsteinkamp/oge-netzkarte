@@ -1,7 +1,7 @@
 import { cleanName, mainDirectionLabel } from "./formatters.js";
 import { normalize } from "./text.js";
 
-export const MIN_SEARCH_LENGTH = 2;
+const MIN_SEARCH_LENGTH = 2;
 
 export const getSearchQuery = searchTerm => normalize(searchTerm);
 

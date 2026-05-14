@@ -25,8 +25,8 @@ export function useMapSelection({ filteredPipelines, filteredPoints, layerVisibi
 
    const selectResult = result => {
       if (result.kind === "point") {
-         const center = pointOffsets.get(result.item.id);
-         const isOffset = center?.[0] !== result.item.latitude || center?.[1] !== result.item.longitude;
+         const center = pointOffsets.get(result.item.id) ?? [result.item.latitude, result.item.longitude];
+         const isOffset = center[0] !== result.item.latitude || center[1] !== result.item.longitude;
          selectPoint(result.item, isOffset);
          return;
       }

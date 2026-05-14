@@ -1,12 +1,11 @@
 import { X } from "lucide-react";
 
 import TooltipIconButton from "@/components/TooltipIconButton";
-import { RELATION_LABELS } from "@/lib/domain/constants";
-import { cleanName, formatValue, mainDirectionLabel, pointTypeLabel } from "@/lib/domain/formatters";
+import { cleanName, formatValue, mainDirectionLabel, pointTypeLabel, relationLabel } from "@/lib/domain/formatters";
 
 function DetailRow({ label, value }) {
    return (
-      <div className="grid min-h-9 grid-cols-[100px_minmax(0,1fr)] gap-2.5 border-b border-border/70 py-2 text-xs max-[560px]:grid-cols-1 max-[560px]:gap-1">
+      <div className="grid min-h-9 grid-cols-[100px_minmax(0,1fr)] gap-2.5 border-b border-border/70 py-2 text-xs max-sm:grid-cols-1 max-sm:gap-1">
          <span className="text-muted-foreground">{label}</span>
          <strong className="min-w-0 font-normal break-words text-card-foreground">{value}</strong>
       </div>
@@ -22,7 +21,6 @@ export default function SelectionPanel({ selection, onClose }) {
             <div>
                <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">Auswahl</p>
                <h2 id="selection-panel-title" className="mt-1 mb-2 text-base leading-snug font-medium text-card-foreground">Keine Auswahl</h2>
-               <p className="m-0 max-w-[30ch] text-xs leading-relaxed">Leitung oder Punkt anklicken, um Details und Quellenhinweise zu sehen.</p>
             </div>
          </aside>
       );
@@ -34,7 +32,7 @@ export default function SelectionPanel({ selection, onClose }) {
       return (
          <aside className="relative flex-none border border-border bg-muted/75 p-4" aria-labelledby="selection-panel-title" aria-live="polite">
             <TooltipIconButton label="Auswahl schließen" onClick={onClose} className="absolute top-3 right-3 size-8">
-               <X className="size-4" />
+               <X aria-hidden="true" className="size-4" />
             </TooltipIconButton>
             <div className="grid gap-1 pr-8">
                <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">{pointTypeLabel(point.point_type)}</p>
@@ -66,10 +64,10 @@ export default function SelectionPanel({ selection, onClose }) {
    return (
       <aside className="relative flex-none border border-border bg-muted/75 p-4" aria-labelledby="selection-panel-title" aria-live="polite">
          <TooltipIconButton label="Auswahl schließen" onClick={onClose} className="absolute top-3 right-3 size-8">
-            <X className="size-4" />
+            <X aria-hidden="true" className="size-4" />
          </TooltipIconButton>
          <div className="grid gap-1 pr-8">
-            <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">{RELATION_LABELS[props.relation_type] ?? props.relation_type}</p>
+            <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">{relationLabel(props.relation_type)}</p>
             <h2 id="selection-panel-title" className="m-0 text-base leading-snug font-medium text-card-foreground">{cleanName(selection.item)}</h2>
          </div>
          <div className="mt-4 grid border-t border-border">

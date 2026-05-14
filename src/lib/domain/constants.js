@@ -5,27 +5,17 @@ export const RELATION_LABELS = {
    oge_owned_affiliate: "OGE-Beteiligung"
 };
 
+export const OGE_PARTICIPATION_RELATION_TYPES = ["joint_venture", "oge_owned_affiliate"];
+
 export const RELATION_FILTERS = [
    { value: "direct_operator", label: RELATION_LABELS.direct_operator, relationTypes: ["direct_operator"] },
    { value: "joint_operator", label: RELATION_LABELS.joint_operator, relationTypes: ["joint_operator"] },
-   { value: "oge_participation", label: "OGE-Beteiligung", relationTypes: ["joint_venture", "oge_owned_affiliate"] }
+   { value: "oge_participation", label: RELATION_LABELS.joint_venture, relationTypes: OGE_PARTICIPATION_RELATION_TYPES }
 ];
 
 export const POINT_TYPE_ORDER = ["NKP-GÜ", "NKP-MAP", "Speicher", "LNG"];
 export const GAS_TYPE_ORDER = ["H-Gas", "L-Gas"];
 export const MAIN_DIRECTION_ORDER = ["Einspeisung", "Ausspeisung", null];
-export const ROUTE_GROUP_ORDER = [
-   "deudan",
-   "joint_operator_unclassified",
-   "megal",
-   "metg",
-   "netg",
-   "netra",
-   "oge_direct_unclassified",
-   "tenp",
-   "wal",
-   "zeelink"
-];
 export const VALID_PIPELINE_GAS_QUALITIES = new Set(["H-Gas", "unbekannt / L-Gas-nahe Rohdatenkodierung"]);
 
 export const EUROPE_CONTEXT_IDS = new Set([

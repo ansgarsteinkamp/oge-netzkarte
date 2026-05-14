@@ -1,7 +1,6 @@
 import { GeoJSON, Pane } from "react-leaflet";
 
-import { RELATION_LABELS } from "@/lib/domain/constants";
-import { cleanName } from "@/lib/domain/formatters";
+import { cleanName, relationLabel } from "@/lib/domain/formatters";
 import { pipelineStyle } from "@/lib/map/styles";
 
 const createPipelineTooltip = item => {
@@ -12,7 +11,7 @@ const createPipelineTooltip = item => {
    const operator = document.createElement("span");
 
    title.textContent = cleanName(item);
-   relation.textContent = RELATION_LABELS[props.relation_type] ?? props.relation_type ?? "Beziehung unbekannt";
+   relation.textContent = relationLabel(props.relation_type) ?? "Beziehung unbekannt";
    operator.textContent = props.operator ?? "Operator unbekannt";
 
    container.append(title, relation, operator);
@@ -33,6 +32,7 @@ export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, v
       layer.bindTooltip(createPipelineTooltip(item), {
          className: "map-tooltip",
          direction: "top",
+         pane: "tooltipPane",
          sticky: true
       });
       layer.on({

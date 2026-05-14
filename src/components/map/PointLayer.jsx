@@ -4,8 +4,8 @@ import { mainDirectionLabel, pointTypeLabel } from "@/lib/domain/formatters";
 import { POINT_COLORS, THEME } from "@/lib/map/theme";
 
 function PointMarker({ onSelectPoint, point, pointOffsets }) {
-   const center = pointOffsets.get(point.id);
-   const isOffset = center?.[0] !== point.latitude || center?.[1] !== point.longitude;
+   const center = pointOffsets.get(point.id) ?? [point.latitude, point.longitude];
+   const isOffset = center[0] !== point.latitude || center[1] !== point.longitude;
    const activate = () => onSelectPoint(point, isOffset);
    let markerElement = null;
    const activateFromKeyboard = event => {
@@ -43,7 +43,7 @@ function PointMarker({ onSelectPoint, point, pointOffsets }) {
             }
          }}
       >
-         <Tooltip className="map-tooltip" direction="top" offset={[0, -6]}>
+         <Tooltip className="map-tooltip" direction="top" offset={[0, -6]} pane="tooltipPane">
             <strong>{point.name}</strong>
             <span>{pointTypeLabel(point.point_type)}</span>
             <span>Hauptrichtung: {mainDirectionLabel(point.direction)}</span>
