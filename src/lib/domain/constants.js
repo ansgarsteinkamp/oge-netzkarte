@@ -15,6 +15,7 @@ export const RELATION_FILTERS = [
 
 export const POINT_TYPE_ORDER = ["NKP-GÜ", "NKP-MAP", "Speicher", "LNG"];
 export const GAS_TYPE_ORDER = ["H-Gas", "L-Gas"];
+export const DEFAULT_GAS_TYPE = "H-Gas";
 export const MAIN_DIRECTION_ORDER = ["Einspeisung", "Ausspeisung", null];
 export const VALID_PIPELINE_GAS_QUALITIES = new Set(["H-Gas", "unbekannt / L-Gas-nahe Rohdatenkodierung"]);
 

@@ -5,7 +5,7 @@ const PIPELINE_GAS_FILTER_VALUES = {
    "unbekannt / L-Gas-nahe Rohdatenkodierung": "L-Gas"
 };
 
-export const getPipelineGasFilterValue = value => PIPELINE_GAS_FILTER_VALUES[value] ?? value;
+const getPipelineGasFilterValue = value => PIPELINE_GAS_FILTER_VALUES[value] ?? value;
 
 export const matchesPipelineGas = (gasQuality, selectedGasType) => selectedGasType === ALL_VALUE || getPipelineGasFilterValue(gasQuality) === selectedGasType;
 

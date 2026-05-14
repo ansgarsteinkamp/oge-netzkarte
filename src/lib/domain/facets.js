@@ -1,5 +1,4 @@
 import { ALL_VALUE, GAS_TYPE_ORDER, MAIN_DIRECTION_ORDER, POINT_TYPE_ORDER, RELATION_FILTERS } from "./constants.js";
-import { getPipelineGasFilterValue } from "./filters.js";
 import { mainDirectionLabel, pointTypeLabel } from "./formatters.js";
 
 const getUnique = (items, getter) => [...new Set(items.map(getter).filter(Boolean))].sort((a, b) => a.localeCompare(b, "de"));
@@ -14,15 +13,14 @@ const sortByOrder = (values, order) => {
 
 const withAllOption = options => [{ value: ALL_VALUE, label: "Alle" }, ...options];
 
-export const buildFilterOptions = ({ pipelineCollection, points }) => {
+export const buildFilterOptions = ({ points }) => {
    const pointTypes = sortByOrder(getUnique(points, point => point.point_type), POINT_TYPE_ORDER);
-   const gasTypes = sortByOrder(getUnique([...points, ...pipelineCollection.features], item => item.gas_type ?? getPipelineGasFilterValue(item.properties?.gas_quality)), GAS_TYPE_ORDER);
    const mainDirectionTypes = sortByOrder(getUniqueWithNull(points, point => point.direction), MAIN_DIRECTION_ORDER);
 
    return {
       relationTypes: withAllOption(RELATION_FILTERS.map(({ value, label }) => ({ value, label }))),
       pointTypes: withAllOption(pointTypes.map(type => ({ value: type, label: pointTypeLabel(type) }))),
-      gasTypes: withAllOption(gasTypes.map(type => ({ value: type, label: type }))),
+      gasTypes: GAS_TYPE_ORDER.map(type => ({ value: type, label: type })),
       mainDirectionTypes: withAllOption(mainDirectionTypes.map(type => ({ value: type, label: mainDirectionLabel(type) })))
    };
 };

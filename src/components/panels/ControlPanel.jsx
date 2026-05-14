@@ -115,7 +115,7 @@ export default function ControlPanel({
             type="button"
          >
             <RotateCcw aria-hidden="true" className="size-4" />
-            <span>Alles zurücksetzen</span>
+            <span>Standardansicht</span>
          </button>
 
          <label className="grid min-h-10 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 rounded-md border border-border bg-popover px-3 text-muted-foreground focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">

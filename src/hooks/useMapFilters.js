@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-import { ALL_VALUE } from "@/lib/domain/constants";
+import { ALL_VALUE, DEFAULT_GAS_TYPE } from "@/lib/domain/constants";
 import { buildFilterOptions } from "@/lib/domain/facets";
 import { matchesPipelineGas, matchesPipelineRelation } from "@/lib/domain/filters";
 import { pipelineMatchesSearch, getSearchQuery, isSearchActive, pointMatchesSearch, toResultItems } from "@/lib/domain/search";
@@ -14,11 +14,11 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
    const [searchTerm, setSearchTerm] = useState("");
    const [selectedRelation, setSelectedRelation] = useState(ALL_VALUE);
    const [selectedPointType, setSelectedPointType] = useState(ALL_VALUE);
-   const [selectedGasType, setSelectedGasType] = useState(ALL_VALUE);
+   const [selectedGasType, setSelectedGasType] = useState(DEFAULT_GAS_TYPE);
    const [selectedMainDirection, setSelectedMainDirection] = useState(ALL_VALUE);
    const [layerVisibility, setLayerVisibility] = useState(initialLayerVisibility);
 
-   const filterOptions = useMemo(() => buildFilterOptions({ pipelineCollection, points }), [pipelineCollection, points]);
+   const filterOptions = useMemo(() => buildFilterOptions({ points }), [points]);
    const query = getSearchQuery(searchTerm);
    const hasActiveSearch = isSearchActive(query);
 
@@ -36,7 +36,7 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
       return points.filter(point => {
          const matchesType = selectedPointType === ALL_VALUE || point.point_type === selectedPointType;
          const matchesMainDirection = selectedMainDirection === ALL_VALUE || point.direction === selectedMainDirection;
-         const matchesGas = selectedGasType === ALL_VALUE || point.gas_type === selectedGasType;
+         const matchesGas = point.gas_type === selectedGasType;
 
          return matchesType && matchesMainDirection && matchesGas && pointMatchesSearch(point, query, hasActiveSearch);
       });
@@ -81,7 +81,7 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
       setSearchTerm("");
       setSelectedRelation(ALL_VALUE);
       setSelectedPointType(ALL_VALUE);
-      setSelectedGasType(ALL_VALUE);
+      setSelectedGasType(DEFAULT_GAS_TYPE);
       setSelectedMainDirection(ALL_VALUE);
       setLayerVisibility(initialLayerVisibility);
    };
