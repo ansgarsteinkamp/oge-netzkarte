@@ -3,7 +3,7 @@ import { stripBom } from "../domain/text.js";
 const DATA_FILES = {
    points: "data/punkte.json",
    pipelines: "data/leitungsverlaeufe.geojson",
-   countries: "data/countries.geojson"
+   countries: "data/countries_v2.geojson"
 };
 
 const parseJsonResponse = async response => JSON.parse(stripBom(await response.text()));

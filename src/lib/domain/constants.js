@@ -19,44 +19,5 @@ export const DEFAULT_GAS_TYPE = "H-Gas";
 export const MAIN_DIRECTION_ORDER = ["Einspeisung", "Ausspeisung", null];
 export const VALID_PIPELINE_GAS_QUALITIES = new Set(["H-Gas", "unbekannt / L-Gas-nahe Rohdatenkodierung"]);
 
-export const EUROPE_CONTEXT_IDS = new Set([
-   "008",
-   "040",
-   "056",
-   "070",
-   "100",
-   "112",
-   "191",
-   "203",
-   "208",
-   "233",
-   "246",
-   "250",
-   "300",
-   "348",
-   "372",
-   "380",
-   "428",
-   "440",
-   "442",
-   "498",
-   "499",
-   "528",
-   "578",
-   "616",
-   "620",
-   "642",
-   "688",
-   "703",
-   "705",
-   "724",
-   "752",
-   "756",
-   "792",
-   "804",
-   "807",
-   "826"
-]);
-
 export const GERMANY_ID = "276";
 export const ALL_VALUE = "all";

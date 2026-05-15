@@ -1,11 +1,11 @@
 import { readFile } from "node:fs/promises";
 
-import { GAS_TYPE_ORDER, MAIN_DIRECTION_ORDER, POINT_TYPE_ORDER, RELATION_FILTERS, RELATION_LABELS, VALID_PIPELINE_GAS_QUALITIES } from "../src/lib/domain/constants.js";
+import { GAS_TYPE_ORDER, GERMANY_ID, MAIN_DIRECTION_ORDER, POINT_TYPE_ORDER, RELATION_FILTERS, RELATION_LABELS, VALID_PIPELINE_GAS_QUALITIES } from "../src/lib/domain/constants.js";
 
 const files = {
    points: "public/data/punkte.json",
    pipelines: "public/data/leitungsverlaeufe.geojson",
-   countries: "public/data/countries.geojson"
+   countries: "public/data/countries_v2.geojson"
 };
 
 const requiredPointFields = ["id", "name", "point_type", "gas_type", "latitude", "longitude"];
@@ -124,8 +124,41 @@ function validatePipelines(collection) {
 }
 
 function validateCountries(collection) {
-   validateFeatureCollection(collection, "Länder");
-   assert(collection.features.some(feature => String(feature.id).padStart(3, "0") === "276"), "Länder: Deutschland fehlt");
+   validateFeatureCollection(collection, "Laender");
+   assertUniqueIds(collection.features, feature => String(feature.id).padStart(3, "0"), "Laender");
+
+   const germanyFeatures = collection.features.filter(feature => String(feature.id).padStart(3, "0") === GERMANY_ID);
+   assert(germanyFeatures.length === 1, `Laender: Deutschland muss genau einmal vorkommen, gefunden: ${germanyFeatures.length}`);
+
+   collection.features.forEach(feature => {
+      const id = String(feature.id ?? "");
+      assert(feature.type === "Feature", `Land ${id}: type muss Feature sein`);
+      assertNonEmptyString(id, "Land ohne ID gefunden");
+      assert(/^\d{3}$/.test(id), `Land ${id}: ID muss dreistellig numerisch sein`);
+      assertNonEmptyString(feature.properties?.name, `Land ${id}: name fehlt`);
+      assert(["Polygon", "MultiPolygon"].includes(feature.geometry?.type), `Land ${id}: nur Polygon/MultiPolygon wird unterstuetzt`);
+
+      const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
+      assert(Array.isArray(polygons) && polygons.length > 0, `Land ${id}: Geometrie enthaelt keine Polygone`);
+
+      polygons.forEach((polygon, polygonIndex) => {
+         assert(Array.isArray(polygon) && polygon.length > 0, `Land ${id}: Polygon ${polygonIndex} enthaelt keine Ringe`);
+
+         polygon.forEach((ring, ringIndex) => {
+            assert(Array.isArray(ring) && ring.length >= 4, `Land ${id}: Ring ${polygonIndex}/${ringIndex} ist zu kurz`);
+
+            const first = ring[0];
+            const last = ring.at(-1);
+            assert(first[0] === last[0] && first[1] === last[1], `Land ${id}: Ring ${polygonIndex}/${ringIndex} ist nicht geschlossen`);
+
+            ring.forEach(([longitude, latitude]) => {
+               assertFiniteNumber(latitude, `Land ${id}: ungueltige Latitude`);
+               assertFiniteNumber(longitude, `Land ${id}: ungueltige Longitude`);
+               assert(latitude >= 34 && latitude <= 72 && longitude >= -25 && longitude <= 45, `Land ${id}: Koordinaten liegen ausserhalb des Europa-Kontexts`);
+            });
+         });
+      });
+   });
 }
 
 const points = await readJson(files.points);
