@@ -5375,7 +5375,7 @@
       "properties": {
         "id": "oge-lkd-ps-389",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5455,7 +5455,7 @@
       "properties": {
         "id": "oge-lkd-ps-390",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5503,7 +5503,7 @@
       "properties": {
         "id": "oge-lkd-ps-391",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5539,7 +5539,7 @@
       "properties": {
         "id": "oge-lkd-ps-392",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5575,7 +5575,7 @@
       "properties": {
         "id": "oge-lkd-ps-396",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5611,7 +5611,7 @@
       "properties": {
         "id": "oge-lkd-ps-397",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5731,7 +5731,7 @@
       "properties": {
         "id": "oge-lkd-ps-412",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5759,7 +5759,7 @@
       "properties": {
         "id": "oge-lkd-ps-415",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5787,7 +5787,7 @@
       "properties": {
         "id": "oge-lkd-ps-416",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5819,7 +5819,7 @@
       "properties": {
         "id": "oge-lkd-ps-419",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5887,7 +5887,7 @@
       "properties": {
         "id": "oge-lkd-ps-420",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5915,7 +5915,7 @@
       "properties": {
         "id": "oge-lkd-ps-423",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5951,7 +5951,7 @@
       "properties": {
         "id": "oge-lkd-ps-424",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -5979,7 +5979,7 @@
       "properties": {
         "id": "oge-lkd-ps-427",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -8051,7 +8051,7 @@
       "properties": {
         "id": "oge-lkd-ps-452",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -8087,7 +8087,7 @@
       "properties": {
         "id": "oge-lkd-ps-453",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -8127,7 +8127,7 @@
       "properties": {
         "id": "oge-lkd-ps-454",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -8163,7 +8163,7 @@
       "properties": {
         "id": "oge-lkd-ps-455",
         "name": "NETG",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -9298,14 +9298,14 @@
       "id": "oge-lkd-ps-801",
       "properties": {
         "id": "oge-lkd-ps-801",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Steinitz-Bernau",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "steinitz-bernau",
+        "line_name": "Steinitz-Bernau"
       },
       "geometry": {
         "type": "LineString",
@@ -9350,14 +9350,14 @@
       "id": "oge-lkd-ps-803",
       "properties": {
         "id": "oge-lkd-ps-803",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Steinitz-Bernau",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "steinitz-bernau",
+        "line_name": "Steinitz-Bernau"
       },
       "geometry": {
         "type": "LineString",
@@ -9434,14 +9434,14 @@
       "id": "oge-lkd-ps-863",
       "properties": {
         "id": "oge-lkd-ps-863",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Steinitz-Bernau",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "steinitz-bernau",
+        "line_name": "Steinitz-Bernau"
       },
       "geometry": {
         "type": "LineString",
@@ -9466,14 +9466,14 @@
       "id": "oge-lkd-ps-864",
       "properties": {
         "id": "oge-lkd-ps-864",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Bernau-Kienbaum (JAGAL-Anbindung)",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "bernau-kienbaum",
+        "line_name": "Bernau-Kienbaum"
       },
       "geometry": {
         "type": "LineString",
@@ -9506,14 +9506,14 @@
       "id": "oge-lkd-ps-865",
       "properties": {
         "id": "oge-lkd-ps-865",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Bernau-Kienbaum (JAGAL-Anbindung)",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "bernau-kienbaum",
+        "line_name": "Bernau-Kienbaum"
       },
       "geometry": {
         "type": "LineString",
@@ -9574,14 +9574,14 @@
       "id": "oge-lkd-ps-872",
       "properties": {
         "id": "oge-lkd-ps-872",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Bernau-Kienbaum (JAGAL-Anbindung)",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "bernau-kienbaum",
+        "line_name": "Bernau-Kienbaum"
       },
       "geometry": {
         "type": "LineString",
@@ -18910,14 +18910,14 @@
       "id": "oge-lkd-ps-923",
       "properties": {
         "id": "oge-lkd-ps-923",
-        "name": "ONTRAS/OGE-Gemeinschaftsleitungen",
+        "name": "Steinitz-Bernau",
         "operator": "ONTRAS / Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "joint_operator",
         "source": "SciGRID Gas (CC BY 4.0) / ONTRAS / OGE",
-        "system_id": "ontras-oge",
-        "line_name": "ONTRAS/OGE-Gemeinschaftsleitungen"
+        "system_id": "steinitz-bernau",
+        "line_name": "Steinitz-Bernau"
       },
       "geometry": {
         "type": "LineString",
@@ -19115,7 +19115,7 @@
       "properties": {
         "id": "oge-netg-voigtslach-paffrath",
         "name": "NETG Voigtslach-Paffrath",
-        "operator": "NETG / Thyssengas / Open Grid Europe",
+        "operator": "NETG (Open Grid Europe / Thyssengas)",
         "gas_quality": "h_gas",
         "status": "operating",
         "oge_role": "co_owned_affiliate",
@@ -19163,7 +19163,7 @@
         "gas_quality": "h_gas",
         "status": "under_construction",
         "oge_role": "operator",
-        "source": "OGE WAD project / ARL Weser-Ems / Bezirksregierung Detmold; simplified route",
+        "source": "OGE WAD-Projekt / LBEG & Bezirksregierung Detmold (Planfeststellung); simplified route",
         "system_id": "wad",
         "line_name": "WAD"
       },
@@ -19195,8 +19195,8 @@
             52.36
           ],
           [
-            8.3555,
-            52.4177
+            8.3356,
+            52.4314
           ]
         ]
       }
