@@ -1,6 +1,7 @@
 import { Check, ChevronsUpDown, Flame, MapPin, RotateCcw, Route, Search, X } from "lucide-react";
 
-import { formatValue, mainDirectionLabel, pointTypeLabel, routeDisplayLabel } from "@/lib/domain/formatters";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { gasQualityLabel, mainDirectionLabel, pipelineStatusExceptionLabel, pointTypeLabel } from "@/lib/domain/formatters";
 import { cn } from "@/lib/utils";
 
 function SegmentGroup({ disabled = false, label, icon: Icon, options, value, onChange }) {
@@ -13,9 +14,8 @@ function SegmentGroup({ disabled = false, label, icon: Icon, options, value, onC
             {options.map(option => {
                const active = value === option.value;
 
-               return (
+               const button = (
                   <button
-                     key={String(option.value)}
                      aria-label={`${label}: ${option.label}`}
                      aria-pressed={active}
                      className={cn(
@@ -29,6 +29,23 @@ function SegmentGroup({ disabled = false, label, icon: Icon, options, value, onC
                      {active && <Check aria-hidden="true" className="size-3" />}
                      <span>{option.label}</span>
                   </button>
+               );
+
+               return option.description ? (
+                  <Tooltip key={String(option.value)}>
+                     <TooltipTrigger asChild>{button}</TooltipTrigger>
+                     <TooltipContent
+                        side="right"
+                        sideOffset={6}
+                        className="z-[1200] w-max max-w-64 text-left leading-snug"
+                     >
+                        {option.description.split("\n").map(line => (
+                           <span key={line} className="block whitespace-nowrap">{line}</span>
+                        ))}
+                     </TooltipContent>
+                  </Tooltip>
+               ) : (
+                  <span key={String(option.value)}>{button}</span>
                );
             })}
          </div>
@@ -56,7 +73,14 @@ function ResultItem({ result, onSelect }) {
    const title = isPoint ? item.name : result.title;
    const meta = isPoint
       ? `${item.id} · ${pointTypeLabel(item.point_type)} · ${mainDirectionLabel(item.direction)} · ${item.gas_type}`
-      : `${item.properties.id} · ${routeDisplayLabel(item.properties)} · ${formatValue(item.properties.length_km, " km")}`;
+      : [
+           item.properties.id,
+           item.properties.name !== item.properties.line_name ? item.properties.name : null,
+           gasQualityLabel(item.properties.gas_quality),
+           pipelineStatusExceptionLabel(item.properties.status)
+        ]
+           .filter(Boolean)
+           .join(" · ");
    const Icon = isPoint ? MapPin : Route;
 
    return (
@@ -106,8 +130,8 @@ export default function ControlPanel({
 
          <SegmentGroup disabled={!layerVisibility.showPoints} icon={MapPin} label="Punktart" value={selectedPointType} onChange={setSelectedPointType} options={pointTypes} />
          <SegmentGroup disabled={!layerVisibility.showPoints} icon={ChevronsUpDown} label="Hauptrichtung" value={selectedMainDirection} onChange={setSelectedMainDirection} options={mainDirectionTypes} />
-         <SegmentGroup icon={Flame} label="Gasart" value={selectedGasType} onChange={setSelectedGasType} options={gasTypes} />
-         <SegmentGroup disabled={!layerVisibility.showPipelines} icon={Route} label="Leitungen" value={selectedRelation} onChange={setSelectedRelation} options={relationTypes} />
+         <SegmentGroup icon={Flame} label="Gasqualität" value={selectedGasType} onChange={setSelectedGasType} options={gasTypes} />
+         <SegmentGroup disabled={!layerVisibility.showPipelines} icon={Route} label="Leitungsbezug" value={selectedRelation} onChange={setSelectedRelation} options={relationTypes} />
 
          <button
             className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-border bg-muted px-3 text-xs font-medium text-foreground transition-colors hover:border-primary/70 hover:bg-primary/20 hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none"
@@ -121,7 +145,7 @@ export default function ControlPanel({
          <label className="grid min-h-10 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 rounded-md border border-border bg-popover px-3 text-muted-foreground focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">
             <Search aria-hidden="true" className="size-4" />
             <input
-               aria-label="Suche nach Punkt, ID, Leitung oder Operator"
+               aria-label="Suche nach Punkt, ID, Leitung oder Betreiber/Partner"
                value={searchTerm}
                onChange={event => onSearchTermChange(event.target.value)}
                placeholder="Suche"

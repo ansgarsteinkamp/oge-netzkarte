@@ -18,7 +18,7 @@ export const buildFilterOptions = ({ points }) => {
    const mainDirectionTypes = sortByOrder(getUniqueWithNull(points, point => point.direction), MAIN_DIRECTION_ORDER);
 
    return {
-      relationTypes: withAllOption(RELATION_FILTERS.map(({ value, label }) => ({ value, label }))),
+      relationTypes: withAllOption(RELATION_FILTERS.map(({ value, label, description }) => ({ value, label, description }))),
       pointTypes: withAllOption(pointTypes.map(type => ({ value: type, label: pointTypeLabel(type) }))),
       gasTypes: GAS_TYPE_ORDER.map(type => ({ value: type, label: type })),
       mainDirectionTypes: withAllOption(mainDirectionTypes.map(type => ({ value: type, label: mainDirectionLabel(type) })))

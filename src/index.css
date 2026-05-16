@@ -224,6 +224,10 @@
    outline-offset: 2px;
 }
 
+.leaflet-tooltip-pane {
+   z-index: 1100;
+}
+
 .map-tooltip {
    display: grid;
    gap: 3px;

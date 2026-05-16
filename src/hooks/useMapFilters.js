@@ -27,7 +27,7 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
          ...pipelineCollection,
          features: pipelineCollection.features.filter(item => {
             const props = item.properties;
-            return matchesPipelineRelation(props.relation_type, selectedRelation) && matchesPipelineGas(props.gas_quality, selectedGasType) && pipelineMatchesSearch(item, query, hasActiveSearch);
+            return matchesPipelineRelation(props.oge_role, selectedRelation) && matchesPipelineGas(props.gas_quality, selectedGasType) && pipelineMatchesSearch(item, query, hasActiveSearch);
          })
       };
    }, [hasActiveSearch, pipelineCollection, query, selectedGasType, selectedRelation]);

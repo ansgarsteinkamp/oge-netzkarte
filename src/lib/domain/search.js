@@ -1,4 +1,4 @@
-import { cleanName, mainDirectionLabel } from "./formatters.js";
+import { cleanName, gasQualityLabel, mainDirectionLabel, pipelineStatusExceptionLabel, relationLabel } from "./formatters.js";
 import { normalize } from "./text.js";
 
 const MIN_SEARCH_LENGTH = 2;
@@ -11,7 +11,19 @@ export const pipelineMatchesSearch = (feature, query, hasActiveSearch) => {
    if (!hasActiveSearch) return true;
 
    const props = feature.properties;
-   return [props.id, props.name, props.route_label, props.operator, props.source_operator, ...(props.owners ?? []), ...(props.co_owners ?? []), props.gas_quality]
+   return [
+      props.id,
+      props.name,
+      props.line_name,
+      props.system_id,
+      props.operator,
+      props.source,
+      props.gas_quality,
+      gasQualityLabel(props.gas_quality),
+      pipelineStatusExceptionLabel(props.status),
+      props.oge_role,
+      relationLabel(props.oge_role)
+   ]
       .map(normalize)
       .some(value => value.includes(query));
 };

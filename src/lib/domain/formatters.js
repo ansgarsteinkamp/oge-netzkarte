@@ -1,21 +1,25 @@
-import { RELATION_LABELS } from "./constants.js";
-
-const formatNumber = (value, digits = 1) => (Number.isFinite(value) ? value.toLocaleString("de-DE", { maximumFractionDigits: digits }) : "unbekannt");
-
-const GENERIC_ROUTE_LABELS = {
-   "Joint operator": "Gemeinsam",
-   "OGE direct": "OGE direkt"
-};
-
-export const formatValue = (value, suffix = "") => (value === null || value === undefined || value === "" ? "unbekannt" : `${formatNumber(value)}${suffix}`);
+import { PIPELINE_GAS_LABELS, PIPELINE_STATUS_LABELS, RELATION_DETAIL_DESCRIPTIONS, RELATION_LABELS } from "./constants.js";
 
 export const relationLabel = value => RELATION_LABELS[value] ?? value;
 
-export const routeDisplayLabel = props => GENERIC_ROUTE_LABELS[props.route_label] ?? props.route_label ?? relationLabel(props.relation_type);
+export const relationDetailDescription = value => RELATION_DETAIL_DESCRIPTIONS[value] ?? relationLabel(value);
+
+export const gasQualityLabel = value => PIPELINE_GAS_LABELS[value] ?? value ?? "unbekannt";
+
+const pipelineStatusLabel = value => PIPELINE_STATUS_LABELS[value] ?? value ?? "unbekannt";
+
+const isDefaultPipelineStatus = value => value === "operating";
+
+export const pipelineStatusExceptionLabel = value => (isDefaultPipelineStatus(value) ? null : pipelineStatusLabel(value));
+
+export const operatorReferenceLabel = role => {
+   if (role === "operator" || role === "owned_affiliate") return "Betreiber";
+   return "Betreiber/Partner";
+};
 
 export const cleanName = featureLike => {
    const props = featureLike.properties ?? featureLike;
-   return props.route_label ? routeDisplayLabel(props) : props.name || props.id || "Leitung";
+   return props.line_name || props.name || props.id || "Leitung";
 };
 
 export const pointTypeLabel = value => (value === "NKP-GÜ" ? "GÜP" : value === "NKP-MAP" ? "MAP" : value);

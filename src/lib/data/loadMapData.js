@@ -2,7 +2,7 @@ import { stripBom } from "../domain/text.js";
 
 const DATA_FILES = {
    points: "data/punkte.json",
-   pipelines: "data/leitungsverlaeufe.geojson",
+   pipelines: "data/leitungen_v2.geojson",
    countries: "data/countries_v2.geojson"
 };
 

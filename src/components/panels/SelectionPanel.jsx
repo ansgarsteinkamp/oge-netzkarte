@@ -1,11 +1,11 @@
 import { X } from "lucide-react";
 
 import TooltipIconButton from "@/components/TooltipIconButton";
-import { cleanName, formatValue, mainDirectionLabel, pointTypeLabel, relationLabel } from "@/lib/domain/formatters";
+import { cleanName, gasQualityLabel, mainDirectionLabel, operatorReferenceLabel, pipelineStatusExceptionLabel, pointTypeLabel, relationDetailDescription, relationLabel } from "@/lib/domain/formatters";
 
 function DetailRow({ label, value }) {
    return (
-      <div className="grid min-h-9 grid-cols-[100px_minmax(0,1fr)] gap-2.5 border-b border-border/70 py-2 text-xs max-sm:grid-cols-1 max-sm:gap-1">
+      <div className="grid min-h-9 grid-cols-[minmax(96px,0.42fr)_minmax(0,1fr)] gap-2.5 border-b border-border/70 py-2 text-xs @max-[340px]:grid-cols-1 @max-[340px]:gap-1">
          <span className="text-muted-foreground">{label}</span>
          <strong className="min-w-0 font-normal break-words text-card-foreground">{value}</strong>
       </div>
@@ -17,7 +17,7 @@ const formatCoordinate = value => (Number.isFinite(value) ? value.toLocaleString
 export default function SelectionPanel({ selection, onClose }) {
    if (!selection) {
       return (
-         <aside className="relative min-h-44 flex-none border border-border bg-muted/75 p-4 text-muted-foreground" aria-labelledby="selection-panel-title">
+         <aside className="@container relative min-h-44 flex-none border border-border bg-muted/75 p-4 text-muted-foreground" aria-labelledby="selection-panel-title">
             <div>
                <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">Auswahl</p>
                <h2 id="selection-panel-title" className="mt-1 mb-2 text-base leading-snug font-medium text-card-foreground">Keine Auswahl</h2>
@@ -30,7 +30,7 @@ export default function SelectionPanel({ selection, onClose }) {
       const point = selection.item;
 
       return (
-         <aside className="relative flex-none border border-border bg-muted/75 p-4" aria-labelledby="selection-panel-title" aria-live="polite">
+         <aside className="@container relative flex-none border border-border bg-muted/75 p-4" aria-labelledby="selection-panel-title" aria-live="polite">
             <TooltipIconButton label="Auswahl schließen" onClick={onClose} className="absolute top-3 right-3 size-8">
                <X aria-hidden="true" className="size-4" />
             </TooltipIconButton>
@@ -60,27 +60,25 @@ export default function SelectionPanel({ selection, onClose }) {
    }
 
    const props = selection.item.properties;
+   const status = pipelineStatusExceptionLabel(props.status);
 
    return (
-      <aside className="relative flex-none border border-border bg-muted/75 p-4" aria-labelledby="selection-panel-title" aria-live="polite">
+      <aside className="@container relative flex-none border border-border bg-muted/75 p-4" aria-labelledby="selection-panel-title" aria-live="polite">
          <TooltipIconButton label="Auswahl schließen" onClick={onClose} className="absolute top-3 right-3 size-8">
             <X aria-hidden="true" className="size-4" />
          </TooltipIconButton>
          <div className="grid gap-1 pr-8">
-            <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">{relationLabel(props.relation_type)}</p>
+            <p className="m-0 text-[0.72rem] font-medium text-primary uppercase">{relationLabel(props.oge_role)}</p>
             <h2 id="selection-panel-title" className="m-0 text-base leading-snug font-medium text-card-foreground">{cleanName(selection.item)}</h2>
          </div>
          <div className="mt-4 grid border-t border-border">
-            <DetailRow label="Operator" value={props.operator ?? "unbekannt"} />
-            <DetailRow label="Eigentümer" value={(props.owners ?? []).join(", ") || "unbekannt"} />
-            <DetailRow label="Länge" value={formatValue(props.length_km, " km")} />
-            <DetailRow label="Durchmesser" value={formatValue(props.diameter_mm, " mm")} />
-            <DetailRow label="Druck" value={formatValue(props.pressure_bar, " bar")} />
-            <DetailRow label="Kapazität (Modell)" value={formatValue(props.capacity_m_m3_per_d, " Mio. m³/d")} />
-            <DetailRow label="Gasqualität" value={props.gas_quality ?? "unbekannt"} />
-            <DetailRow label="Quelle" value={`${props.source ?? "unbekannt"} (${props.source_license ?? "Lizenz unbekannt"})`} />
+            {props.name !== props.line_name && <DetailRow label="Abschnitt" value={props.name ?? "unbekannt"} />}
+            <DetailRow label="OGE-Bezug" value={relationDetailDescription(props.oge_role) ?? "unbekannt"} />
+            {status && <DetailRow label="Status" value={status} />}
+            <DetailRow label="Gasqualität" value={gasQualityLabel(props.gas_quality)} />
+            <DetailRow label={operatorReferenceLabel(props.oge_role)} value={props.operator ?? "unbekannt"} />
+            <DetailRow label="Quelle" value={props.source ?? "unbekannt"} />
          </div>
-         {props.participation_note && <p className="mt-3 border-l-3 border-primary bg-accent p-2.5 text-xs leading-relaxed text-muted-foreground">{props.participation_note}</p>}
       </aside>
    );
 }

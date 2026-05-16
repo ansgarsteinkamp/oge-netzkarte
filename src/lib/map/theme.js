@@ -18,10 +18,10 @@ export const THEME = {
 };
 
 export const RELATION_COLORS = {
-   direct_operator: THEME.primary,
+   operator: THEME.primary,
    joint_operator: "#e5e5e2",
-   joint_venture: "#86b7a7",
-   oge_owned_affiliate: "#86b7a7"
+   co_owned_affiliate: "#86b7a7",
+   owned_affiliate: "#d2a766"
 };
 
 export const POINT_COLORS = {

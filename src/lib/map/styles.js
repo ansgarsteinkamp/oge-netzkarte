@@ -1,15 +1,15 @@
-import { OGE_PARTICIPATION_RELATION_TYPES } from "../domain/constants.js";
+import { OGE_AFFILIATE_ROLES } from "../domain/constants.js";
 import { PARTICIPATION_LINE_PATTERN, RELATION_COLORS, THEME } from "./theme.js";
 
-const DASHED_RELATION_TYPES = new Set(OGE_PARTICIPATION_RELATION_TYPES);
+const DASHED_ROLES = new Set(OGE_AFFILIATE_ROLES);
 
 export const pipelineStyle = item => {
    const props = item.properties;
    return {
-      color: RELATION_COLORS[props.relation_type] ?? THEME.foreground,
+      color: RELATION_COLORS[props.oge_role] ?? THEME.foreground,
       weight: 4.2,
       opacity: 0.94,
-      dashArray: DASHED_RELATION_TYPES.has(props.relation_type) ? PARTICIPATION_LINE_PATTERN.dashArray : null,
+      dashArray: DASHED_ROLES.has(props.oge_role) ? PARTICIPATION_LINE_PATTERN.dashArray : null,
       lineCap: "round",
       lineJoin: "round"
    };

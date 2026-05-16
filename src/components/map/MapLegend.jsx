@@ -1,16 +1,18 @@
-import { pointTypeLabel, relationLabel } from "@/lib/domain/formatters";
+import { RELATION_FILTER_LABELS } from "@/lib/domain/constants";
+import { pointTypeLabel } from "@/lib/domain/formatters";
 import { PARTICIPATION_LINE_PATTERN, POINT_COLORS, RELATION_COLORS } from "@/lib/map/theme";
 
-const participationLineBackground = `repeating-linear-gradient(
+const dashedLineBackground = color => `repeating-linear-gradient(
    90deg,
-   ${RELATION_COLORS.joint_venture} 0 ${PARTICIPATION_LINE_PATTERN.dash}px,
+   ${color} 0 ${PARTICIPATION_LINE_PATTERN.dash}px,
    transparent ${PARTICIPATION_LINE_PATTERN.dash}px ${PARTICIPATION_LINE_PATTERN.dash + PARTICIPATION_LINE_PATTERN.gap}px
 )`;
 
 const entries = [
-   { label: relationLabel("direct_operator"), kind: "line", style: { background: RELATION_COLORS.direct_operator } },
-   { label: relationLabel("joint_operator"), kind: "line", style: { background: RELATION_COLORS.joint_operator } },
-   { label: relationLabel("joint_venture"), kind: "line", style: { background: participationLineBackground } },
+   { label: RELATION_FILTER_LABELS.operator, kind: "line", style: { background: RELATION_COLORS.operator } },
+   { label: RELATION_FILTER_LABELS.joint_operator, kind: "line", style: { background: RELATION_COLORS.joint_operator } },
+   { label: RELATION_FILTER_LABELS.co_owned_affiliate, kind: "line", style: { background: dashedLineBackground(RELATION_COLORS.co_owned_affiliate) } },
+   { label: RELATION_FILTER_LABELS.owned_affiliate, kind: "line", style: { background: dashedLineBackground(RELATION_COLORS.owned_affiliate) } },
    { label: pointTypeLabel("Speicher"), kind: "dot", style: { background: POINT_COLORS.Speicher } },
    { label: pointTypeLabel("NKP-GÜ"), kind: "dot", style: { background: POINT_COLORS["NKP-GÜ"] } },
    { label: pointTypeLabel("NKP-MAP"), kind: "dot", style: { background: POINT_COLORS["NKP-MAP"] } },

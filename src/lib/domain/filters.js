@@ -1,9 +1,4 @@
-import { ALL_VALUE, RELATION_FILTERS } from "./constants.js";
-
-const PIPELINE_GAS_FILTER_VALUES = {
-   "H-Gas": "H-Gas",
-   "unbekannt / L-Gas-nahe Rohdatenkodierung": "L-Gas"
-};
+import { ALL_VALUE, PIPELINE_GAS_FILTER_VALUES, RELATION_FILTERS } from "./constants.js";
 
 const getPipelineGasFilterValue = value => PIPELINE_GAS_FILTER_VALUES[value] ?? value;
 

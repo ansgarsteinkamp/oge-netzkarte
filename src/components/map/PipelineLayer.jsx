@@ -1,27 +1,29 @@
 import { GeoJSON, Pane } from "react-leaflet";
 
-import { cleanName, relationLabel } from "@/lib/domain/formatters";
+import { cleanName, gasQualityLabel, pipelineStatusExceptionLabel, relationLabel } from "@/lib/domain/formatters";
 import { pipelineStyle } from "@/lib/map/styles";
 
 const createPipelineTooltip = item => {
-   const props = item.properties;
-   const container = document.createElement("div");
    const title = document.createElement("strong");
-   const relation = document.createElement("span");
-   const operator = document.createElement("span");
-
    title.textContent = cleanName(item);
-   relation.textContent = relationLabel(props.relation_type) ?? "Beziehung unbekannt";
-   operator.textContent = props.operator ?? "Operator unbekannt";
-
-   container.append(title, relation, operator);
-   return container;
+   return title;
 };
 
 export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, visible }) {
    const bindPipeline = (item, layer) => {
       const activate = () => onSelectPipeline(item);
-      const label = `Leitung ${cleanName(item)} auswählen`;
+      const props = item.properties;
+      const status = pipelineStatusExceptionLabel(props.status);
+      const label = [
+         `Leitung ${cleanName(item)} auswählen`,
+         props.name !== props.line_name ? `Abschnitt ${props.name}` : null,
+         `ID ${props.id}`,
+         relationLabel(props.oge_role),
+         gasQualityLabel(props.gas_quality),
+         status
+      ]
+         .filter(Boolean)
+         .join(", ");
       let pipelineElement = null;
       const activateFromKeyboard = event => {
          if (event.key !== "Enter" && event.key !== " ") return;
@@ -32,6 +34,7 @@ export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, v
       layer.bindTooltip(createPipelineTooltip(item), {
          className: "map-tooltip",
          direction: "top",
+         offset: [0, -6],
          pane: "tooltipPane",
          sticky: true
       });
