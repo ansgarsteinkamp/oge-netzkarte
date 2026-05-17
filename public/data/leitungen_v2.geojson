@@ -19205,7 +19205,7 @@
       "type": "Feature",
       "properties": {
         "id": "oge-wkl-ch4-wilhelmshaven-kuestenlinie",
-        "name": "WKL CH4 Wilhelmshaven-Kuestenlinie",
+        "name": "WKL CH4 Wilhelmshaven-Küstenlinie",
         "operator": "Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "approved",
@@ -19626,7 +19626,7 @@
       "id": "osm-way-1005026764",
       "properties": {
         "id": "osm-way-1005026764",
-        "name": "Sueddeutsche Erdgastransportleitung 423/1",
+        "name": "Süddeutsche Erdgastransportleitung 423/1",
         "operator": "Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
@@ -19902,7 +19902,7 @@
       "id": "osm-way-1005042635",
       "properties": {
         "id": "osm-way-1005042635",
-        "name": "Sueddeutsche Erdgastransportleitung 23/2",
+        "name": "Süddeutsche Erdgastransportleitung 23/2",
         "operator": "Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
@@ -20014,7 +20014,7 @@
       "id": "osm-way-1005042636",
       "properties": {
         "id": "osm-way-1005042636",
-        "name": "Sueddeutsche Erdgastransportleitung 423",
+        "name": "Süddeutsche Erdgastransportleitung 423",
         "operator": "Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
@@ -24054,7 +24054,7 @@
       "id": "osm-way-1343787988",
       "properties": {
         "id": "osm-way-1343787988",
-        "name": "Sueddeutsche Erdgastransportleitung 23/5",
+        "name": "Süddeutsche Erdgastransportleitung 23/5",
         "operator": "Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
@@ -28182,7 +28182,7 @@
       "id": "osm-way-957143572",
       "properties": {
         "id": "osm-way-957143572",
-        "name": "Sueddeutsche Erdgastransportleitung 23",
+        "name": "Süddeutsche Erdgastransportleitung 23",
         "operator": "Open Grid Europe",
         "gas_quality": "h_gas",
         "status": "operating",
