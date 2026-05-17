@@ -34,7 +34,7 @@
     "lat": 50.817,
     "lon": 6.022,
     "position_method": "single",
-    "description": "Strategischer Grenzübergangspunkt an der deutsch-niederländischen Grenze und nördlicher Kopfpunkt der TENP-Leitungsachse. Der dem VIP TTF-THE-H zugeordnete Knoten verbindet das OGE-Netz mit dem niederländischen GTS-System und ist für bidirektionale Import- und Exportflüsse in Nordwesteuropa relevant.",
+    "description": "Strategischer Grenzübergangspunkt an der deutsch-niederländischen Grenze und ein nördlicher Anschluss der TENP-Leitungsachse. Der OGE-Punkt ist dem kommerziellen VIP TTF-THE-H zugeordnet und verbindet das OGE-Netz mit dem niederländischen GTS-System.",
     "points": [
       {
         "location_id": "L1000896",
@@ -57,7 +57,7 @@
     "lat": 47.9186,
     "lon": 12.4137,
     "position_method": "single",
-    "description": "Großer Porenspeicherkomplex (Breitbrunn/Eggstätt) im südöstlichen Bayern, der zur regionalen und überregionalen Versorgungssicherheit beiträgt. Für diese Anlage ist netzseitig eine Stilllegung zum 31. März 2027 beantragt, bis dahin bleibt sie ein relevanter Flexibilitätsbezug im THE-Marktgebiet.",
+    "description": "Großer Porenspeicherkomplex (Breitbrunn/Eggstätt) im südöstlichen Bayern, der zur regionalen und überregionalen Versorgungssicherheit beiträgt. Uniper Energy Storage hat bei der Bundesnetzagentur die Genehmigung zur Stilllegung des Speichers mit Wirkung zum 31. März 2027 beantragt; bis dahin bleibt er ein relevanter Flexibilitätsbezug im THE-Marktgebiet.",
     "points": [
       {
         "location_id": "L1001107",
@@ -156,7 +156,7 @@
     "lat": 52.4297,
     "lon": 8.3546,
     "position_method": "single",
-    "description": "Direkte Anbindung an die Nord-West-Anbindungsleitung (NOWAL) am Standort Drohne. Dieser innerdeutsche H-Gas-Knotenpunkt koppelt das OGE-System physisch an das Netz der GASCADE.",
+    "description": "Physischer OGE/GASCADE-Kopplungspunkt am NOWAL-Endpunkt Drohne. Drohne NOWAL war historisch ein innerdeutscher Marktgebietsübergangspunkt; seit der Zusammenlegung zu Trading Hub Europe 2021 ist der Punkt öffentlich nicht mehr als eigenständiger buchbarer Connection Point ausgewiesen.",
     "points": [
       {
         "location_id": "L2001097",
@@ -248,7 +248,7 @@
     "lat": 52.39,
     "lon": 7.2548,
     "position_method": "single",
-    "description": "Physischer L-Gas-Kopplungspunkt im nordwestdeutschen Leitungsnetz am Standort Berge. Relevant für die großräumige L-Gas-Verteilung und das operative Management im Rahmen der fortschreitenden Marktraumumstellung auf H-Gas.",
+    "description": "Physischer L-Gas-Kopplungspunkt Emsbüren RG im nordwestdeutschen Leitungsnetz. Relevant für die großräumige L-Gas-Verteilung und das operative Management im Rahmen der fortschreitenden Marktraumumstellung auf H-Gas.",
     "points": [
       {
         "location_id": "L1001266",
@@ -315,7 +315,7 @@
     "lat": 50.7215,
     "lon": 6.1161,
     "position_method": "single",
-    "description": "Wichtiger Knotenpunkt auf der TENP-Achse zur Kopplung mit dem belgischen Fluxys-Netz (VIP THE-ZTP). Dient dem bidirektionalen H-Gas-Transit zwischen Deutschland und dem BeLux-Markt sowie der Anbindung an westeuropäische LNG-Terminals.",
+    "description": "Physischer OGE-Grenzpunkt auf der TENP-Achse zur Kopplung mit dem belgischen Fluxys-Netz; kommerziell ist Eynatten-Raeren dem VIP THE-ZTP zugeordnet. Der Punkt ist relevant für bidirektionale H-Gas-Flüsse zwischen THE und ZTP/BeLux sowie für LNG-bezogene Importpfade aus Westeuropa.",
     "points": [
       {
         "location_id": "L1000915",
@@ -338,12 +338,12 @@
     "lat": 49.746,
     "lon": 8.5535,
     "position_method": "single",
-    "description": "Wichtiger Kreuzungspunkt in Südhessen. Hier ist die west-östlich verlaufende MEGAL-Pipeline der OGE an das vorwiegend nord-südlich ausgerichtete MIDAL-System der GASCADE angebunden, was die regionale Verteilung im Raum Rhein-Main/Neckar sichert.",
+    "description": "Wichtiger innerdeutscher Kopplungspunkt in Südhessen. Gernsheim Midal GRTD verbindet das MIDAL-System der GASCADE mit dem MEGAL-System der heutigen NaTran Deutschland und unterstützt den Austausch zwischen Nord-Süd- und Ost-West-Achsen im Raum Rhein-Main/Neckar.",
     "points": [
       {
         "location_id": "L1001128",
-        "label": "Gernsheim MEGAL",
-        "eic": "37Z0OGE357000006",
+        "label": "Gernsheim Midal GRTD",
+        "eic": "37Z000000006481P",
         "lat": 49.746,
         "lon": 8.5535
       }
@@ -398,7 +398,7 @@
     "lat": 52.1698,
     "lon": 7.0055,
     "position_method": "mean",
-    "description": "L-Gas-Spezifischer Bereich des Kavernenfelds Gronau-Epe. Einer der wichtigsten verbleibenden Flexibilitätsknoten für die Aufrechterhaltung der auslaufenden L-Gas-Versorgung in Westdeutschland und den Niederlanden.",
+    "description": "L-Gas-spezifischer Bereich des Kavernenfelds Gronau-Epe (Epe L und Gronau-Epe L2). Einer der wichtigsten verbleibenden Flexibilitätsknoten für die Aufrechterhaltung der auslaufenden L-Gas-Versorgung in Westdeutschland und den Niederlanden.",
     "points": [
       {
         "location_id": "L1001138",
@@ -541,7 +541,7 @@
     "lat": 49.1256,
     "lon": 7.2803,
     "position_method": "single",
-    "description": "Westlicher Endpunkt der MEGAL-Pipeline und Grenzübergang zum französischen GRTgaz-System bei Obergailbach (VIP France - Germany). Der Punkt ist physisch bidirektional gerüstet, wodurch neben dem traditionellen Export nach Frankreich auch direkte Importflüsse nach Süddeutschland möglich sind.",
+    "description": "Westlicher Endpunkt der MEGAL-Pipeline und physischer Grenzübergang zum französischen GRTgaz-System bei Obergailbach; kommerziell ist Medelsheim dem VIP France - Germany zugeordnet. Der Punkt ist physisch bidirektional gerüstet, wodurch neben dem traditionellen Export nach Frankreich auch direkte Importflüsse nach Süddeutschland möglich sind.",
     "points": [
       {
         "location_id": "L1000955",
@@ -587,7 +587,7 @@
     "lat": 53.2061,
     "lon": 7.2329,
     "position_method": "single",
-    "description": "Großer Grenzübergangspunkt (VIP TTF-THE-H) in Ostfriesland zur Kopplung mit dem niederländischen GTS-Netz. Eng verknüpft mit der Bunde-Etzel-Pipeline (BEP) fungiert der Knoten als Hauptschlagader für Importe aus den Niederlanden und internationalen Transit.",
+    "description": "Physischer H-Gas-Grenzpunkt Oude Statenzijl/Bunde des OGE-Netzes zum niederländischen GTS-System; der Punkt ist dem kommerziellen VIP TTF-THE-H zugeordnet. Über die Bunde-Etzel-Pipeline (BEP) ist der Knoten mit dem Speicher- und Leitungsraum Etzel verbunden und bleibt für Import-, Export- und Transitlagen in Nordwesteuropa relevant.",
     "points": [
       {
         "location_id": "L1000920",
@@ -679,7 +679,7 @@
     "lat": 50.881,
     "lon": 10.06,
     "position_method": "single",
-    "description": "Innerdeutsche Systemkopplung an der Grenze zwischen Hessen und Thüringen. Physischer Übergabepunkt für H-Gas zwischen dem OGE-Netz und der Ferngas-Leitung FGL 401.",
+    "description": "Innerdeutsche Systemkopplung an der Grenze zwischen Hessen und Thüringen. Physischer Übergabepunkt für H-Gas zwischen dem OGE-Netz und der Ferngas-Leitung EGL 401.",
     "points": [
       {
         "location_id": "L2000746",
@@ -725,7 +725,7 @@
     "lat": 49.6582,
     "lon": 12.5357,
     "position_method": "single",
-    "description": "Bidirektionaler Grenzübergangspunkt (VIP Waidhaus) zum tschechischen NET4GAS-System und östlicher Startpunkt der MEGAL-Nord-Pipeline. Als einer der kapazitätsstärksten Netzknoten Europas ist Waidhaus die zentrale Hauptschlagader für Gasflüsse aus Osteuropa in den süd- und westeuropäischen Raum.",
+    "description": "Bidirektionaler Grenzübergangspunkt (VIP Waidhaus) zum tschechischen NET4GAS-System und östlicher Startpunkt der MEGAL-Nord-Pipeline. Historisch war Waidhaus eine zentrale Hauptschlagader für Gasflüsse aus Osteuropa; seit 2022 hat sich die Rolle durch die Neuordnung der europäischen Gasflüsse deutlich verändert.",
     "points": [
       {
         "location_id": "L1000488",
@@ -777,13 +777,6 @@
         "location_id": "L1000945",
         "label": "Wardenburg",
         "eic": "37Z000000006389D",
-        "lat": 53.0743,
-        "lon": 8.1719
-      },
-      {
-        "location_id": "L2000896",
-        "label": "Wardenburg GUD",
-        "eic": "37Z0OGE40200000Z",
         "lat": 53.0743,
         "lon": 8.1719
       }
