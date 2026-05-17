@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useMap } from "react-leaflet";
 
+import { lineStringToLatLngs, toLatLng } from "@/lib/domain/coordinates";
 import { INITIAL_BOUNDS } from "@/lib/map/bounds";
+
+const CAMERA_PADDING = [48, 48];
+const SEARCH_MAX_ZOOM = 8;
+const POINT_MAX_ZOOM = 10;
 
 function FitBounds({ resetKey }) {
    const map = useMap();
@@ -13,45 +18,50 @@ function FitBounds({ resetKey }) {
    return null;
 }
 
-function FitSearchResults({ bounds }) {
+function FitSearchResults({ bounds, disabled }) {
    const map = useMap();
 
    useEffect(() => {
+      if (disabled) return;
       if (!bounds.length) return;
 
       if (bounds.length === 1) {
-         map.setView(bounds[0], Math.max(map.getZoom(), 8), { animate: true });
+         map.setView(bounds[0], SEARCH_MAX_ZOOM, { animate: true });
       } else {
-         map.fitBounds(bounds, { animate: true, maxZoom: 8, padding: [48, 48] });
+         map.fitBounds(bounds, { animate: true, maxZoom: SEARCH_MAX_ZOOM, padding: CAMERA_PADDING });
       }
-   }, [bounds, map]);
+   }, [bounds, disabled, map]);
 
    return null;
 }
 
-function FitSelection({ pointOffsets, selection }) {
+function FitSelection({ selection }) {
    const map = useMap();
 
    useEffect(() => {
       if (!selection) return;
 
       if (selection.kind === "point") {
-         const center = pointOffsets.get(selection.item.id) ?? [selection.item.latitude, selection.item.longitude];
-         map.setView(center, Math.max(map.getZoom(), 8), { animate: true });
+         if (selection.technicalPoint) {
+            map.setView(toLatLng(selection.technicalPoint), Math.max(map.getZoom(), POINT_MAX_ZOOM), { animate: false });
+            return;
+         }
+
+         map.setView(toLatLng(selection.item), Math.max(map.getZoom(), POINT_MAX_ZOOM), { animate: false });
       } else {
-         map.fitBounds(selection.item.geometry.coordinates.map(([longitude, latitude]) => [latitude, longitude]), { animate: true, maxZoom: 8, padding: [48, 48] });
+         map.fitBounds(lineStringToLatLngs(selection.item), { animate: true, maxZoom: SEARCH_MAX_ZOOM, padding: CAMERA_PADDING });
       }
-   }, [map, pointOffsets, selection]);
+   }, [map, selection]);
 
    return null;
 }
 
-export default function MapCameraEffects({ pointOffsets, resetViewKey, searchBounds, selection }) {
+export default function MapCameraEffects({ resetViewKey, searchBounds, selection }) {
    return (
       <>
          <FitBounds resetKey={resetViewKey} />
-         <FitSearchResults bounds={searchBounds} />
-         <FitSelection pointOffsets={pointOffsets} selection={selection} />
+         <FitSearchResults bounds={searchBounds} disabled={!!selection} />
+         <FitSelection selection={selection} />
       </>
    );
 }

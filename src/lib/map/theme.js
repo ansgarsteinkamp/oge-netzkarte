@@ -24,11 +24,11 @@ export const RELATION_COLORS = {
    owned_affiliate: "#d2a766"
 };
 
-export const POINT_COLORS = {
-   "NKP-GÜ": "#d97757",
-   "NKP-MAP": "#e5e5e2",
-   Speicher: "#86b7a7",
-   LNG: "#d2a766"
+export const POINT_CATEGORY_COLORS = {
+   cross_border_ip: "#d97757",
+   domestic_ip: "#e5e5e2",
+   storage: "#86b7a7",
+   lng: "#d2a766"
 };
 
 const PARTICIPATION_LINE_DASH = 7;

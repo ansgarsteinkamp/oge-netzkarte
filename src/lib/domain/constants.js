@@ -35,23 +35,37 @@ export const RELATION_FILTERS = [
    { value: "owned_affiliate", label: RELATION_FILTER_LABELS.owned_affiliate, description: RELATION_DESCRIPTIONS.owned_affiliate, relationTypes: ["owned_affiliate"] }
 ];
 
-export const POINT_TYPE_ORDER = ["NKP-GÜ", "NKP-MAP", "Speicher", "LNG"];
-export const GAS_TYPE_ORDER = ["H-Gas", "L-Gas"];
-export const DEFAULT_GAS_TYPE = "H-Gas";
-export const MAIN_DIRECTION_ORDER = ["Einspeisung", "Ausspeisung", null];
+export const POINT_CATEGORY_LABELS = {
+   cross_border_ip: "Grenzübergang",
+   domestic_ip: "Netzkopplung",
+   storage: "Speicher",
+   lng: "LNG"
+};
+export const POINT_CATEGORY_ORDER = ["cross_border_ip", "domestic_ip", "storage", "lng"];
+
+export const GAS_QUALITY_LABELS = {
+   H: "H-Gas",
+   L: "L-Gas"
+};
+export const GAS_QUALITY_ORDER = ["H", "L"];
+export const DEFAULT_GAS_QUALITY = "H";
+
 export const PIPELINE_GAS_LABELS = {
    h_gas: "H-Gas",
    l_gas: "L-Gas"
 };
 export const PIPELINE_GAS_FILTER_VALUES = {
-   h_gas: "H-Gas",
-   l_gas: "L-Gas"
+   h_gas: "H",
+   l_gas: "L"
 };
 export const PIPELINE_STATUS_LABELS = {
    operating: "In Betrieb",
    under_construction: "Im Bau",
    approved: "Genehmigt"
 };
+
+export const VALID_POINT_CATEGORIES = new Set(Object.keys(POINT_CATEGORY_LABELS));
+export const VALID_POINT_GAS_QUALITIES = new Set(GAS_QUALITY_ORDER);
 export const VALID_PIPELINE_GAS_QUALITIES = new Set(Object.keys(PIPELINE_GAS_LABELS));
 export const VALID_PIPELINE_STATUSES = new Set(Object.keys(PIPELINE_STATUS_LABELS));
 

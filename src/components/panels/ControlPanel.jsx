@@ -1,16 +1,18 @@
-import { Check, ChevronsUpDown, Flame, MapPin, RotateCcw, Route, Search, X } from "lucide-react";
+import { useRef } from "react";
+import { Check, Flame, MapPin, RotateCcw, Route, Search, X } from "lucide-react";
 
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { gasQualityLabel, mainDirectionLabel, pipelineStatusExceptionLabel, pointTypeLabel } from "@/lib/domain/formatters";
+import { gasQualityLabel, pipelineStatusExceptionLabel } from "@/lib/domain/formatters";
+import { pointResultMeta } from "@/lib/domain/search";
 import { cn } from "@/lib/utils";
 
 function SegmentGroup({ disabled = false, label, icon: Icon, options, value, onChange }) {
    return (
-      <section className={cn("flex flex-col gap-2 border-t border-border pt-4", disabled && "opacity-45")} aria-disabled={disabled || undefined} aria-label={label}>
-         <h2 className="mb-0 flex items-center gap-2 text-sm font-medium text-card-foreground">
-            <Icon aria-hidden="true" className="size-4" /> {label}
+      <section className={cn("flex flex-col gap-2 border-t border-border pt-3", disabled && "opacity-45")} aria-disabled={disabled || undefined} aria-label={label}>
+         <h2 className="mb-0 flex items-center gap-1.5 text-xs font-medium text-card-foreground">
+            <Icon aria-hidden="true" className="size-3.5" /> {label}
          </h2>
-         <div className="flex flex-wrap gap-2" role="group" aria-label={label}>
+         <div className="flex flex-wrap gap-1.5" role="group" aria-label={label}>
             {options.map(option => {
                const active = value === option.value;
 
@@ -19,7 +21,7 @@ function SegmentGroup({ disabled = false, label, icon: Icon, options, value, onC
                      aria-label={`${label}: ${option.label}`}
                      aria-pressed={active}
                      className={cn(
-                        "inline-flex min-h-8 items-center justify-center gap-1.5 rounded-md border border-border bg-muted px-2.5 text-[0.72rem] text-foreground transition-colors hover:border-primary/70 hover:bg-primary/20 hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:bg-muted disabled:hover:text-foreground max-xl:min-h-10",
+                        "inline-flex min-h-8 items-center justify-center gap-1.5 rounded-md border border-border bg-muted px-2.5 text-[0.72rem] text-foreground transition-colors hover:border-primary/70 hover:bg-primary/20 hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none disabled:cursor-not-allowed disabled:hover:border-border disabled:hover:bg-muted disabled:hover:text-foreground max-lg:min-h-10",
                         active && "border-primary/80 bg-primary/15 text-card-foreground"
                      )}
                      disabled={disabled}
@@ -57,7 +59,7 @@ function LayerToggle({ active, children, onClick }) {
    return (
       <button
          aria-pressed={active}
-         className="inline-flex min-w-0 min-h-9 items-center justify-between gap-2 rounded-md border border-border bg-muted px-2.5 text-[0.72rem] text-foreground transition-colors hover:border-primary/70 hover:bg-primary/20 hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none max-xl:min-h-10"
+         className="inline-flex min-w-0 min-h-9 items-center justify-between gap-2 rounded-md border border-border bg-muted px-2.5 text-[0.72rem] text-foreground transition-colors hover:border-primary/70 hover:bg-primary/20 hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none max-lg:min-h-10"
          onClick={onClick}
          type="button"
       >
@@ -72,7 +74,7 @@ function ResultItem({ result, onSelect }) {
    const item = result.item;
    const title = isPoint ? item.name : result.title;
    const meta = isPoint
-      ? `${item.id} · ${pointTypeLabel(item.point_type)} · ${mainDirectionLabel(item.direction)} · ${item.gas_type}`
+      ? pointResultMeta(item, result.match)
       : [
            item.properties.id,
            item.properties.name !== item.properties.line_name ? item.properties.name : null,
@@ -101,40 +103,44 @@ function ResultItem({ result, onSelect }) {
 }
 
 export default function ControlPanel({
+   className,
    gasTypes,
    layerVisibility,
-   mainDirectionTypes,
    onLayerChange,
    onResetFilters,
    onSearchTermChange,
    onSelectResult,
-   pointTypes,
+   pointCategories,
    relationTypes,
    results,
    searchTerm,
    selectedGasType,
-   selectedMainDirection,
-   selectedPointType,
+   selectedPointCategory,
    selectedRelation,
    setSelectedGasType,
-   setSelectedMainDirection,
-   setSelectedPointType,
+   setSelectedPointCategory,
    setSelectedRelation
 }) {
+   const searchInputRef = useRef(null);
+
+   const clearSearch = () => {
+      onSearchTermChange("");
+      window.requestAnimationFrame(() => searchInputRef.current?.focus());
+   };
+
    return (
-      <aside className="flex min-h-0 flex-col gap-4 overflow-auto border border-border bg-muted/75 p-4 max-lg:order-2" aria-label="Filter und Treffer">
-         <section className="grid grid-cols-1 gap-2 3xs:grid-cols-2" aria-label="Kartenebenen">
+      <aside className={cn("flex min-h-0 flex-col gap-3 overflow-auto border border-border bg-muted/75 p-3.5", className)} aria-label="Filter und Treffer">
+         <section className="grid grid-cols-1 gap-1.5 3xs:grid-cols-2" aria-label="Kartenebenen">
             <LayerToggle active={layerVisibility.showPipelines} onClick={() => onLayerChange("showPipelines")}>Leitungen</LayerToggle>
             <LayerToggle active={layerVisibility.showPoints} onClick={() => onLayerChange("showPoints")}>Punkte</LayerToggle>
          </section>
 
-         <SegmentGroup disabled={!layerVisibility.showPoints} icon={MapPin} label="Punktart" value={selectedPointType} onChange={setSelectedPointType} options={pointTypes} />
-         <SegmentGroup disabled={!layerVisibility.showPoints} icon={ChevronsUpDown} label="Hauptrichtung" value={selectedMainDirection} onChange={setSelectedMainDirection} options={mainDirectionTypes} />
+         <SegmentGroup disabled={!layerVisibility.showPoints} icon={MapPin} label="Punktkategorie" value={selectedPointCategory} onChange={setSelectedPointCategory} options={pointCategories} />
          <SegmentGroup icon={Flame} label="Gasqualität" value={selectedGasType} onChange={setSelectedGasType} options={gasTypes} />
          <SegmentGroup disabled={!layerVisibility.showPipelines} icon={Route} label="Leitungsbezug" value={selectedRelation} onChange={setSelectedRelation} options={relationTypes} />
 
          <button
-            className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-border bg-muted px-3 text-xs font-medium text-foreground transition-colors hover:border-primary/70 hover:bg-primary/20 hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none"
+            className="inline-flex min-h-9 items-center justify-center gap-2 rounded-md border border-border/70 bg-transparent px-3 text-[0.72rem] font-medium text-foreground transition-colors hover:border-primary/70 hover:bg-muted hover:text-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none"
             onClick={onResetFilters}
             type="button"
          >
@@ -142,20 +148,21 @@ export default function ControlPanel({
             <span>Standardansicht</span>
          </button>
 
-         <label className="grid min-h-10 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2.5 rounded-md border border-border bg-popover px-3 text-muted-foreground focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">
-            <Search aria-hidden="true" className="size-4" />
+         <label className="grid min-h-9 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 rounded-md border border-border bg-field px-2.5 text-muted-foreground focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/25">
+            <Search aria-hidden="true" className="size-3.5" />
             <input
-               aria-label="Suche nach Punkt, ID, Leitung oder Betreiber/Partner"
+               aria-label="Suche nach Punkt, Leitung, Betreiber, EIC oder Location-ID"
+               ref={searchInputRef}
                value={searchTerm}
                onChange={event => onSearchTermChange(event.target.value)}
                placeholder="Suche"
                type="text"
-               className="min-w-0 border-0 bg-transparent text-sm text-popover-foreground outline-none placeholder:text-muted-foreground/70"
+               className="min-w-0 border-0 bg-transparent text-xs leading-5 text-popover-foreground outline-none placeholder:text-muted-foreground/65"
             />
             {searchTerm && (
                <button
                   className="inline-grid size-6 place-items-center rounded text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none"
-                  onClick={() => onSearchTermChange("")}
+                  onClick={clearSearch}
                   type="button"
                   aria-label="Suche löschen"
                >

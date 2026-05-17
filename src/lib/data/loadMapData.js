@@ -1,7 +1,7 @@
 import { stripBom } from "../domain/text.js";
 
 const DATA_FILES = {
-   points: "data/punkte.json",
+   points: "data/punkte_v2.json",
    pipelines: "data/leitungen_v2.geojson",
    countries: "data/countries_v2.geojson"
 };

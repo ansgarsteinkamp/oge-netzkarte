@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 
-import { ALL_VALUE, DEFAULT_GAS_TYPE } from "@/lib/domain/constants";
+import { ALL_VALUE, DEFAULT_GAS_QUALITY } from "@/lib/domain/constants";
+import { getPointBoundsLatLngs, lineStringToLatLngs } from "@/lib/domain/coordinates";
 import { buildFilterOptions } from "@/lib/domain/facets";
-import { matchesPipelineGas, matchesPipelineRelation } from "@/lib/domain/filters";
+import { matchesPipelineGas, matchesPipelineRelation, matchesPointGas } from "@/lib/domain/filters";
 import { pipelineMatchesSearch, getSearchQuery, isSearchActive, pointMatchesSearch, toResultItems } from "@/lib/domain/search";
 
 const initialLayerVisibility = {
@@ -10,12 +11,11 @@ const initialLayerVisibility = {
    showPoints: true
 };
 
-export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
+export function useMapFilters({ pipelineCollection, points }) {
    const [searchTerm, setSearchTerm] = useState("");
    const [selectedRelation, setSelectedRelation] = useState(ALL_VALUE);
-   const [selectedPointType, setSelectedPointType] = useState(ALL_VALUE);
-   const [selectedGasType, setSelectedGasType] = useState(DEFAULT_GAS_TYPE);
-   const [selectedMainDirection, setSelectedMainDirection] = useState(ALL_VALUE);
+   const [selectedPointCategory, setSelectedPointCategory] = useState(ALL_VALUE);
+   const [selectedGasType, setSelectedGasType] = useState(DEFAULT_GAS_QUALITY);
    const [layerVisibility, setLayerVisibility] = useState(initialLayerVisibility);
 
    const filterOptions = useMemo(() => buildFilterOptions({ points }), [points]);
@@ -34,13 +34,12 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
 
    const filteredPoints = useMemo(() => {
       return points.filter(point => {
-         const matchesType = selectedPointType === ALL_VALUE || point.point_type === selectedPointType;
-         const matchesMainDirection = selectedMainDirection === ALL_VALUE || point.direction === selectedMainDirection;
-         const matchesGas = point.gas_type === selectedGasType;
+         const matchesCategory = selectedPointCategory === ALL_VALUE || point.category === selectedPointCategory;
+         const matchesGas = matchesPointGas(point.gas_quality, selectedGasType);
 
-         return matchesType && matchesMainDirection && matchesGas && pointMatchesSearch(point, query, hasActiveSearch);
+         return matchesCategory && matchesGas && pointMatchesSearch(point, query, hasActiveSearch);
       });
-   }, [hasActiveSearch, points, query, selectedGasType, selectedMainDirection, selectedPointType]);
+   }, [hasActiveSearch, points, query, selectedGasType, selectedPointCategory]);
 
    const searchBounds = useMemo(() => {
       if (!hasActiveSearch) return [];
@@ -48,15 +47,15 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
       const latLngs = [];
       if (layerVisibility.showPipelines) {
          filteredPipelines.features.forEach(item => {
-            item.geometry.coordinates.forEach(([longitude, latitude]) => latLngs.push([latitude, longitude]));
+            latLngs.push(...lineStringToLatLngs(item));
          });
       }
       if (layerVisibility.showPoints) {
-         filteredPoints.forEach(point => latLngs.push(pointOffsets.get(point.id) ?? [point.latitude, point.longitude]));
+         filteredPoints.forEach(point => latLngs.push(...getPointBoundsLatLngs(point)));
       }
 
       return latLngs;
-   }, [filteredPipelines, filteredPoints, hasActiveSearch, layerVisibility.showPipelines, layerVisibility.showPoints, pointOffsets]);
+   }, [filteredPipelines, filteredPoints, hasActiveSearch, layerVisibility.showPipelines, layerVisibility.showPoints]);
 
    const results = useMemo(() => {
       if (!hasActiveSearch) {
@@ -67,22 +66,21 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
          };
       }
 
-      const items = toResultItems({ filteredPipelines, filteredPoints, layerVisibility });
+      const items = toResultItems({ filteredPipelines, filteredPoints, hasActiveSearch, layerVisibility, query });
       return {
          active: true,
          items,
          total: items.length
       };
-   }, [filteredPipelines, filteredPoints, hasActiveSearch, layerVisibility]);
+   }, [filteredPipelines, filteredPoints, hasActiveSearch, layerVisibility, query]);
 
    const pipelineLayerKey = JSON.stringify([selectedRelation, selectedGasType, hasActiveSearch ? query : ""]);
 
    const resetFilters = () => {
       setSearchTerm("");
       setSelectedRelation(ALL_VALUE);
-      setSelectedPointType(ALL_VALUE);
-      setSelectedGasType(DEFAULT_GAS_TYPE);
-      setSelectedMainDirection(ALL_VALUE);
+      setSelectedPointCategory(ALL_VALUE);
+      setSelectedGasType(DEFAULT_GAS_QUALITY);
       setLayerVisibility(initialLayerVisibility);
    };
 
@@ -102,13 +100,11 @@ export function useMapFilters({ pipelineCollection, pointOffsets, points }) {
       searchBounds,
       searchTerm,
       selectedGasType,
-      selectedMainDirection,
-      selectedPointType,
+      selectedPointCategory,
       selectedRelation,
       setSearchTerm,
       setSelectedGasType,
-      setSelectedMainDirection,
-      setSelectedPointType,
+      setSelectedPointCategory,
       setSelectedRelation,
       toggleLayer
    };

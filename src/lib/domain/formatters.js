@@ -1,10 +1,16 @@
-import { PIPELINE_GAS_LABELS, PIPELINE_STATUS_LABELS, RELATION_DETAIL_DESCRIPTIONS, RELATION_LABELS } from "./constants.js";
+import { GAS_QUALITY_LABELS, PIPELINE_GAS_LABELS, PIPELINE_STATUS_LABELS, POINT_CATEGORY_LABELS, RELATION_DETAIL_DESCRIPTIONS, RELATION_LABELS } from "./constants.js";
 
 export const relationLabel = value => RELATION_LABELS[value] ?? value;
 
 export const relationDetailDescription = value => RELATION_DETAIL_DESCRIPTIONS[value] ?? relationLabel(value);
 
 export const gasQualityLabel = value => PIPELINE_GAS_LABELS[value] ?? value ?? "unbekannt";
+
+export const pointGasQualityLabel = value => GAS_QUALITY_LABELS[value] ?? value ?? "unbekannt";
+
+export const pointCategoryLabel = value => POINT_CATEGORY_LABELS[value] ?? value ?? "unbekannt";
+
+export const formatCoordinate = value => (Number.isFinite(value) ? String(value).replace(".", ",") : "unbekannt");
 
 const pipelineStatusLabel = value => PIPELINE_STATUS_LABELS[value] ?? value ?? "unbekannt";
 
@@ -21,7 +27,3 @@ export const cleanName = featureLike => {
    const props = featureLike.properties ?? featureLike;
    return props.line_name || props.name || props.id || "Leitung";
 };
-
-export const pointTypeLabel = value => (value === "NKP-GÜ" ? "GÜP" : value === "NKP-MAP" ? "MAP" : value);
-
-export const mainDirectionLabel = value => (value === "Einspeisung" ? "Entry" : value === "Ausspeisung" ? "Exit" : value === null ? "Beidseitig" : value);

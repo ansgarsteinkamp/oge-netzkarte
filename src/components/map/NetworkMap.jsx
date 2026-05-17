@@ -15,18 +15,17 @@ export default function NetworkMap({
    onSelectPipeline,
    onSelectPoint,
    pipelineLayerKey,
-   pointOffsets,
    resetViewKey,
    searchBounds,
    selection
 }) {
    return (
       <MapViewport>
-         <MapCameraEffects pointOffsets={pointOffsets} resetViewKey={resetViewKey} searchBounds={searchBounds} selection={selection} />
+         <MapCameraEffects resetViewKey={resetViewKey} searchBounds={searchBounds} selection={selection} />
          <MapZoomControls />
          <CountryLayers europeContext={europeContext} germany={germany} />
          <PipelineLayer visible={layerVisibility.showPipelines} pipelines={filteredPipelines} layerKey={pipelineLayerKey} onSelectPipeline={onSelectPipeline} />
-         <PointLayer visible={layerVisibility.showPoints} points={filteredPoints} pointOffsets={pointOffsets} onSelectPoint={onSelectPoint} />
+         <PointLayer visible={layerVisibility.showPoints} points={filteredPoints} onSelectPoint={onSelectPoint} />
          <MapLegend />
       </MapViewport>
    );

@@ -1,6 +1,6 @@
 import { GeoJSON, Pane } from "react-leaflet";
 
-import { cleanName, gasQualityLabel, pipelineStatusExceptionLabel, relationLabel } from "@/lib/domain/formatters";
+import { cleanName } from "@/lib/domain/formatters";
 import { pipelineStyle } from "@/lib/map/styles";
 
 const createPipelineTooltip = item => {
@@ -12,24 +12,6 @@ const createPipelineTooltip = item => {
 export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, visible }) {
    const bindPipeline = (item, layer) => {
       const activate = () => onSelectPipeline(item);
-      const props = item.properties;
-      const status = pipelineStatusExceptionLabel(props.status);
-      const label = [
-         `Leitung ${cleanName(item)} auswählen`,
-         props.name !== props.line_name ? `Abschnitt ${props.name}` : null,
-         `ID ${props.id}`,
-         relationLabel(props.oge_role),
-         gasQualityLabel(props.gas_quality),
-         status
-      ]
-         .filter(Boolean)
-         .join(", ");
-      let pipelineElement = null;
-      const activateFromKeyboard = event => {
-         if (event.key !== "Enter" && event.key !== " ") return;
-         event.preventDefault();
-         activate();
-      };
 
       layer.bindTooltip(createPipelineTooltip(item), {
          className: "map-tooltip",
@@ -42,20 +24,13 @@ export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, v
          add: () => {
             const element = layer.getElement();
             if (element) {
-               pipelineElement = element;
-               element.setAttribute("aria-label", label);
-               element.setAttribute("role", "button");
-               element.setAttribute("tabindex", "0");
-               element.addEventListener("keydown", activateFromKeyboard);
+               element.setAttribute("aria-hidden", "true");
+               element.setAttribute("tabindex", "-1");
             }
          },
          click: activate,
          mouseover: event => event.target.setStyle({ weight: 6, opacity: 1 }),
-         mouseout: event => event.target.setStyle(pipelineStyle(item)),
-         remove: () => {
-            if (pipelineElement) pipelineElement.removeEventListener("keydown", activateFromKeyboard);
-            pipelineElement = null;
-         }
+         mouseout: event => event.target.setStyle(pipelineStyle(item))
       });
    };
 

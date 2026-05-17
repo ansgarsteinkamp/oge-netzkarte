@@ -1,6 +1,6 @@
-import { RELATION_FILTER_LABELS } from "@/lib/domain/constants";
-import { pointTypeLabel } from "@/lib/domain/formatters";
-import { PARTICIPATION_LINE_PATTERN, POINT_COLORS, RELATION_COLORS } from "@/lib/map/theme";
+import { POINT_CATEGORY_ORDER, RELATION_FILTERS } from "@/lib/domain/constants";
+import { pointCategoryLabel } from "@/lib/domain/formatters";
+import { PARTICIPATION_LINE_PATTERN, POINT_CATEGORY_COLORS, RELATION_COLORS } from "@/lib/map/theme";
 
 const dashedLineBackground = color => `repeating-linear-gradient(
    90deg,
@@ -8,15 +8,22 @@ const dashedLineBackground = color => `repeating-linear-gradient(
    transparent ${PARTICIPATION_LINE_PATTERN.dash}px ${PARTICIPATION_LINE_PATTERN.dash + PARTICIPATION_LINE_PATTERN.gap}px
 )`;
 
+const relationLegendEntry = ({ label, value }) => {
+   const color = RELATION_COLORS[value];
+   const isDashed = value === "co_owned_affiliate" || value === "owned_affiliate";
+
+   return { label, kind: "line", style: { background: isDashed ? dashedLineBackground(color) : color } };
+};
+
+const pointLegendEntry = category => ({
+   label: pointCategoryLabel(category),
+   kind: "dot",
+   style: { background: POINT_CATEGORY_COLORS[category] }
+});
+
 const entries = [
-   { label: RELATION_FILTER_LABELS.operator, kind: "line", style: { background: RELATION_COLORS.operator } },
-   { label: RELATION_FILTER_LABELS.joint_operator, kind: "line", style: { background: RELATION_COLORS.joint_operator } },
-   { label: RELATION_FILTER_LABELS.co_owned_affiliate, kind: "line", style: { background: dashedLineBackground(RELATION_COLORS.co_owned_affiliate) } },
-   { label: RELATION_FILTER_LABELS.owned_affiliate, kind: "line", style: { background: dashedLineBackground(RELATION_COLORS.owned_affiliate) } },
-   { label: pointTypeLabel("Speicher"), kind: "dot", style: { background: POINT_COLORS.Speicher } },
-   { label: pointTypeLabel("NKP-GÜ"), kind: "dot", style: { background: POINT_COLORS["NKP-GÜ"] } },
-   { label: pointTypeLabel("NKP-MAP"), kind: "dot", style: { background: POINT_COLORS["NKP-MAP"] } },
-   { label: pointTypeLabel("LNG"), kind: "dot", style: { background: POINT_COLORS.LNG } }
+   ...RELATION_FILTERS.map(relationLegendEntry),
+   ...POINT_CATEGORY_ORDER.map(pointLegendEntry)
 ];
 
 export default function MapLegend() {

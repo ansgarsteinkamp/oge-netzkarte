@@ -3,13 +3,11 @@ import { useMemo, useState } from "react";
 import Topbar from "@/components/layout/Topbar";
 import NetworkMap from "@/components/map/NetworkMap";
 import ControlPanel from "@/components/panels/ControlPanel";
-import QualityPanel from "@/components/panels/QualityPanel";
 import SelectionPanel from "@/components/panels/SelectionPanel";
 import { useMapData } from "@/hooks/useMapData";
 import { useMapFilters } from "@/hooks/useMapFilters";
 import { useMapSelection } from "@/hooks/useMapSelection";
 import { buildEuropeContextCollection, buildGermanyCollection } from "@/lib/data/geoCollections";
-import { buildPointOffsets } from "@/lib/map/pointOffsets";
 
 function LoadingState() {
    return (
@@ -33,6 +31,14 @@ function DataErrorState({ error }) {
    );
 }
 
+function DataBasisNote() {
+   return (
+      <p className="mt-2 mb-0 px-1 text-[0.62rem] leading-relaxed text-muted-foreground/70">
+         Die Leitungen und Punkte wurden aus öffentlich zugänglichen Informationen zusammengestellt und vereinfacht aufbereitet; sie dienen ausschließlich der schnellen Orientierung.
+      </p>
+   );
+}
+
 function App() {
    const { countries, error, loading, pipelineCollection, points } = useMapData();
 
@@ -44,16 +50,15 @@ function App() {
 
 function LoadedApp({ countries, pipelineCollection, points }) {
    const [resetViewKey, setResetViewKey] = useState(0);
-   const pointOffsets = useMemo(() => buildPointOffsets(points), [points]);
    const germany = useMemo(() => buildGermanyCollection(countries), [countries]);
    const europeContext = useMemo(() => buildEuropeContextCollection(countries), [countries]);
 
-   const filters = useMapFilters({ pipelineCollection, pointOffsets, points });
+   const filters = useMapFilters({ pipelineCollection, points });
    const selection = useMapSelection({
       filteredPipelines: filters.filteredPipelines,
       filteredPoints: filters.filteredPoints,
       layerVisibility: filters.layerVisibility,
-      pointOffsets
+      results: filters.results
    });
 
    const resetFilters = () => {
@@ -62,50 +67,56 @@ function LoadedApp({ countries, pipelineCollection, points }) {
       setResetViewKey(value => value + 1);
    };
 
+   const closeSelection = () => {
+      selection.clearSelection();
+      window.requestAnimationFrame(() => document.querySelector(".leaflet-container")?.focus());
+   };
+
    return (
       <main className="app-shell min-h-svh bg-background p-4 text-foreground max-lg:p-3">
          <Topbar />
-         <section className="mx-auto grid min-h-[calc(100svh-128px)] max-w-[1700px] grid-cols-[22.5rem_minmax(420px,1fr)_minmax(240px,280px)] gap-4 xl:h-[calc(100svh-128px)] max-xl:h-auto max-xl:min-h-0 max-xl:grid-cols-[22.5rem_minmax(430px,1fr)] max-lg:grid-cols-1">
+         <section className="mx-auto grid min-h-[calc(100svh-128px)] max-w-[1700px] items-start gap-4 grid-cols-[21rem_minmax(430px,1fr)] min-[1360px]:grid-cols-[21rem_minmax(420px,1fr)_21rem] max-lg:grid-cols-1">
             <ControlPanel
+               className={selection.selection ? "max-lg:order-3" : "max-lg:order-2"}
                gasTypes={filters.filterOptions.gasTypes}
                layerVisibility={filters.layerVisibility}
-               mainDirectionTypes={filters.filterOptions.mainDirectionTypes}
                onLayerChange={filters.toggleLayer}
                onResetFilters={resetFilters}
                onSearchTermChange={filters.setSearchTerm}
                onSelectResult={selection.selectResult}
-               pointTypes={filters.filterOptions.pointTypes}
+               pointCategories={filters.filterOptions.pointCategories}
                relationTypes={filters.filterOptions.relationTypes}
                results={filters.results}
                searchTerm={filters.searchTerm}
                selectedGasType={filters.selectedGasType}
-               selectedMainDirection={filters.selectedMainDirection}
-               selectedPointType={filters.selectedPointType}
+               selectedPointCategory={filters.selectedPointCategory}
                selectedRelation={filters.selectedRelation}
                setSelectedGasType={filters.setSelectedGasType}
-               setSelectedMainDirection={filters.setSelectedMainDirection}
-               setSelectedPointType={filters.setSelectedPointType}
+               setSelectedPointCategory={filters.setSelectedPointCategory}
                setSelectedRelation={filters.setSelectedRelation}
             />
 
-            <NetworkMap
-               europeContext={europeContext}
-               filteredPipelines={filters.filteredPipelines}
-               filteredPoints={filters.filteredPoints}
-               germany={germany}
-               layerVisibility={filters.layerVisibility}
-               onSelectPipeline={selection.selectPipeline}
-               onSelectPoint={selection.selectPoint}
-               pipelineLayerKey={filters.pipelineLayerKey}
-               pointOffsets={pointOffsets}
-               resetViewKey={resetViewKey}
-               searchBounds={filters.searchBounds}
-               selection={selection.selection}
-            />
+            <div className="flex min-h-0 flex-col self-start">
+               <div className="min-h-0 min-[1360px]:h-[calc(100svh-128px)]">
+                  <NetworkMap
+                     europeContext={europeContext}
+                     filteredPipelines={filters.filteredPipelines}
+                     filteredPoints={filters.filteredPoints}
+                     germany={germany}
+                     layerVisibility={filters.layerVisibility}
+                     onSelectPipeline={selection.selectPipeline}
+                     onSelectPoint={selection.selectPoint}
+                     pipelineLayerKey={filters.pipelineLayerKey}
+                     resetViewKey={resetViewKey}
+                     searchBounds={filters.searchBounds}
+                     selection={selection.selection}
+                  />
+               </div>
+               <DataBasisNote />
+            </div>
 
-            <div className="flex min-h-0 flex-col gap-3.5 overflow-auto max-xl:col-span-full max-xl:grid max-xl:grid-cols-2 max-lg:order-3 max-lg:grid-cols-1">
-               <SelectionPanel selection={selection.selection} onClose={selection.clearSelection} />
-               <QualityPanel />
+            <div className={`flex min-h-0 flex-col overflow-auto min-[1360px]:col-auto max-[1359px]:col-start-2 max-[1359px]:col-span-1 max-lg:col-start-auto max-lg:col-span-1 ${selection.selection ? "max-lg:order-2" : "max-lg:order-3"}`}>
+               <SelectionPanel selection={selection.selection} onClose={closeSelection} />
             </div>
          </section>
       </main>

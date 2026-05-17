@@ -1,10 +1,7 @@
-import { ALL_VALUE, GAS_TYPE_ORDER, MAIN_DIRECTION_ORDER, POINT_TYPE_ORDER, RELATION_FILTERS } from "./constants.js";
-import { mainDirectionLabel, pointTypeLabel } from "./formatters.js";
+import { ALL_VALUE, GAS_QUALITY_LABELS, GAS_QUALITY_ORDER, POINT_CATEGORY_ORDER, RELATION_FILTERS } from "./constants.js";
+import { pointCategoryLabel } from "./formatters.js";
 
 const getUnique = (items, getter) => [...new Set(items.map(getter).filter(Boolean))].sort((a, b) => a.localeCompare(b, "de"));
-
-const getUniqueWithNull = (items, getter) =>
-   [...new Set(items.map(getter).filter(value => value !== undefined && value !== ""))].sort((a, b) => String(a).localeCompare(String(b), "de"));
 
 const sortByOrder = (values, order) => {
    const orderMap = new Map(order.map((item, index) => [item, index]));
@@ -14,13 +11,11 @@ const sortByOrder = (values, order) => {
 const withAllOption = options => [{ value: ALL_VALUE, label: "Alle" }, ...options];
 
 export const buildFilterOptions = ({ points }) => {
-   const pointTypes = sortByOrder(getUnique(points, point => point.point_type), POINT_TYPE_ORDER);
-   const mainDirectionTypes = sortByOrder(getUniqueWithNull(points, point => point.direction), MAIN_DIRECTION_ORDER);
+   const pointCategories = sortByOrder(getUnique(points, point => point.category), POINT_CATEGORY_ORDER);
 
    return {
       relationTypes: withAllOption(RELATION_FILTERS.map(({ value, label, description }) => ({ value, label, description }))),
-      pointTypes: withAllOption(pointTypes.map(type => ({ value: type, label: pointTypeLabel(type) }))),
-      gasTypes: GAS_TYPE_ORDER.map(type => ({ value: type, label: type })),
-      mainDirectionTypes: withAllOption(mainDirectionTypes.map(type => ({ value: type, label: mainDirectionLabel(type) })))
+      pointCategories: withAllOption(pointCategories.map(category => ({ value: category, label: pointCategoryLabel(category) }))),
+      gasTypes: GAS_QUALITY_ORDER.map(type => ({ value: type, label: GAS_QUALITY_LABELS[type] }))
    };
 };
