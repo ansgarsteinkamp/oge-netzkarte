@@ -1,0 +1,822 @@
+[
+  {
+    "id": "bierwang",
+    "importance_level": 3,
+    "name": "Bierwang",
+    "category": "storage",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 48.1269,
+    "lon": 12.4035,
+    "position_method": "single",
+    "description": "Porenspeicher in Oberbayern (Betreiber: Uniper). Die Anlage speist direkt in das süddeutsche H-Gas-Netz ein und ist operativ wichtig für die saisonale Flexibilität sowie den Spitzenlastausgleich im MEGAL-Einflussbereich.",
+    "points": [
+      {
+        "location_id": "L1001105",
+        "label": "Speicher Bierwang",
+        "eic": "21Z000000000323V",
+        "lat": 48.1269,
+        "lon": 12.4035
+      }
+    ]
+  },
+  {
+    "id": "bocholtz",
+    "importance_level": 4,
+    "name": "Bocholtz",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Niederlande",
+    "vip_name": "VIP TTF-THE-H",
+    "zone": null,
+    "lat": 50.817,
+    "lon": 6.022,
+    "position_method": "single",
+    "description": "Strategischer Grenzübergangspunkt an der deutsch-niederländischen Grenze und nördlicher Kopfpunkt der TENP-Leitungsachse. Der dem VIP TTF-THE-H zugeordnete Knoten verbindet das OGE-Netz mit dem niederländischen GTS-System und ist für bidirektionale Import- und Exportflüsse in Nordwesteuropa relevant.",
+    "points": [
+      {
+        "location_id": "L1000896",
+        "label": "Bocholtz",
+        "eic": "21Z000000000071W",
+        "lat": 50.817,
+        "lon": 6.022
+      }
+    ]
+  },
+  {
+    "id": "breitbrunn",
+    "importance_level": 3,
+    "name": "Breitbrunn",
+    "category": "storage",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 47.9186,
+    "lon": 12.4137,
+    "position_method": "single",
+    "description": "Großer Porenspeicherkomplex (Breitbrunn/Eggstätt) im südöstlichen Bayern, der zur regionalen und überregionalen Versorgungssicherheit beiträgt. Für diese Anlage ist netzseitig eine Stilllegung zum 31. März 2027 beantragt, bis dahin bleibt sie ein relevanter Flexibilitätsbezug im THE-Marktgebiet.",
+    "points": [
+      {
+        "location_id": "L1001107",
+        "label": "Speicher Breitbrunn",
+        "eic": "21Z000000000332U",
+        "lat": 47.9186,
+        "lon": 12.4137
+      }
+    ]
+  },
+  {
+    "id": "bunder-tief",
+    "importance_level": 1,
+    "name": "Bunder Tief",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 53.2061,
+    "lon": 7.2332,
+    "position_method": "single",
+    "description": "Innerdeutsche Netzkopplung in der Nähe des Knotens Oude Statenzijl. Dient als physische Schnittstelle zur Übergabe und Übernahme von H-Gas zwischen den Transportnetzen der OGE und der Gasunie Deutschland (GUD).",
+    "points": [
+      {
+        "location_id": "L1001118",
+        "label": "Bunder Tief",
+        "eic": "37Z000000006390S",
+        "lat": 53.2061,
+        "lon": 7.2332
+      }
+    ]
+  },
+  {
+    "id": "dornum",
+    "importance_level": 5,
+    "name": "Dornum",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Norwegen",
+    "vip_name": null,
+    "zone": null,
+    "lat": 53.6562,
+    "lon": 7.4039,
+    "position_method": "single",
+    "description": "Zentraler Anlandepunkt für norwegisches Offshore-Gas an der ostfriesischen Küste. Die OGE übernimmt hier Pipelinegas aus dem Europipe-System (Gassco) und speist es in die Norddeutsche Erdgas Transversale (NETRA) ein, was Dornum zu einer der wichtigsten Einspeisequellen für Nord- und Ostdeutschland macht.",
+    "points": [
+      {
+        "location_id": "L1000923",
+        "label": "Dornum",
+        "eic": "21Z000000000053Y",
+        "lat": 53.6562,
+        "lon": 7.4039
+      },
+      {
+        "location_id": "L2001154",
+        "label": "Dornum GASPOOL",
+        "eic": "21Z0000000004855",
+        "lat": 53.6562,
+        "lon": 7.4039
+      }
+    ]
+  },
+  {
+    "id": "drohne",
+    "importance_level": 1,
+    "name": "Drohne",
+    "category": "domestic_ip",
+    "gas_quality": "L",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 52.4298,
+    "lon": 8.3545,
+    "position_method": "single",
+    "description": "Inländischer L-Gas-Netzkopplungspunkt am Standort Drohne in Nordrhein-Westfalen. Der physische Übergabepunkt zwischen benachbarten Fernleitungsnetzen dient der regionalen Verteilung und Bilanzierung von L-Gas in Nordwestdeutschland.",
+    "points": [
+      {
+        "location_id": "L1001055",
+        "label": "Drohne",
+        "eic": "37Z000000006388F",
+        "lat": 52.4298,
+        "lon": 8.3545
+      }
+    ]
+  },
+  {
+    "id": "drohne-nowal",
+    "importance_level": 2,
+    "name": "Drohne NOWAL",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 52.4297,
+    "lon": 8.3546,
+    "position_method": "single",
+    "description": "Direkte Anbindung an die Nord-West-Anbindungsleitung (NOWAL) am Standort Drohne. Dieser innerdeutsche H-Gas-Knotenpunkt koppelt das OGE-System physisch an das Netz der GASCADE.",
+    "points": [
+      {
+        "location_id": "L2001097",
+        "label": "Drohne NOWAL",
+        "eic": "21Z0000000004774",
+        "lat": 52.4297,
+        "lon": 8.3546
+      }
+    ]
+  },
+  {
+    "id": "ellund",
+    "importance_level": 3,
+    "name": "Ellund",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Dänemark",
+    "vip_name": "VIP DK-THE",
+    "zone": null,
+    "lat": 54.8025,
+    "lon": 9.2892,
+    "position_method": "single",
+    "description": "Nördlichster Grenzübergangspunkt der OGE und Verbindung zum dänischen Energinet-System (VIP DK-THE) über die DEUDAN-Leitung. Die Station ist physisch bidirektional betreibbar und gewinnt neben dem historischen Export nach Dänemark durch die Baltic Pipe zunehmend strategische Bedeutung für Importe.",
+    "points": [
+      {
+        "location_id": "L1001094",
+        "label": "Ellund",
+        "eic": "21Z0000000000260",
+        "lat": 54.8025,
+        "lon": 9.2892
+      }
+    ]
+  },
+  {
+    "id": "elten",
+    "importance_level": 2,
+    "name": "Elten",
+    "category": "cross_border_ip",
+    "gas_quality": "L",
+    "adjacent_country": "Niederlande",
+    "vip_name": "VIP TTF-THE-L",
+    "zone": null,
+    "lat": 51.9021,
+    "lon": 6.1397,
+    "position_method": "single",
+    "description": "Physischer L-Gas-Grenzpunkt (Kopplung Zevenaar/Elten) zum niederländischen GTS-Netz, der dem VIP TTF-THE-L zugeordnet ist. Die Station ist operativ wichtig für die Aufrechterhaltung der L-Gas-Versorgung in Westdeutschland; ihre Bedeutung sinkt perspektivisch mit dem Abschluss der Marktraumumstellung auf H-Gas.",
+    "points": [
+      {
+        "location_id": "L1000970",
+        "label": "Elten",
+        "eic": "21Y0000000001367",
+        "lat": 51.9021,
+        "lon": 6.1397
+      }
+    ]
+  },
+  {
+    "id": "emden",
+    "importance_level": 4,
+    "name": "Emden",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Norwegen",
+    "vip_name": null,
+    "zone": null,
+    "lat": 53.3611,
+    "lon": 7.0069,
+    "position_method": "single",
+    "description": "Wichtiger Nordsee-Anlandepunkt für das von Gassco betriebene norwegische Norpipe-System. Dient operativ als reiner Hochdruck-Einspeisepunkt für nordwesteuropäisches Importgas in das nachgelagerte deutsche Transportnetz.",
+    "points": [
+      {
+        "location_id": "L1000927",
+        "label": "Emden EPT",
+        "eic": "21Z0000000000503",
+        "lat": 53.3611,
+        "lon": 7.0069
+      }
+    ]
+  },
+  {
+    "id": "emsbueren",
+    "importance_level": 1,
+    "name": "Emsbüren",
+    "category": "domestic_ip",
+    "gas_quality": "L",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 52.39,
+    "lon": 7.2548,
+    "position_method": "single",
+    "description": "Physischer L-Gas-Kopplungspunkt im nordwestdeutschen Leitungsnetz am Standort Berge. Relevant für die großräumige L-Gas-Verteilung und das operative Management im Rahmen der fortschreitenden Marktraumumstellung auf H-Gas.",
+    "points": [
+      {
+        "location_id": "L1001266",
+        "label": "Emsbüren",
+        "eic": "37Z000000006391Q",
+        "lat": 52.39,
+        "lon": 7.2548
+      }
+    ]
+  },
+  {
+    "id": "etzel",
+    "importance_level": 5,
+    "name": "Etzel",
+    "category": "storage",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 53.4507,
+    "lon": 7.9084,
+    "position_method": "mean",
+    "description": "Massiver norddeutscher Kavernenspeicher-Cluster am Standort Friedeburg-Etzel (umfasst Anlagen wie EGL, Crystal, EKB, ESE). Durch die direkte Anbindung an Hochleistungstrassen wie NETRA und BEP ist der Knoten ein essenzieller Stützpfeiler für den kurzfristigen Flexibilitätsbedarf und Druckausgleich in Nordwesteuropa.",
+    "points": [
+      {
+        "location_id": "L1001123",
+        "label": "Friedeburg-Etzel, Schienenstrang, EGL",
+        "eic": "21Z0000000003200",
+        "lat": 53.4508,
+        "lon": 7.9019
+      },
+      {
+        "location_id": "L2000600",
+        "label": "Etzel (Speicher Crystal), Bitzenlander Weg 10",
+        "eic": "21Z000000000326P",
+        "lat": 53.4484,
+        "lon": 7.9098
+      },
+      {
+        "location_id": "L2000703",
+        "label": "Friedeburg-Etzel, Bitzenlander Weg 2",
+        "eic": "21Z000000000325R",
+        "lat": 53.4506,
+        "lon": 7.9088
+      },
+      {
+        "location_id": "L2000907",
+        "label": "Etzel (Speicher ESE),Bitzenlander Weg 3",
+        "eic": "21Z000000000324T",
+        "lat": 53.4528,
+        "lon": 7.9129
+      }
+    ]
+  },
+  {
+    "id": "eynatten-raeren",
+    "importance_level": 4,
+    "name": "Eynatten-Raeren",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Belgien",
+    "vip_name": "VIP THE-ZTP",
+    "zone": null,
+    "lat": 50.7215,
+    "lon": 6.1161,
+    "position_method": "single",
+    "description": "Wichtiger Knotenpunkt auf der TENP-Achse zur Kopplung mit dem belgischen Fluxys-Netz (VIP THE-ZTP). Dient dem bidirektionalen H-Gas-Transit zwischen Deutschland und dem BeLux-Markt sowie der Anbindung an westeuropäische LNG-Terminals.",
+    "points": [
+      {
+        "location_id": "L1000915",
+        "label": "Eynatten-Raeren",
+        "eic": "21Z0000000000163",
+        "lat": 50.7215,
+        "lon": 6.1161
+      }
+    ]
+  },
+  {
+    "id": "gernsheim",
+    "importance_level": 2,
+    "name": "Gernsheim",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 49.746,
+    "lon": 8.5535,
+    "position_method": "single",
+    "description": "Wichtiger Kreuzungspunkt in Südhessen. Hier ist die west-östlich verlaufende MEGAL-Pipeline der OGE an das vorwiegend nord-südlich ausgerichtete MIDAL-System der GASCADE angebunden, was die regionale Verteilung im Raum Rhein-Main/Neckar sichert.",
+    "points": [
+      {
+        "location_id": "L1001128",
+        "label": "Gernsheim MEGAL",
+        "eic": "37Z0OGE357000006",
+        "lat": 49.746,
+        "lon": 8.5535
+      }
+    ]
+  },
+  {
+    "id": "gronau-epe-h",
+    "importance_level": 4,
+    "name": "Gronau-Epe H",
+    "category": "storage",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 52.17,
+    "lon": 6.9918,
+    "position_method": "mean",
+    "description": "H-Gas-Kavernenspeicher-Cluster (Epe H, Gronau-Epe H1 und H4) nahe der niederländischen Grenze. Überregional bedeutsamer Einspeicher- und Ausspeisepunkt für die Bereitstellung von Speicherflexibilität und den Lastausgleich im westdeutschen Industrieraum.",
+    "points": [
+      {
+        "location_id": "L1001121",
+        "label": "Speicher Epe H",
+        "eic": "21Z000000000328L",
+        "lat": 52.162,
+        "lon": 7.004
+      },
+      {
+        "location_id": "L2000260",
+        "label": "Speicher Gronau-Epe H1",
+        "eic": "21Z000000000350S",
+        "lat": 52.1749,
+        "lon": 6.9835
+      },
+      {
+        "location_id": "L2391221",
+        "label": "Speicher Gronau-Epe H4",
+        "eic": "37Z000000009018X",
+        "lat": 52.1731,
+        "lon": 6.9878
+      }
+    ]
+  },
+  {
+    "id": "gronau-epe-l",
+    "importance_level": 2,
+    "name": "Gronau-Epe L",
+    "category": "storage",
+    "gas_quality": "L",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 52.1698,
+    "lon": 7.0055,
+    "position_method": "mean",
+    "description": "L-Gas-Spezifischer Bereich des Kavernenfelds Gronau-Epe. Einer der wichtigsten verbleibenden Flexibilitätsknoten für die Aufrechterhaltung der auslaufenden L-Gas-Versorgung in Westdeutschland und den Niederlanden.",
+    "points": [
+      {
+        "location_id": "L1001138",
+        "label": "Speicher Epe L",
+        "eic": "21Z000000000327N",
+        "lat": 52.162,
+        "lon": 7.004
+      },
+      {
+        "location_id": "L2000361",
+        "label": "Speicher Gronau-Epe L2",
+        "eic": "37Z000000007316Z",
+        "lat": 52.1775,
+        "lon": 7.0069
+      }
+    ]
+  },
+  {
+    "id": "mnd-esg-haehnlein-stockstadt",
+    "importance_level": 1,
+    "name": "MND ESG: Hähnlein / Stockstadt",
+    "category": "storage",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": "Zone MND ESG",
+    "lat": 49.7708,
+    "lon": 8.529,
+    "position_method": "mean",
+    "description": "Bündelung der beiden südhessischen H-Gas-Porenspeicher Hähnlein und Stockstadt (Betreiber: MND Energy Storage Germany). Sie dienen primär dem regionalen Lastausgleich im dynamischen Leitungsraum Rhein-Main/Neckar.",
+    "points": [
+      {
+        "location_id": "L1001109",
+        "label": "Speicher Hähnlein",
+        "eic": "21Z000000000331W",
+        "lat": 49.7435,
+        "lon": 8.5519
+      },
+      {
+        "location_id": "L1001111",
+        "label": "Speicher Stockstadt",
+        "eic": "21Z000000000330Y",
+        "lat": 49.798,
+        "lon": 8.506
+      }
+    ]
+  },
+  {
+    "id": "haiming-haidach-7fields",
+    "importance_level": 4,
+    "name": "Haiming / Haidach / 7Fields",
+    "category": "storage",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 48.196,
+    "lon": 12.8515,
+    "position_method": "mean",
+    "description": "Speicher-Cluster im Raum Burghausen. Obwohl die riesigen Porenspeicher Haidach und 7Fields physisch in Österreich liegen, bildet dieser Knotenpunkt die direkte, hochkapazitive OGE-Anbindung an das deutsche THE-Netz zur Bereitstellung enormer Flexibilitätsmengen.",
+    "points": [
+      {
+        "location_id": "L2000800",
+        "label": "Haiming 2 7F",
+        "eic": "21Z000000000272M",
+        "lat": 48.196,
+        "lon": 12.852
+      },
+      {
+        "location_id": "L2001604",
+        "label": "Speicher Haiming 3-Haidach",
+        "eic": "37Z000000007357L",
+        "lat": 48.196,
+        "lon": 12.851
+      }
+    ]
+  },
+  {
+    "id": "kienbaum",
+    "importance_level": 2,
+    "name": "Kienbaum",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 52.4573,
+    "lon": 13.9691,
+    "position_method": "single",
+    "description": "Östlicher Netzkopplungspunkt zwischen dem OGE-Netz und der GASCADE-Infrastruktur nahe Berlin. Operativ relevant für die großräumige Ost-West-Verteilung von H-Gas-Mengen im THE-Marktgebiet.",
+    "points": [
+      {
+        "location_id": "L1001076",
+        "label": "Kienbaum",
+        "eic": "37Z000000001078I",
+        "lat": 52.4573,
+        "lon": 13.9691
+      }
+    ]
+  },
+  {
+    "id": "lampertheim",
+    "importance_level": 2,
+    "name": "Lampertheim",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 49.5821,
+    "lon": 8.5017,
+    "position_method": "mean",
+    "description": "Komplexer Netzknoten in Südhessen mit doppelter Funktion: Lampertheim I koppelt das OGE-Netz an das MIDAL-System (GASCADE), während Lampertheim 2 als physische Ausspeisung in das südwestdeutsche Transportnetz der terranets bw dient.",
+    "points": [
+      {
+        "location_id": "L1000988",
+        "label": "Lampertheim I",
+        "eic": "37Z0000000007905",
+        "lat": 49.5821,
+        "lon": 8.502
+      },
+      {
+        "location_id": "L1000987",
+        "label": "Lampertheim 2",
+        "eic": "37Z0000000026535",
+        "lat": 49.582,
+        "lon": 8.501
+      }
+    ]
+  },
+  {
+    "id": "medelsheim",
+    "importance_level": 4,
+    "name": "Medelsheim",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Frankreich",
+    "vip_name": "VIP France - Germany",
+    "zone": null,
+    "lat": 49.1256,
+    "lon": 7.2803,
+    "position_method": "single",
+    "description": "Westlicher Endpunkt der MEGAL-Pipeline und Grenzübergang zum französischen GRTgaz-System bei Obergailbach (VIP France - Germany). Der Punkt ist physisch bidirektional gerüstet, wodurch neben dem traditionellen Export nach Frankreich auch direkte Importflüsse nach Süddeutschland möglich sind.",
+    "points": [
+      {
+        "location_id": "L1000955",
+        "label": "Medelsheim",
+        "eic": "21Z000000000039S",
+        "lat": 49.1256,
+        "lon": 7.2803
+      }
+    ]
+  },
+  {
+    "id": "oberkappel",
+    "importance_level": 4,
+    "name": "Oberkappel",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Österreich",
+    "vip_name": "VIP Oberkappel",
+    "zone": null,
+    "lat": 48.555,
+    "lon": 13.7522,
+    "position_method": "single",
+    "description": "Strategischer Kopplungspunkt der MEGAL-Süd-Leitung mit der West-Austria-Gasleitung (WAG) der Gas Connect Austria. Der VIP Oberkappel ist ein essenzieller bidirektionaler Transitknoten für die Versorgung Süddeutschlands und Zentraleuropas.",
+    "points": [
+      {
+        "location_id": "L1000950",
+        "label": "Oberkappel",
+        "eic": "21Z000000000001G",
+        "lat": 48.555,
+        "lon": 13.7522
+      }
+    ]
+  },
+  {
+    "id": "oude-statenzijl",
+    "importance_level": 5,
+    "name": "Oude Statenzijl",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Niederlande",
+    "vip_name": "VIP TTF-THE-H",
+    "zone": null,
+    "lat": 53.2061,
+    "lon": 7.2329,
+    "position_method": "single",
+    "description": "Großer Grenzübergangspunkt (VIP TTF-THE-H) in Ostfriesland zur Kopplung mit dem niederländischen GTS-Netz. Eng verknüpft mit der Bunde-Etzel-Pipeline (BEP) fungiert der Knoten als Hauptschlagader für Importe aus den Niederlanden und internationalen Transit.",
+    "points": [
+      {
+        "location_id": "L1000920",
+        "label": "Oude Statenzijl",
+        "eic": "21Z000000000075O",
+        "lat": 53.2061,
+        "lon": 7.2329
+      }
+    ]
+  },
+  {
+    "id": "reckrod",
+    "importance_level": 3,
+    "name": "Reckrod",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 50.7856,
+    "lon": 9.7884,
+    "position_method": "single",
+    "description": "Verdichter- und Leitungsknoten bei Eiterfeld in Hessen, an dem das OGE-Netz mit dem System der GASCADE (Kreuzungspunkt MIDAL/STEGAL) verschaltet ist. Dient dem inländischen, großvolumigen Lastausgleich.",
+    "points": [
+      {
+        "location_id": "L1001072",
+        "label": "Reckrod I",
+        "eic": "37Z000000004923T",
+        "lat": 50.7856,
+        "lon": 9.7884
+      }
+    ]
+  },
+  {
+    "id": "remich",
+    "importance_level": 1,
+    "name": "Remich",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Luxemburg",
+    "vip_name": null,
+    "zone": null,
+    "lat": 49.5323,
+    "lon": 6.3655,
+    "position_method": "single",
+    "description": "Physischer Grenzübergang zur Versorgung des Großherzogtums Luxemburg. Das H-Gas wird am Standort Remich aus dem OGE-Netz an den luxemburgischen Netzbetreiber Creos übergeben; es gibt an diesem Punkt keine physische Rückspeisung nach Deutschland.",
+    "points": [
+      {
+        "location_id": "L1000672",
+        "label": "Remich",
+        "eic": "21Z0000000000406",
+        "lat": 49.5323,
+        "lon": 6.3655
+      }
+    ]
+  },
+  {
+    "id": "ueberackern",
+    "importance_level": 3,
+    "name": "Überackern",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Österreich",
+    "vip_name": null,
+    "zone": null,
+    "lat": 48.1945,
+    "lon": 12.8672,
+    "position_method": "single",
+    "description": "Bidirektionaler physischer Grenzübergang im bayerischen Chemiedreieck (Burghausen). Verbindet das süddeutsche OGE-Netz mit der Penta-West-Pipeline der Gas Connect Austria und dient dem regionalen sowie grenzüberschreitenden Lastausgleich.",
+    "points": [
+      {
+        "location_id": "L2000857",
+        "label": "Überackern",
+        "eic": "21Z000000000002E",
+        "lat": 48.1945,
+        "lon": 12.8672
+      }
+    ]
+  },
+  {
+    "id": "vitzeroda",
+    "importance_level": 1,
+    "name": "Vitzeroda",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 50.881,
+    "lon": 10.06,
+    "position_method": "single",
+    "description": "Innerdeutsche Systemkopplung an der Grenze zwischen Hessen und Thüringen. Physischer Übergabepunkt für H-Gas zwischen dem OGE-Netz und der Ferngas-Leitung FGL 401.",
+    "points": [
+      {
+        "location_id": "L2000746",
+        "label": "Vitzeroda MÜP",
+        "eic": "37Z000000007164W",
+        "lat": 50.881,
+        "lon": 10.06
+      }
+    ]
+  },
+  {
+    "id": "vreden",
+    "importance_level": 2,
+    "name": "Vreden",
+    "category": "cross_border_ip",
+    "gas_quality": "L",
+    "adjacent_country": "Niederlande",
+    "vip_name": "VIP TTF-THE-L",
+    "zone": null,
+    "lat": 51.9943,
+    "lon": 6.8094,
+    "position_method": "single",
+    "description": "Einer der verbleibenden L-Gas-Importpunkte (Kopplung Winterswijk/Vreden, VIP TTF-THE-L) aus dem niederländischen GTS-System. Sichert operativ den L-Gas-Bedarf im nordwestdeutschen Verteilnetz, verliert jedoch mit dem nahenden Abschluss der Marktraumumstellung seine Funktion.",
+    "points": [
+      {
+        "location_id": "L1000780",
+        "label": "Vreden",
+        "eic": "21Z000000000073S",
+        "lat": 51.9943,
+        "lon": 6.8094
+      }
+    ]
+  },
+  {
+    "id": "waidhaus",
+    "importance_level": 5,
+    "name": "Waidhaus",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Tschechische Republik",
+    "vip_name": "VIP Waidhaus",
+    "zone": null,
+    "lat": 49.6582,
+    "lon": 12.5357,
+    "position_method": "single",
+    "description": "Bidirektionaler Grenzübergangspunkt (VIP Waidhaus) zum tschechischen NET4GAS-System und östlicher Startpunkt der MEGAL-Nord-Pipeline. Als einer der kapazitätsstärksten Netzknoten Europas ist Waidhaus die zentrale Hauptschlagader für Gasflüsse aus Osteuropa in den süd- und westeuropäischen Raum.",
+    "points": [
+      {
+        "location_id": "L1000488",
+        "label": "Waidhaus",
+        "eic": "21Z0000000000236",
+        "lat": 49.6582,
+        "lon": 12.5357
+      }
+    ]
+  },
+  {
+    "id": "wallbach",
+    "importance_level": 4,
+    "name": "Wallbach",
+    "category": "cross_border_ip",
+    "gas_quality": "H",
+    "adjacent_country": "Schweiz",
+    "vip_name": "VIP Germany-CH",
+    "zone": null,
+    "lat": 47.5728,
+    "lon": 7.8964,
+    "position_method": "single",
+    "description": "Südlicher Endpunkt der TENP-Pipeline und Grenzübergang zum Schweizer Transitgas-System (VIP Germany-CH). Der bidirektionale Punkt ist essenziell für den Nord-Süd-Transit nach Italien, ermöglicht aber auch Importe aus dem Süden in das THE-Marktgebiet.",
+    "points": [
+      {
+        "location_id": "L1000899",
+        "label": "Wallbach",
+        "eic": "21Z0000000001232",
+        "lat": 47.5728,
+        "lon": 7.8964
+      }
+    ]
+  },
+  {
+    "id": "wardenburg",
+    "importance_level": 3,
+    "name": "Wardenburg",
+    "category": "domestic_ip",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": null,
+    "lat": 53.0743,
+    "lon": 8.1719,
+    "position_method": "single",
+    "description": "Zentraler inländischer H-Gas-Knotenpunkt und Standort einer wichtigen OGE-Verdichterstation auf der NETRA-Pipeline. Dient primär der Übergabe und Übernahme von Mengen zum/vom angrenzenden System der Gasunie Deutschland (GUD).",
+    "points": [
+      {
+        "location_id": "L1000945",
+        "label": "Wardenburg",
+        "eic": "37Z000000006389D",
+        "lat": 53.0743,
+        "lon": 8.1719
+      },
+      {
+        "location_id": "L2000896",
+        "label": "Wardenburg GUD",
+        "eic": "37Z0OGE40200000Z",
+        "lat": 53.0743,
+        "lon": 8.1719
+      }
+    ]
+  },
+  {
+    "id": "wilhelmshaven-lng",
+    "importance_level": 4,
+    "name": "Wilhelmshaven LNG",
+    "category": "lng",
+    "gas_quality": "H",
+    "adjacent_country": null,
+    "vip_name": null,
+    "zone": "Wilhelmshaven, LNG-Zone",
+    "lat": 53.6346,
+    "lon": 8.1192,
+    "position_method": "mean",
+    "description": "Zentraler Einspeisepunkt für regasifiziertes Flüssigerdgas an der Nordseeküste, der die FSRU-Terminals Wilhelmshaven 1 und 2 bündelt. Das Gas fließt über die Wilhelmshavener Anbindungsleitung (WAL) direkt in Richtung des Speicher- und Leitungsknotens Etzel in das THE-Netz.",
+    "points": [
+      {
+        "location_id": "L2001816",
+        "label": "Wilhelmshaven, LNG-Terminal 1",
+        "eic": "21Z000000000532M",
+        "lat": 53.6422,
+        "lon": 8.1099
+      },
+      {
+        "location_id": "L2391168",
+        "label": "Wilhelmshaven, LNG-Terminal 2",
+        "eic": "21Z000000000542J",
+        "lat": 53.627,
+        "lon": 8.1284
+      }
+    ]
+  }
+]
