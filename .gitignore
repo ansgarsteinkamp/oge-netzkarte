@@ -1,0 +1,15 @@
+*.log
+*.local
+
+node_modules/
+dist/
+public/data/punkte_v2/
+verification-*.png
+.env
+.env.*
+!.env.example
+.vite/
+coverage/
+playwright-report/
+test-results/
+.DS_Store
