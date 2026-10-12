@@ -1,4 +1,4 @@
-import { ALL_VALUE, GAS_QUALITY_LABELS, GAS_QUALITY_ORDER, POINT_CATEGORY_ORDER, RELATION_FILTERS } from "./constants.js";
+import { ALL_VALUE, GAS_QUALITY_LABELS, GAS_QUALITY_ORDER, POINT_CATEGORY_DESCRIPTIONS, POINT_CATEGORY_ORDER, RELATION_FILTERS } from "./constants.js";
 import { pointCategoryLabel } from "./formatters.js";
 
 const getUnique = (items, getter) => [...new Set(items.map(getter).filter(Boolean))].sort((a, b) => a.localeCompare(b, "de"));
@@ -15,7 +15,11 @@ export const buildFilterOptions = ({ points }) => {
 
    return {
       relationTypes: withAllOption(RELATION_FILTERS.map(({ value, label, description }) => ({ value, label, description }))),
-      pointCategories: withAllOption(pointCategories.map(category => ({ value: category, label: pointCategoryLabel(category) }))),
+      pointCategories: withAllOption(pointCategories.map(category => ({
+         value: category,
+         label: pointCategoryLabel(category),
+         description: POINT_CATEGORY_DESCRIPTIONS[category]
+      }))),
       gasTypes: [
          { value: ALL_VALUE, label: "H-Gas und L-Gas" },
          ...GAS_QUALITY_ORDER.map(type => ({ value: type, label: GAS_QUALITY_LABELS[type] }))

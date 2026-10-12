@@ -36,10 +36,16 @@ export const RELATION_FILTERS = [
 ];
 
 export const POINT_CATEGORY_LABELS = {
-   cross_border_ip: "Grenzübergang",
-   domestic_ip: "Netzkopplung",
-   storage: "Speicher",
+   cross_border_ip: "GÜP",
+   domestic_ip: "MAP",
+   storage: "SAP",
    lng: "LNG"
+};
+export const POINT_CATEGORY_DESCRIPTIONS = {
+   cross_border_ip: "Grenzübergangspunkt",
+   domestic_ip: "Marktanschlusspunkt",
+   storage: "Speicheranschlusspunkt",
+   lng: "LNG-Terminal"
 };
 export const POINT_CATEGORY_ORDER = ["cross_border_ip", "domestic_ip", "storage", "lng"];
 export const ADJACENT_OPERATOR_LABELS = {
