@@ -7,7 +7,7 @@ import { matchesPipelineGas, matchesPipelineRelation, matchesPointGas } from "@/
 import { pipelineMatchesSearch, getSearchQuery, isSearchActive, pointMatchesSearch, toResultItems } from "@/lib/domain/search";
 
 const initialLayerVisibility = {
-   showPipelines: true,
+   showPipelines: false,
    showPoints: true
 };
 

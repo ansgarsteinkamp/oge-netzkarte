@@ -131,8 +131,8 @@ export default function ControlPanel({
    return (
       <aside className={cn("flex min-h-0 flex-col gap-3 overflow-auto border border-border bg-muted/75 p-3.5", className)} aria-label="Filter und Treffer">
          <section className="grid grid-cols-1 gap-1.5 3xs:grid-cols-2" aria-label="Kartenebenen">
-            <LayerToggle active={layerVisibility.showPipelines} onClick={() => onLayerChange("showPipelines")}>Leitungen</LayerToggle>
             <LayerToggle active={layerVisibility.showPoints} onClick={() => onLayerChange("showPoints")}>Punkte</LayerToggle>
+            <LayerToggle active={layerVisibility.showPipelines} onClick={() => onLayerChange("showPipelines")}>Leitungen</LayerToggle>
          </section>
 
          <SegmentGroup disabled={!layerVisibility.showPoints} icon={MapPin} label="Punktkategorie" value={selectedPointCategory} onChange={setSelectedPointCategory} options={pointCategories} />

@@ -48,7 +48,6 @@ export const GAS_QUALITY_LABELS = {
    L: "L-Gas"
 };
 export const GAS_QUALITY_ORDER = ["H", "L"];
-export const DEFAULT_GAS_QUALITY = "H";
 
 export const PIPELINE_GAS_LABELS = {
    h_gas: "H-Gas",
@@ -71,3 +70,4 @@ export const VALID_PIPELINE_STATUSES = new Set(Object.keys(PIPELINE_STATUS_LABEL
 
 export const GERMANY_ID = "276";
 export const ALL_VALUE = "all";
+export const DEFAULT_GAS_QUALITY = ALL_VALUE;

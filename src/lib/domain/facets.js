@@ -17,8 +17,8 @@ export const buildFilterOptions = ({ points }) => {
       relationTypes: withAllOption(RELATION_FILTERS.map(({ value, label, description }) => ({ value, label, description }))),
       pointCategories: withAllOption(pointCategories.map(category => ({ value: category, label: pointCategoryLabel(category) }))),
       gasTypes: [
-         ...GAS_QUALITY_ORDER.map(type => ({ value: type, label: GAS_QUALITY_LABELS[type] })),
-         { value: ALL_VALUE, label: "H-Gas und L-Gas" }
+         { value: ALL_VALUE, label: "H-Gas und L-Gas" },
+         ...GAS_QUALITY_ORDER.map(type => ({ value: type, label: GAS_QUALITY_LABELS[type] }))
       ]
    };
 };
