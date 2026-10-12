@@ -450,28 +450,6 @@
     ]
   },
   {
-    "id": "kienbaum",
-    "importance_level": 2,
-    "name": "Kienbaum",
-    "category": "domestic_ip",
-    "gas_quality": "H",
-    "adjacent_country": null,
-    "vip_name": null,
-    "zone": null,
-    "lat": 52.4573,
-    "lon": 13.9691,
-    "position_method": "single",
-    "description": "Östlicher Netzkopplungspunkt zwischen dem OGE-Netz und der GASCADE-Infrastruktur nahe Berlin. Operativ relevant für die großräumige Ost-West-Verteilung von H-Gas-Mengen im THE-Marktgebiet.",
-    "points": [
-      {
-        "label": "Kienbaum",
-        "eic": "37Z000000001078I",
-        "lat": 52.4573,
-        "lon": 13.9691
-      }
-    ]
-  },
-  {
     "id": "lampertheim",
     "importance_level": 2,
     "name": "Lampertheim",
