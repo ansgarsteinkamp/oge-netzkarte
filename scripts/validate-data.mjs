@@ -16,7 +16,7 @@ const files = {
    countries: "public/data/countries_v2.geojson"
 };
 
-const requiredPointFields = ["id", "name", "category", "gas_quality", "importance_level", "lat", "lon", "position_method", "description", "points"];
+const requiredPointFields = ["id", "name", "category", "gas_quality", "importance_level", "adjacent_operator", "lat", "lon", "position_method", "description", "points"];
 const requiredTechnicalPointFields = ["label", "eic", "lat", "lon"];
 const validPositionMethods = new Set(["single", "mean"]);
 const EIC_CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-";
@@ -173,6 +173,7 @@ function validatePoints(points) {
       assert(Number.isInteger(point.importance_level) && point.importance_level >= 1 && point.importance_level <= 5, `Punkt ${point.id}: importance_level muss 1 bis 5 sein`);
       assert(validPositionMethods.has(point.position_method), `Punkt ${point.id}: position_method ist ungültig`);
       assertOptionalTrimmedNonEmptyString(point.adjacent_country, `Punkt ${point.id}: adjacent_country ist ungültig`);
+      assertTrimmedNonEmptyString(point.adjacent_operator, `Punkt ${point.id}: adjacent_operator muss ein Text sein`);
       assertOptionalTrimmedNonEmptyString(point.vip_name, `Punkt ${point.id}: vip_name ist ungültig`);
       assertOptionalTrimmedNonEmptyString(point.zone, `Punkt ${point.id}: zone ist ungültig`);
       assertTrimmedNonEmptyString(point.description, `Punkt ${point.id}: description muss ein Text sein`);

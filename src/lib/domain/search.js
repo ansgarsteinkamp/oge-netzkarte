@@ -31,6 +31,7 @@ export const pointSearchTokens = point => [
    point.name,
    point.vip_name,
    point.zone,
+   point.adjacent_operator,
    ...(point.points ?? []).flatMap(item => [item.label, item.eic])
 ];
 
@@ -52,6 +53,7 @@ export const getPointSearchMatch = (point, query, hasActiveSearch) => {
 
    if (matches(point.vip_name)) return { label: `Treffer: ${point.vip_name}` };
    if (matches(point.zone)) return { label: `Treffer: ${point.zone}` };
+   if (matches(point.adjacent_operator)) return { label: `Treffer: ${point.adjacent_operator}` };
 
    return null;
 };

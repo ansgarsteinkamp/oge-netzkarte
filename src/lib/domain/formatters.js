@@ -1,4 +1,4 @@
-import { GAS_QUALITY_LABELS, PIPELINE_GAS_LABELS, PIPELINE_STATUS_LABELS, POINT_CATEGORY_LABELS, RELATION_DETAIL_DESCRIPTIONS, RELATION_LABELS } from "./constants.js";
+import { ADJACENT_OPERATOR_LABELS, GAS_QUALITY_LABELS, PIPELINE_GAS_LABELS, PIPELINE_STATUS_LABELS, POINT_CATEGORY_LABELS, RELATION_DETAIL_DESCRIPTIONS, RELATION_LABELS } from "./constants.js";
 
 export const relationLabel = value => RELATION_LABELS[value] ?? value;
 
@@ -10,7 +10,7 @@ export const pointGasQualityLabel = value => GAS_QUALITY_LABELS[value] ?? value 
 
 export const pointCategoryLabel = value => POINT_CATEGORY_LABELS[value] ?? value ?? "unbekannt";
 
-export const formatCoordinate = value => (Number.isFinite(value) ? value.toFixed(3).replace(".", ",") : "unbekannt");
+export const adjacentOperatorLabel = category => ADJACENT_OPERATOR_LABELS[category] ?? "Angrenzender Betreiber";
 
 const pipelineStatusLabel = value => PIPELINE_STATUS_LABELS[value] ?? value ?? "unbekannt";
 

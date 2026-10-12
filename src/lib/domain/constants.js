@@ -42,6 +42,12 @@ export const POINT_CATEGORY_LABELS = {
    lng: "LNG"
 };
 export const POINT_CATEGORY_ORDER = ["cross_border_ip", "domestic_ip", "storage", "lng"];
+export const ADJACENT_OPERATOR_LABELS = {
+   cross_border_ip: "Angrenzender Netzbetreiber",
+   domestic_ip: "Angrenzender Netzbetreiber",
+   storage: "Speicherbetreiber",
+   lng: "Terminalbetreiber"
+};
 
 export const GAS_QUALITY_LABELS = {
    H: "H-Gas",
