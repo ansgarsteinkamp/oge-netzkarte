@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 
 import TooltipIconButton from "@/components/TooltipIconButton";
-import { adjacentOperatorLabel, cleanName, gasQualityLabel, operatorReferenceLabel, pipelineStatusExceptionLabel, pointCategoryLabel, pointGasQualityLabel, relationDetailDescription, relationLabel } from "@/lib/domain/formatters";
+import { getPipelineDetailRows, getPointDetailRows } from "@/lib/domain/details";
+import { cleanName, relationLabel } from "@/lib/domain/formatters";
 
 function DetailRow({ label, value }) {
    return (
@@ -45,12 +46,7 @@ export default function SelectionPanel({ selection, onClose }) {
                <h2 id="selection-panel-title" className="m-0 text-base leading-snug font-medium text-card-foreground">{point.name}</h2>
             </div>
             <div className="mt-4 grid border-t border-border">
-               <DetailRow label="Gasqualität" value={pointGasQualityLabel(point.gas_quality)} />
-               {point.adjacent_country && <DetailRow label="Anbindung" value={point.adjacent_country} />}
-               {point.adjacent_operator && <DetailRow label={adjacentOperatorLabel(point.category)} value={point.adjacent_operator} />}
-               {point.vip_name && <DetailRow label="VIP" value={point.vip_name} />}
-               {point.zone && <DetailRow label="Zone" value={point.zone} />}
-               <DetailRow label="Punktkategorie" value={pointCategoryLabel(point.category)} />
+               {getPointDetailRows(point).map(row => <DetailRow key={row.label} {...row} />)}
             </div>
             {point.description && (
                <section className="mt-3 border-t border-border pt-3" aria-label="Einordnung">
@@ -63,7 +59,6 @@ export default function SelectionPanel({ selection, onClose }) {
    }
 
    const props = selection.item.properties;
-   const status = pipelineStatusExceptionLabel(props.status);
 
    return (
       <aside ref={panelRef} tabIndex={-1} className="@container relative flex-none border border-border bg-muted/75 p-4 focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none" aria-labelledby="selection-panel-title" aria-live="polite">
@@ -75,12 +70,7 @@ export default function SelectionPanel({ selection, onClose }) {
             <h2 id="selection-panel-title" className="m-0 text-base leading-snug font-medium text-card-foreground">{cleanName(selection.item)}</h2>
          </div>
          <div className="mt-4 grid border-t border-border">
-            {props.name !== props.line_name && <DetailRow label="Abschnitt" value={props.name ?? "unbekannt"} />}
-            <DetailRow label="OGE-Bezug" value={relationDetailDescription(props.oge_role) ?? "unbekannt"} />
-            {status && <DetailRow label="Status" value={status} />}
-            <DetailRow label="Gasqualität" value={gasQualityLabel(props.gas_quality)} />
-            <DetailRow label={operatorReferenceLabel(props.oge_role)} value={props.operator ?? "unbekannt"} />
-            <DetailRow label="Quelle" value={props.source ?? "unbekannt"} />
+            {getPipelineDetailRows(selection.item).map(row => <DetailRow key={row.label} {...row} />)}
          </div>
       </aside>
    );

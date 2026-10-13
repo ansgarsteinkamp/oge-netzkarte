@@ -1,10 +1,20 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { CircleMarker, Pane, Tooltip, useMap } from "react-leaflet";
+import { CircleMarker, Pane, useMap } from "react-leaflet";
 
 import { toLatLng } from "@/lib/domain/coordinates";
-import { getPointPathOptions, getPointRadius, shouldRenderTechnicalPoints } from "@/lib/map/pointMarkers";
+import { getPointDetailRows } from "@/lib/domain/details";
+import { getPointColor, getPointPathOptions, getPointRadius, shouldRenderTechnicalPoints } from "@/lib/map/pointMarkers";
+import { createMapTooltip, getTooltipPlacement } from "@/lib/map/tooltip";
+
+const createPointTooltip = (cluster, technicalPoint) => createMapTooltip({
+   title: cluster.name,
+   subtitle: technicalPoint?.label,
+   rows: getPointDetailRows(cluster),
+   symbol: { kind: "dot", background: getPointColor(cluster.category) }
+});
 
 function InteractiveCircleMarker({ ariaLabel, center, dataAttributes = {}, onActivate, pathOptions, radius, tooltip }) {
+   const map = useMap();
    const markerElementRef = useRef(null);
    const activateRef = useRef(onActivate);
 
@@ -38,6 +48,13 @@ function InteractiveCircleMarker({ ariaLabel, center, dataAttributes = {}, onAct
          pathOptions={pathOptions}
          eventHandlers={{
             add: event => {
+               event.target.bindTooltip(tooltip(), {
+                  className: "map-tooltip",
+                  opacity: 1,
+                  pane: "tooltipPane",
+                  ...getTooltipPlacement(map.latLngToContainerPoint(center).y, map.getSize().y)
+               });
+
                const element = event.target.getElement();
                if (element) {
                   removeKeyboardListener();
@@ -52,11 +69,7 @@ function InteractiveCircleMarker({ ariaLabel, center, dataAttributes = {}, onAct
             click: onActivate,
             remove: removeKeyboardListener
          }}
-      >
-         <Tooltip className="map-tooltip" direction="top" offset={[0, -6]} pane="tooltipPane">
-            <strong>{tooltip}</strong>
-         </Tooltip>
-      </CircleMarker>
+      />
    );
 }
 
@@ -69,7 +82,7 @@ function TechnicalPointMarker({ cluster, onSelectPoint, point }) {
          onActivate={() => onSelectPoint(cluster, point)}
          pathOptions={getPointPathOptions(cluster, 0.92)}
          radius={getPointRadius(cluster.importance_level)}
-         tooltip={point.label}
+         tooltip={() => createPointTooltip(cluster, point)}
       />
    );
 }
@@ -83,7 +96,7 @@ function PointMarker({ onSelectPoint, point }) {
          onActivate={() => onSelectPoint(point)}
          pathOptions={getPointPathOptions(point)}
          radius={getPointRadius(point.importance_level)}
-         tooltip={point.name}
+         tooltip={() => createPointTooltip(point)}
       />
    );
 }

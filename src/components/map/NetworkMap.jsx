@@ -1,6 +1,7 @@
 import CountryLayers from "@/components/map/CountryLayers";
 import MapCameraEffects from "@/components/map/MapCameraEffects";
 import MapLegend from "@/components/map/MapLegend";
+import MapTooltipGuard from "@/components/map/MapTooltipGuard";
 import MapViewport from "@/components/map/MapViewport";
 import MapZoomControls from "@/components/map/MapZoomControls";
 import PipelineLayer from "@/components/map/PipelineLayer";
@@ -23,6 +24,7 @@ export default function NetworkMap({
       <MapViewport>
          <MapCameraEffects resetViewKey={resetViewKey} searchBounds={searchBounds} selection={selection} />
          <MapZoomControls />
+         <MapTooltipGuard />
          <CountryLayers europeContext={europeContext} germany={germany} />
          <PipelineLayer visible={layerVisibility.showPipelines} pipelines={filteredPipelines} layerKey={pipelineLayerKey} onSelectPipeline={onSelectPipeline} />
          <PointLayer visible={layerVisibility.showPoints} points={filteredPoints} onSelectPoint={onSelectPoint} />

@@ -3,6 +3,15 @@ import { PARTICIPATION_LINE_PATTERN, RELATION_COLORS, THEME } from "./theme.js";
 
 const DASHED_ROLES = new Set(OGE_AFFILIATE_ROLES);
 
+// CSS background that mimics the map line, used for legend and tooltip symbols.
+export const getRelationSymbolBackground = role => {
+   const color = RELATION_COLORS[role] ?? THEME.foreground;
+   if (!DASHED_ROLES.has(role)) return color;
+
+   const { dash, gap } = PARTICIPATION_LINE_PATTERN;
+   return `repeating-linear-gradient(90deg, ${color} 0 ${dash}px, transparent ${dash}px ${dash + gap}px)`;
+};
+
 export const pipelineStyle = item => {
    const props = item.properties;
    return {

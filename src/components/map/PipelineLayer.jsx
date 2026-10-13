@@ -1,22 +1,25 @@
-import { GeoJSON, Pane } from "react-leaflet";
+import { GeoJSON, Pane, useMap } from "react-leaflet";
 
+import { getPipelineDetailRows } from "@/lib/domain/details";
 import { cleanName } from "@/lib/domain/formatters";
-import { pipelineStyle } from "@/lib/map/styles";
+import { getRelationSymbolBackground, pipelineStyle } from "@/lib/map/styles";
+import { createMapTooltip, getTooltipPlacement } from "@/lib/map/tooltip";
 
-const createPipelineTooltip = item => {
-   const title = document.createElement("strong");
-   title.textContent = cleanName(item);
-   return title;
-};
+const createPipelineTooltip = item => createMapTooltip({
+   title: cleanName(item),
+   rows: getPipelineDetailRows(item),
+   symbol: { kind: "line", background: getRelationSymbolBackground(item.properties.oge_role) }
+});
 
 export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, visible }) {
+   const map = useMap();
+
    const bindPipeline = (item, layer) => {
       const activate = () => onSelectPipeline(item);
 
       layer.bindTooltip(createPipelineTooltip(item), {
          className: "map-tooltip",
-         direction: "top",
-         offset: [0, -6],
+         opacity: 1,
          pane: "tooltipPane",
          sticky: true
       });
@@ -29,7 +32,12 @@ export default function PipelineLayer({ layerKey, onSelectPipeline, pipelines, v
             }
          },
          click: activate,
-         mouseover: event => event.target.setStyle({ weight: 6, opacity: 1 }),
+         mouseover: event => {
+            const tooltip = layer.getTooltip();
+            Object.assign(tooltip.options, getTooltipPlacement(event.containerPoint.y, map.getSize().y));
+            if (layer.isTooltipOpen()) tooltip.update();
+            event.target.setStyle({ weight: 6, opacity: 1 });
+         },
          mouseout: event => event.target.setStyle(pipelineStyle(item))
       });
    };

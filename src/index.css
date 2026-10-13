@@ -229,31 +229,89 @@
 }
 
 .map-tooltip {
-   display: grid;
-   gap: 3px;
-   padding: 7px 9px;
+   padding: 10px 12px;
    border: 1px solid var(--border);
+   border-radius: var(--radius);
    background: var(--popover);
    color: var(--popover-foreground);
-   box-shadow: none;
+   box-shadow: 0 8px 24px -6px hsl(0 0% 0% / 0.55);
    font-family: "DM Mono", monospace;
    font-size: 0.74rem;
+   line-height: 1.4;
    max-width: min(20rem, calc(100vw - 2rem));
    width: max-content;
    overflow-wrap: break-word;
    white-space: normal;
 }
 
-.map-tooltip strong {
+.map-tooltip-body {
+   display: grid;
+   gap: 8px;
+}
+
+.map-tooltip-header {
+   display: grid;
+   grid-template-columns: auto minmax(0, 1fr);
+   align-items: center;
+   gap: 9px;
+}
+
+.map-tooltip-symbol {
+   display: block;
+}
+
+.map-tooltip-symbol-dot {
+   width: 11px;
+   height: 11px;
+   border: 2px solid var(--background);
+   border-radius: 999px;
+   box-shadow: 0 0 0 1px var(--border);
+}
+
+.map-tooltip-symbol-line {
+   width: 22px;
+   height: 3px;
+}
+
+.map-tooltip-titles {
+   display: grid;
+   gap: 1px;
+}
+
+.map-tooltip-title {
    color: var(--secondary);
+   font-size: 0.8rem;
    font-weight: 500;
 }
 
-.map-tooltip span {
-   display: block;
+.map-tooltip-subtitle {
+   color: var(--muted-foreground);
+   font-size: 0.68rem;
+}
+
+.map-tooltip-rows {
+   display: grid;
+   grid-template-columns: auto minmax(0, 1fr);
+   gap: 4px 14px;
+   margin: 0;
+   padding-top: 8px;
+   border-top: 1px solid var(--border);
+   font-size: 0.68rem;
+}
+
+.map-tooltip-rows dt {
    color: var(--muted-foreground);
 }
 
-.leaflet-tooltip-top::before {
+.map-tooltip-rows dd {
+   margin: 0;
+   color: var(--popover-foreground);
+}
+
+.leaflet-tooltip-top.map-tooltip::before {
    border-top-color: var(--border);
+}
+
+.leaflet-tooltip-bottom.map-tooltip::before {
+   border-bottom-color: var(--border);
 }

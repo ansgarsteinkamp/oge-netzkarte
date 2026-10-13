@@ -1,20 +1,10 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { POINT_CATEGORY_DESCRIPTIONS, POINT_CATEGORY_ORDER, RELATION_FILTERS } from "@/lib/domain/constants";
 import { pointCategoryLabel } from "@/lib/domain/formatters";
-import { PARTICIPATION_LINE_PATTERN, POINT_CATEGORY_COLORS, RELATION_COLORS } from "@/lib/map/theme";
+import { getRelationSymbolBackground } from "@/lib/map/styles";
+import { POINT_CATEGORY_COLORS } from "@/lib/map/theme";
 
-const dashedLineBackground = color => `repeating-linear-gradient(
-   90deg,
-   ${color} 0 ${PARTICIPATION_LINE_PATTERN.dash}px,
-   transparent ${PARTICIPATION_LINE_PATTERN.dash}px ${PARTICIPATION_LINE_PATTERN.dash + PARTICIPATION_LINE_PATTERN.gap}px
-)`;
-
-const relationLegendEntry = ({ label, value }) => {
-   const color = RELATION_COLORS[value];
-   const isDashed = value === "co_owned_affiliate" || value === "owned_affiliate";
-
-   return { label, kind: "line", style: { background: isDashed ? dashedLineBackground(color) : color } };
-};
+const relationLegendEntry = ({ label, value }) => ({ label, kind: "line", style: { background: getRelationSymbolBackground(value) } });
 
 const pointLegendEntry = category => ({
    label: pointCategoryLabel(category),
