@@ -13,12 +13,17 @@ const pointLegendEntry = category => ({
    style: { background: POINT_CATEGORY_COLORS[category] }
 });
 
-const entries = [
-   ...RELATION_FILTERS.map(relationLegendEntry),
-   ...POINT_CATEGORY_ORDER.map(pointLegendEntry)
-];
+const pipelineEntries = RELATION_FILTERS.map(relationLegendEntry);
+const pointEntries = POINT_CATEGORY_ORDER.map(pointLegendEntry);
 
-export default function MapLegend() {
+export default function MapLegend({ layerVisibility }) {
+   const entries = [
+      ...(layerVisibility.showPipelines ? pipelineEntries : []),
+      ...(layerVisibility.showPoints ? pointEntries : [])
+   ];
+
+   if (entries.length === 0) return null;
+
    return (
       <div className="absolute right-3.5 bottom-3.5 left-3.5 z-[500] flex flex-wrap gap-x-3.5 gap-y-2 border border-border bg-muted/90 px-3 py-2.5 text-[0.72rem] text-muted-foreground backdrop-blur-md max-sm:hidden">
          {entries.map(entry => {

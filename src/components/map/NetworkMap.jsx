@@ -28,7 +28,7 @@ export default function NetworkMap({
          <CountryLayers europeContext={europeContext} germany={germany} />
          <PipelineLayer visible={layerVisibility.showPipelines} pipelines={filteredPipelines} layerKey={pipelineLayerKey} onSelectPipeline={onSelectPipeline} />
          <PointLayer visible={layerVisibility.showPoints} points={filteredPoints} onSelectPoint={onSelectPoint} />
-         <MapLegend />
+         <MapLegend layerVisibility={layerVisibility} />
       </MapViewport>
    );
 }
