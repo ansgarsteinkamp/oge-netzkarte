@@ -352,13 +352,13 @@
     "category": "storage",
     "gas_quality": "H",
     "adjacent_country": null,
-    "adjacent_operator": "Uniper Energy Storage, Trianel Gasspeicher Epe, RWE Gas Storage West",
+    "adjacent_operator": "Uniper Energy Storage, Trianel Gasspeicher Epe, RWE Gas Storage West, MET Epe Speicher",
     "vip_name": null,
     "zone": null,
     "lat": 52.17,
     "lon": 6.9918,
     "position_method": "mean",
-    "description": "Sammelpunkt für die H-Gas-Speicher im Kavernenfeld Gronau-Epe am OGE-Netz: der H-Gas-Teil des Uniper-Speichers Epe, der Trianel-Speicher und seit April 2026 der RWE-Speicher Epe DE. RWE hat diesen früheren L-Gas-Speicher im Zuge der Marktraumumstellung vollständig auf H-Gas umgestellt, Uniper hatte bereits 2023 einen Teil seiner L-Gas-Kavernen auf H-Gas gewechselt. Die Fahrweise ist saisonal mit Einspeicherung im Sommer und Ausspeicherung im Winter. Im selben Feld baut RWE den Wasserstoffspeicher Epe-H2, angebunden über die neue Wasserstoffleitung Heek–Epe von OGE und Nowega; der kommerzielle Betrieb ist ab Juli 2027 geplant.",
+    "description": "Sammelpunkt für die H-Gas-Speicher im Kavernenfeld Gronau-Epe am OGE-Netz: der H-Gas-Teil des Uniper-Speichers Epe, über den auch der kleine MET-Speicher (früher KGE) angebunden ist, der Trianel-Speicher und seit April 2026 der RWE-Speicher Epe DE. RWE hat diesen früheren L-Gas-Speicher im Zuge der Marktraumumstellung vollständig auf H-Gas umgestellt, Uniper hatte bereits 2023 einen Teil seiner L-Gas-Kavernen auf H-Gas gewechselt. Die Fahrweise ist saisonal mit Einspeicherung im Sommer und Ausspeicherung im Winter. Im selben Feld baut RWE den Wasserstoffspeicher Epe-H2, angebunden über die neue Wasserstoffleitung Heek–Epe von OGE und Nowega; der kommerzielle Betrieb ist ab Juli 2027 geplant.",
     "points": [
       {
         "label": "Speicher Epe H",
@@ -445,7 +445,7 @@
     "category": "storage",
     "gas_quality": "H",
     "adjacent_country": null,
-    "adjacent_operator": "Uniper Energy Storage, SEFE Storage",
+    "adjacent_operator": "Uniper Energy Storage, SEFE Storage, RAG Energy Storage",
     "vip_name": null,
     "zone": null,
     "lat": 48.196,
@@ -762,7 +762,7 @@
     "lat": 53.6346,
     "lon": 8.1192,
     "position_method": "mean",
-    "description": "Einspeisepunkt für regasifiziertes LNG der beiden schwimmenden Terminals vor Wilhelmshaven: Wilhelmshaven 1 mit der FSRU Höegh Esperanza seit Ende 2022 und Wilhelmshaven 2 mit der Excelsior seit 2025. Die Excelsior ist über die kurze WAL II an die Einspeisestelle von Wilhelmshaven 1 angebunden; von dort geht das Gas gemeinsam über die Wilhelmshavener Anbindungsleitung (WAL) nach Etzel auf die NETRA und seit Ende 2025 auch in die OGE-Leitung Etzel–Wardenburg. Kommerziell sind beide Terminals in einer LNG-Zone zusammengefasst. Im Gasjahr 2025/26 durchgehend Einspeisung, nur durch kurze Wartungen gemindert. WAL und WAL II sind für Wasserstoff ausgelegt.",
+    "description": "Einspeisepunkt für regasifiziertes LNG der beiden schwimmenden Terminals vor Wilhelmshaven: Wilhelmshaven 1 mit der FSRU Höegh Esperanza seit Ende 2022 und Wilhelmshaven 2 mit der Excelsior seit 2025. Die Excelsior ist über die kurze WAL II angebunden; das Gas beider Terminals läuft über die Wilhelmshavener Anbindungsleitung (WAL) nach Etzel auf die NETRA und seit Ende 2025 auch in die OGE-Leitung Etzel–Wardenburg. Kommerziell sind beide Terminals in einer LNG-Zone zusammengefasst. Im Gasjahr 2025/26 durchgehend Einspeisung, nur durch kurze Wartungen gemindert. WAL und WAL II sind für Wasserstoff ausgelegt.",
     "points": [
       {
         "label": "Wilhelmshaven, LNG-Terminal 1",
