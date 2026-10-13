@@ -12,7 +12,7 @@
     "lat": 48.1269,
     "lon": 12.4035,
     "position_method": "single",
-    "description": "Porenspeicher in Oberbayern (Betreiber: Uniper). Die Anlage speist direkt in das süddeutsche H-Gas-Netz ein und ist operativ wichtig für die saisonale Flexibilität sowie den Spitzenlastausgleich im MEGAL-Einflussbereich.",
+    "description": "Porenspeicher von Uniper in einem ausgeförderten Erdgasfeld bei Unterreit im Landkreis Mühldorf am Inn, angebunden an das OGE-Leitungssystem Arresting–Bierwang. Saisonale Fahrweise mit Einspeicherung im Sommer und Ausspeicherung im Winter, vor allem für die Versorgung Südbayerns. Anders als für Breitbrunn ist keine Stilllegung beantragt, die Kapazität wird weiter vermarktet. Am Standort erprobt Uniper mit OGE und weiteren Partnern in einem separaten Speicherhorizont die Speicherung von Methan-Wasserstoff-Gemischen.",
     "points": [
       {
         "label": "Speicher Bierwang",
@@ -35,7 +35,7 @@
     "lat": 50.817,
     "lon": 6.022,
     "position_method": "single",
-    "description": "Strategischer Grenzübergangspunkt an der deutsch-niederländischen Grenze und ein nördlicher Anschluss der TENP-Leitungsachse. Der OGE-Punkt ist dem kommerziellen VIP TTF-THE-H zugeordnet und verbindet das OGE-Netz mit dem niederländischen GTS-System.",
+    "description": "Grenzübergang zum GTS-Netz bei Aachen und nördlicher Einspeisepunkt der TENP, die von Bocholtz und Eynatten über Stolberg, Mittelbrunn, Schwarzach und Hügelheim bis Wallbach an der Schweizer Grenze führt. Die TENP gehört OGE und Fluxys TENP gemeinsam, am Punkt sind beide als Netzbetreiber vertreten; kommerziell ist Bocholtz im VIP TTF-THE-H gebündelt. Im Gasjahr 2025/26 durchgehend Einspeisung aus den Niederlanden auf gleichmäßig hohem Niveau, keine Ausspeisung. Seit Juli 2025 ersetzt TENP III die wegen Korrosion stillgelegten Abschnitte der TENP I; der neue Strang ist wasserstofftauglich und erhöht die Kapazität Richtung Schweiz.",
     "points": [
       {
         "label": "Bocholtz",
@@ -58,7 +58,7 @@
     "lat": 47.9186,
     "lon": 12.4137,
     "position_method": "single",
-    "description": "Großer Porenspeicherkomplex (Breitbrunn/Eggstätt) im südöstlichen Bayern, der zur regionalen und überregionalen Versorgungssicherheit beiträgt. Uniper Energy Storage hat bei der Bundesnetzagentur die Genehmigung zur Stilllegung des Speichers mit Wirkung zum 31. März 2027 beantragt; bis dahin bleibt er ein relevanter Flexibilitätsbezug im THE-Marktgebiet.",
+    "description": "Porenspeicher im ehemaligen Erdgasfeld Breitbrunn/Eggstätt am Chiemsee, angeschlossen an das OGE-Netz. Technischer Betreiber ist NAFTA, die Kapazität vermarktet Uniper. Saisonale Fahrweise mit Einspeicherung im Sommer und Ausspeicherung im Winter. Uniper hat 2025 aus wirtschaftlichen Gründen die Stilllegung zum 31. März 2027 beantragt; dann läuft auch der Vertrag mit NAFTA aus. Im Speicherjahr 2025/26 blieb rund die Hälfte der Kapazität unvermarktet; der Speicher geht nur gering befüllt in den Winter 2026/27.",
     "points": [
       {
         "label": "Speicher Breitbrunn",
@@ -81,7 +81,7 @@
     "lat": 53.2061,
     "lon": 7.2332,
     "position_method": "single",
-    "description": "Innerdeutsche Netzkopplung in der Nähe des Knotens Oude Statenzijl. Dient als physische Schnittstelle zur Übergabe und Übernahme von H-Gas zwischen den Transportnetzen der OGE und der Gasunie Deutschland (GUD).",
+    "description": "H-Gas-Netzkopplung zwischen OGE und Gasunie Deutschland in Bunde unmittelbar an der niederländischen Grenze. Die Übergabe liegt am selben Standort wie die OGE-Verdichterstation Bunde, an dem auch die Grenzübergänge von OGE, Gasunie Deutschland und GASCADE nach Oude Statenzijl zusammenlaufen. Bis zur Bildung von THE 2021 Marktgebietsübergang zwischen GASPOOL und NCG, in beide Richtungen buchbar; seitdem interne Kopplung im Marktgebiet THE ohne eigene Kapazitätsvermarktung. Auch für Wasserstoff ist Bunde ein Knoten: Hier soll der Nordsee-Ruhr-Link III von OGE mit dem Hyperlink von Gasunie Deutschland verknüpft werden, der vom Grenzübergang Oude Statenzijl/Bunder Tief über Nüttermoor Richtung Bremen führt.",
     "points": [
       {
         "label": "Bunder Tief",
@@ -104,7 +104,7 @@
     "lat": 53.6562,
     "lon": 7.4039,
     "position_method": "single",
-    "description": "Zentraler Anlandepunkt für norwegisches Offshore-Gas an der ostfriesischen Küste. Die OGE übernimmt hier Pipelinegas aus dem Europipe-System (Gassco) und speist es in die Norddeutsche Erdgas Transversale (NETRA) ein, was Dornum zu einer der wichtigsten Einspeisequellen für Nord- und Ostdeutschland macht.",
+    "description": "Anlandepunkt der norwegischen Europipe I und II. In der Gassco-Empfangsanlage wird das Gas aufbereitet, gemessen und an die NETRA übergeben, die über Etzel und Wardenburg bis Steinitz in Sachsen-Anhalt führt; eine Teilmenge geht per Landleitung nach Emden. Die NETRA gehört OGE und Gasunie Deutschland, beide übernehmen hier. Der zweite technische Punkt Dornum GASPOOL stammt aus der früheren jordgasTransport-Kapazität im Marktgebiet GASPOOL; er weist dieselben Flusswerte aus wie Dornum, die Werte dürfen nicht addiert werden. Im Gasjahr 2025/26 durchgehend Einspeisung aus Norwegen. Seit 2022 zweigt die Baltic Pipe offshore Mengen aus Europipe II nach Dänemark und Polen ab.",
     "points": [
       {
         "label": "Dornum",
@@ -133,7 +133,7 @@
     "lat": 52.4298,
     "lon": 8.3545,
     "position_method": "single",
-    "description": "Inländischer L-Gas-Netzkopplungspunkt am Standort Drohne in Nordrhein-Westfalen. Der physische Übergabepunkt zwischen benachbarten Fernleitungsnetzen dient der regionalen Verteilung und Bilanzierung von L-Gas in Nordwestdeutschland.",
+    "description": "L-Gas-Netzkopplung zwischen OGE und Gasunie Deutschland in Stemwede-Drohne (Kreis Minden-Lübbecke); am selben Standort liegt die H-Gas-Kopplung Drohne NOWAL zu GASCADE. Ab 2014 war der Punkt mit Emsbüren und Nordlohne zu einer gemeinsamen L-Gas-Zone gebündelt und bis zur Bildung von THE 2021 Marktgebietsübergang zwischen GASPOOL und NCG. Ausgelegt ist die Übergabe von Gasunie an OGE, die Gegenrichtung gab es nur als Gegenstromkapazität. Im Umfeld läuft die Marktraumumstellung: Der Bereich Drohne–Ahlten Richtung Hannover ist seit 2025 auf H-Gas umgestellt, Werne–Ummeln–Drohne wird seit März 2026 schrittweise bis Mitte 2027 umgestellt. Spätestens mit dem Abschluss der Marktraumumstellung endet die L-Gas-Funktion.",
     "points": [
       {
         "label": "Drohne",
@@ -156,7 +156,7 @@
     "lat": 52.4297,
     "lon": 8.3546,
     "position_method": "single",
-    "description": "Physischer OGE/GASCADE-Kopplungspunkt am NOWAL-Endpunkt Drohne. Drohne NOWAL war historisch ein innerdeutscher Marktgebietsübergangspunkt; seit der Zusammenlegung zu Trading Hub Europe 2021 ist der Punkt öffentlich nicht mehr als eigenständiger buchbarer Connection Point ausgewiesen.",
+    "description": "H-Gas-Netzkopplung zwischen GASCADE und OGE in Stemwede-Drohne am Ende der NOWAL, die GASCADE 2017 vom Knoten Rehden (NEL, MIDAL) gebaut hat; in Drohne bindet sie an die OGE-Leitung Wardenburg–Werne an. Errichtet wurde die Kopplung, um H-Gas von Rehden nach Westdeutschland zu bringen; bis zur Bildung von THE 2021 war sie Marktgebietsübergang zwischen GASPOOL und NCG. Seit dem Wegfall der Nord-Stream-Mengen 2022 baut GASCADE Rehden für Transporte Richtung Osten aus; die Lastflüsse am Knoten haben sich verändert. Über Drohne wird seit 2025 auch der auf H-Gas umgestellte Bereich Drohne–Ahlten versorgt. Ende 2026 soll in Drohne die neue OGE-Leitung Wardenburg–Drohne angeschlossen werden.",
     "points": [
       {
         "label": "Drohne NOWAL",
@@ -179,7 +179,7 @@
     "lat": 54.8025,
     "lon": 9.2892,
     "position_method": "single",
-    "description": "Nördlichster Grenzübergangspunkt der OGE und Verbindung zum dänischen Energinet-System (VIP DK-THE) über die DEUDAN-Leitung. Die Station ist physisch bidirektional betreibbar und gewinnt neben dem historischen Export nach Dänemark durch die Baltic Pipe zunehmend strategische Bedeutung für Importe.",
+    "description": "Grenzübergang zum dänischen Energinet-Netz bei Flensburg. Auf deutscher Seite schließt die bidirektionale DEUDAN-Leitung nach Quarnstedt an, an der OGE als Minderheitsgesellschafter neben Gasunie Deutschland beteiligt ist; vermarktet wird gebündelt am VIP DK-THE, den Gasunie führt. Seit die Baltic Pipe 2022 norwegisches Gas direkt nach Dänemark bringt und das Tyra-Feld wieder fördert, sind die Ausspeisungen nach Dänemark stark zurückgegangen. Im Gasjahr 2025/26 wechselnd und in geringen Mengen: im Herbst und Winter überwiegend Ausspeisung nach Dänemark, von März bis Juni überwiegend Einspeisung aus Dänemark, im Spätsommer kaum Fluss.",
     "points": [
       {
         "label": "Ellund",
@@ -202,7 +202,7 @@
     "lat": 51.9021,
     "lon": 6.1397,
     "position_method": "single",
-    "description": "Physischer L-Gas-Grenzpunkt (Kopplung Zevenaar/Elten) zum niederländischen GTS-Netz, der dem VIP TTF-THE-L zugeordnet ist. Die Station ist operativ wichtig für die Aufrechterhaltung der L-Gas-Versorgung in Westdeutschland; ihre Bedeutung sinkt perspektivisch mit dem Abschluss der Marktraumumstellung auf H-Gas.",
+    "description": "L-Gas-Grenzübergang zum GTS-Netz bei Zevenaar, an dem auf deutscher Seite OGE und Thyssengas angebunden sind. Hier beginnt das Leitungssystem der NETG, des gemeinsamen Unternehmens beider Betreiber, über den Niederrhein bis Bergisch Gladbach; die NETG-Verdichterstation in Elten verdichtet das Gas für den Weitertransport. Im Gasjahr 2025/26 ausschließlich Einspeisung aus den Niederlanden mit Schwerpunkt im Winter, im Frühjahr 2026 zeitweise ohne Fluss. Am VIP TTF-THE-L gibt es ab 2026/27 keine Jahreskapazität mehr, ab April 2027 nur noch unterbrechbare Kurzfristkapazität; die niederländischen L-Gas-Exporte enden im Oktober 2029. Um 2031 wollen Gasunie, OGE und Thyssengas hier einen Grenzübergang für Wasserstoff aus Richtung Rotterdam schaffen.",
     "points": [
       {
         "label": "Elten",
@@ -225,7 +225,7 @@
     "lat": 53.3611,
     "lon": 7.0069,
     "position_method": "single",
-    "description": "Wichtiger Nordsee-Anlandepunkt für das von Gassco betriebene norwegische Norpipe-System. Dient operativ als reiner Hochdruck-Einspeisepunkt für nordwesteuropäisches Importgas in das nachgelagerte deutsche Transportnetz.",
+    "description": "Übergabe norwegischen Gases aus den Gassco-Anlagen in Emden: der Europipe-Messstation, die über eine Landleitung aus Dornum versorgt wird, und dem benachbarten Norsea Gas Terminal, an dem die Norpipe aus dem Ekofisk-Gebiet endet. Seit 2015 sind beide Übergaben zu einem Punkt zusammengefasst. Neben OGE übernehmen hier Gasunie Deutschland, Thyssengas und die niederländische GTS. Über die nahe OGE-Verdichterstation Krummhörn, Kopfstation des Nord-Süd-Transports Richtung Werne, gelangt das Gas ins OGE-Netz. Im Gasjahr 2025/26 reine Einspeisung aus Norwegen, auf dem OGE-Strang mit mehrwöchiger Flusspause im Spätsommer 2026.",
     "points": [
       {
         "label": "Emden EPT",
@@ -248,7 +248,7 @@
     "lat": 52.39,
     "lon": 7.2548,
     "position_method": "single",
-    "description": "Physischer L-Gas-Kopplungspunkt Emsbüren RG im nordwestdeutschen Leitungsnetz. Relevant für die großräumige L-Gas-Verteilung und das operative Management im Rahmen der fortschreitenden Marktraumumstellung auf H-Gas.",
+    "description": "L-Gas-Netzkopplung zwischen OGE und Gasunie Deutschland im südlichen Emsland, neben Drohne und Nordlohne eine der drei L-Gas-Kopplungen. Davon zu unterscheiden ist Emsbüren-Berge, die H-Gas-Kopplung zwischen Gasunie Deutschland und Thyssengas. Ab 2014 wurden die drei L-Gas-Punkte als gemeinsame Zone vermarktet, bis zur Bildung von THE 2021 als Marktgebietsübergang zwischen GASPOOL und NCG, seitdem sind sie interne Kopplungen im Marktgebiet THE. Ausgelegt ist die Übergabe vom Gasunie- in das OGE-Netz; mit der Marktraumumstellung läuft die L-Gas-Funktion aus, spätestens mit dem Ende der niederländischen L-Gas-Exporte im Oktober 2029. In Emsbüren betreibt OGE zudem eine Verdichterstation, über die künftig der Nordsee-Ruhr-Link III läuft.",
     "points": [
       {
         "label": "Emsbüren",
@@ -271,7 +271,7 @@
     "lat": 53.4507,
     "lon": 7.9084,
     "position_method": "mean",
-    "description": "Massiver norddeutscher Kavernenspeicher-Cluster am Standort Friedeburg-Etzel (umfasst Anlagen wie EGL, Crystal, EKB, ESE). Durch die direkte Anbindung an Hochleistungstrassen wie NETRA und BEP ist der Knoten ein essenzieller Stützpfeiler für den kurzfristigen Flexibilitätsbedarf und Druckausgleich in Nordwesteuropa.",
+    "description": "Anschlüsse der Erdgas-Kavernenspeicher am Salzstock Etzel in Friedeburg an das OGE-Netz, je ein technischer Punkt für die Speicher EGL (Schienenstrang), EKB (Bitzenlander Weg 2), ESE (Bitzenlander Weg 3) und Crystal (Bitzenlander Weg 10). Am Standort laufen die NETRA, die Wilhelmshavener Anbindungsleitung (WAL) von den LNG-Terminals und seit Ende 2025 die OGE-Leitung Etzel–Wardenburg zusammen. EKB, ESE und Crystal sind zusätzlich an Gasunie Deutschland und über die Bunde-Etzel-Pipeline an das niederländische GTS-Netz angebunden. Saisonale Fahrweise mit Einspeicherung im Sommer und Ausspeicherung im Winter. Im Projekt H2CAST wurde in zwei Kavernen die Wasserstoffspeicherung erprobt.",
     "points": [
       {
         "label": "Friedeburg-Etzel, Schienenstrang, EGL",
@@ -312,7 +312,7 @@
     "lat": 50.7215,
     "lon": 6.1161,
     "position_method": "single",
-    "description": "Physischer OGE-Grenzpunkt auf der TENP-Achse zur Kopplung mit dem belgischen Fluxys-Netz; kommerziell ist Eynatten-Raeren dem VIP THE-ZTP zugeordnet. Der Punkt ist relevant für bidirektionale H-Gas-Flüsse zwischen THE und ZTP/BeLux sowie für LNG-bezogene Importpfade aus Westeuropa.",
+    "description": "Grenzübergang bei Aachen zum belgischen Fluxys-Netz. Auf deutscher Seite schließen hier die TENP Richtung Süden bis Wallbach und die seit 2021 betriebene ZEELINK von OGE und Thyssengas über St. Hubert nach Legden an, die H-Gas für die Marktraumumstellung in NRW bringt. Die deutschen Punkte von OGE, Fluxys TENP, Thyssengas und GASCADE sind seit 2022 im VIP THE-ZTP gebündelt, den OGE als VIP-Betreiber führt. Über das belgische Netz besteht Zugang zu LNG aus Zeebrugge. Im Gasjahr 2025/26 ausschließlich Einspeisung aus Belgien. Mit Fluxys ist hier ein Grenzübergang für das Wasserstoff-Kernnetz geplant.",
     "points": [
       {
         "label": "Eynatten-Raeren",
@@ -335,7 +335,7 @@
     "lat": 49.746,
     "lon": 8.5535,
     "position_method": "single",
-    "description": "Wichtiger innerdeutscher Kopplungspunkt in Südhessen. Gernsheim Midal GRTD verbindet das MIDAL-System der GASCADE mit dem MEGAL-System der heutigen NaTran Deutschland und unterstützt den Austausch zwischen Nord-Süd- und Ost-West-Achsen im Raum Rhein-Main/Neckar.",
+    "description": "Netzkopplung zwischen MIDAL der GASCADE und MEGAL am Verdichterstandort Gernsheim in Südhessen, an dem auch die METG von OGE aus dem Rheinland ankommt. GASCADE bindet den Punkt über eine Anschlussleitung an, die bei Herchenrode im Odenwald von der MIDAL abzweigt. Errichtet 2014 von GASCADE und GRTgaz Deutschland, heute NaTran Deutschland, war der Punkt bis zur Bildung von THE 2021 Marktgebietsübergang zwischen GASPOOL und NCG, ausgelegt für die Übernahme von Gas aus der MIDAL in die MEGAL. Im Wasserstoff-Kernnetz ist Gernsheim Knoten von H2ercules; die MEGAL-Abschnitte Richtung Mittelbrunn und Rimpar sollen bis 2032 auf Wasserstoff umgestellt werden.",
     "points": [
       {
         "label": "Gernsheim Midal GRTD",
@@ -358,7 +358,7 @@
     "lat": 52.17,
     "lon": 6.9918,
     "position_method": "mean",
-    "description": "H-Gas-Kavernenspeicher-Cluster (Epe H, Gronau-Epe H1 und H4) nahe der niederländischen Grenze. Überregional bedeutsamer Einspeicher- und Ausspeisepunkt für die Bereitstellung von Speicherflexibilität und den Lastausgleich im westdeutschen Industrieraum.",
+    "description": "Sammelpunkt für die H-Gas-Speicher im Kavernenfeld Gronau-Epe am OGE-Netz: der H-Gas-Teil des Uniper-Speichers Epe, der Trianel-Speicher und seit April 2026 der RWE-Speicher Epe DE. RWE hat diesen früheren L-Gas-Speicher im Zuge der Marktraumumstellung vollständig auf H-Gas umgestellt, Uniper hatte bereits 2023 einen Teil seiner L-Gas-Kavernen auf H-Gas gewechselt. Die Fahrweise ist saisonal mit Einspeicherung im Sommer und Ausspeicherung im Winter. Im selben Feld baut RWE den Wasserstoffspeicher Epe-H2, angebunden über die neue Wasserstoffleitung Heek–Epe von OGE und Nowega; der kommerzielle Betrieb ist ab Juli 2027 geplant.",
     "points": [
       {
         "label": "Speicher Epe H",
@@ -393,7 +393,7 @@
     "lat": 52.1698,
     "lon": 7.0055,
     "position_method": "mean",
-    "description": "L-Gas-spezifischer Bereich des Kavernenfelds Gronau-Epe (Epe L und Gronau-Epe L2). Einer der wichtigsten verbleibenden Flexibilitätsknoten für die Aufrechterhaltung der auslaufenden L-Gas-Versorgung in Westdeutschland und den Niederlanden.",
+    "description": "Anschluss der verbliebenen L-Gas-Kavernenspeicher im Feld Gronau-Epe an das L-Gas-Netz von OGE: der L-Gas-Teil des Uniper-Speichers Epe und der Vattenfall-Speicher (Nuon Epe). Der Vattenfall-Speicher wird ausschließlich aus dem niederländischen GTS-Netz befüllt; Richtung OGE ist er nur für die Ausspeicherung angebunden, also nur Einspeisung ins OGE-Netz. Der Uniper-Teil ist für das Speicherjahr 2026/27 noch als L-Gas-Speicher vermarktet und folgt der saisonalen Fahrweise mit Einspeicherung im Sommer und Ausspeicherung im Winter. Der benachbarte RWE-L-Gas-Speicher ist seit April 2026 auf H-Gas umgestellt und hängt jetzt am Punkt Gronau-Epe H. Mit dem Abschluss der Marktraumumstellung entfällt die L-Gas-Funktion.",
     "points": [
       {
         "label": "Speicher Epe L",
@@ -422,7 +422,7 @@
     "lat": 49.7708,
     "lon": 8.529,
     "position_method": "mean",
-    "description": "Bündelung der beiden südhessischen H-Gas-Porenspeicher Hähnlein und Stockstadt (Betreiber: MND Energy Storage Germany). Sie dienen primär dem regionalen Lastausgleich im dynamischen Leitungsraum Rhein-Main/Neckar.",
+    "description": "Zwei Porenspeicher im südhessischen Ried, die MND 2016 von Uniper übernommen hat und als gemeinsame Speicherzone vermarktet. Beide dienten ursprünglich der Stadtgasspeicherung. Angebunden sind sie im Wesentlichen über den Verdichterstandort Gernsheim an MEGAL und METG. Die Fahrweise ist saisonal mit Einspeicherung im Sommer und Ausspeicherung im Winter. Arbeitsgasvolumen sowie Ein- und Ausspeicherleistung sind vergleichsweise gering.",
     "points": [
       {
         "label": "Speicher Hähnlein",
@@ -451,7 +451,7 @@
     "lat": 48.196,
     "lon": 12.8515,
     "position_method": "mean",
-    "description": "Speicher-Cluster im Raum Burghausen. Obwohl die riesigen Porenspeicher Haidach und 7Fields physisch in Österreich liegen, bildet dieser Knotenpunkt die direkte, hochkapazitive OGE-Anbindung an das deutsche THE-Netz zur Bereitstellung enormer Flexibilitätsmengen.",
+    "description": "Speicheranschlüsse am Netzknoten Haiming bei Burghausen für zwei Porenspeicher jenseits der Grenze in Oberösterreich und Salzburg, beide technisch betrieben von RAG Austria: Haidach über Haiming 3, der Verbund 7Fields aus mehreren ehemaligen Gasfeldern über Haiming 2. Beide Speicher sind parallel auch an bayernets angeschlossen. Haidach vermarkten SEFE Storage und seit 2022 RAG Energy Storage, 7Fields Uniper und RAG Energy Storage. Saisonale Fahrweise mit Einspeicherung im Sommer und Ausspeicherung im Winter. 7Fields hat zusätzlich einen österreichischen Netzanschluss, Haidach seit Oktober 2025 dauerhaft ebenfalls; beide Speicher bedienen damit auch das österreichische Marktgebiet Ost.",
     "points": [
       {
         "label": "Haiming 2 7F",
@@ -480,7 +480,7 @@
     "lat": 49.5821,
     "lon": 8.5017,
     "position_method": "mean",
-    "description": "Komplexer Netzknoten in Südhessen mit doppelter Funktion: Lampertheim I koppelt das OGE-Netz an das MIDAL-System (GASCADE), während Lampertheim 2 als physische Ausspeisung in das südwestdeutsche Transportnetz der terranets bw dient.",
+    "description": "Übergabeknoten in Südhessen zwischen OGE, GASCADE und terranets bw; OGE ist hier über die METG aus dem Rheinland angebunden. Lampertheim I koppelt OGE mit der von Reckrod kommenden MIDAL-Süd der GASCADE und war bis zur Bildung von THE 2021 Marktgebietsübergang zwischen GASPOOL und NCG. Lampertheim 2 ist Ausspeisung aus dem OGE-Netz zu terranets bw für die Versorgung Baden-Württembergs. Hier beginnt die im Bau befindliche Süddeutsche Erdgasleitung der terranets bw, und hier soll deren Spessart-Odenwald-Leitung aus Wirtheim enden. Sobald diese den Erdgastransport übernimmt, soll ein MIDAL-Strang auf Wasserstoff umgestellt werden, mit Lampertheim als Verteilknoten Richtung Ludwigshafen und Karlsruhe.",
     "points": [
       {
         "label": "Lampertheim I",
@@ -509,7 +509,7 @@
     "lat": 49.1256,
     "lon": 7.2803,
     "position_method": "single",
-    "description": "Westlicher Endpunkt der MEGAL-Pipeline und physischer Grenzübergang zum französischen NaTran-System bei Obergailbach; kommerziell ist Medelsheim dem VIP France - Germany zugeordnet. Der Punkt ist physisch bidirektional gerüstet, wodurch neben dem traditionellen Export nach Frankreich auch direkte Importflüsse nach Süddeutschland möglich sind.",
+    "description": "Westlicher Endpunkt der MEGAL Nord und Grenzübergang zu NaTran, Gegenstück ist Obergailbach. Die beiden parallelen MEGAL-Stränge laufen von Waidhaus über Mittelbrunn hierher; die MEGAL gehört OGE und NaTran Deutschland. Bis 2022 war der Punkt reiner Ausspeisepunkt nach Frankreich, seit Oktober 2022 ist auch Einspeisung aus Frankreich möglich. Das französische Gas ist bereits im Fernleitungsnetz odoriert; die Einspeisekapazität ist begrenzt und hängt an einer befristeten Kostenregelung der Bundesnetzagentur für Odorierungsfolgen. Im Gasjahr 2025/26 nur zeitweise Einspeisung aus Frankreich mit Schwerpunkt im Spätwinter, keine Ausspeisung. Im Wasserstoff-Kernnetz ist die Umstellung eines MEGAL-Strangs zwischen Medelsheim und Gernsheim vorgesehen, als Anschluss an den H2med-Korridor.",
     "points": [
       {
         "label": "Medelsheim",
@@ -532,7 +532,7 @@
     "lat": 48.555,
     "lon": 13.7522,
     "position_method": "single",
-    "description": "Strategischer Kopplungspunkt der MEGAL-Süd-Leitung mit der West-Austria-Gasleitung (WAG) der Gas Connect Austria. Der VIP Oberkappel ist ein essenzieller bidirektionaler Transitknoten für die Versorgung Süddeutschlands und Zentraleuropas.",
+    "description": "Grenzübergang zu Österreich nordöstlich von Passau, an dem die MEGAL Süd auf die West-Austria-Gasleitung (WAG) der Gas Connect Austria trifft; dort zweigt auch die Penta West nach Überackern ab. Die MEGAL Süd führt bis Schwandorf und ist über Rothenstadt mit der MEGAL Nord verbunden. OGE und NaTran Deutschland vermarkten ihre Kapazitäten im VIP Oberkappel. Früher floss hier russisches Gas aus Österreich ein. Seit dem Ende des Ukraine-Transits 2025 läuft der Großteil der österreichischen Importe über Oberkappel; im Gasjahr 2025/26 durchgehend Ausspeisung nach Österreich. Engpass ist die WAG-Kapazität, die sich Oberkappel und Überackern teilen; der 2026 genehmigte WAG Loop 1 soll sie erhöhen.",
     "points": [
       {
         "label": "Oberkappel",
@@ -555,7 +555,7 @@
     "lat": 53.2061,
     "lon": 7.2329,
     "position_method": "single",
-    "description": "Physischer H-Gas-Grenzpunkt Oude Statenzijl/Bunde des OGE-Netzes zum niederländischen GTS-System; der Punkt ist dem kommerziellen VIP TTF-THE-H zugeordnet. Über die Bunde-Etzel-Pipeline (BEP) ist der Knoten mit dem Speicher- und Leitungsraum Etzel verbunden und bleibt für Import-, Export- und Transitlagen in Nordwesteuropa relevant.",
+    "description": "H-Gas-Grenzübergang zum GTS-Netz am Stationskomplex Bunde/Oude Statenzijl, an dem neben OGE auch Gasunie Deutschland und GASCADE an das niederländische Netz angebunden sind. OGE betreibt am Standort Bunde eine Verdichterstation. Kommerziell ist der Punkt zusammen mit Bocholtz und den Parallelsträngen der anderen Betreiber im VIP TTF-THE-H gebündelt. Im Gasjahr 2025/26 überwiegend Ausspeisung in die Niederlande, Einspeisung nur sporadisch, über mehrere Wochen zuletzt im Spätsommer 2026. In Bunde beginnt der Nordsee-Ruhr-Link III, eine Wasserstoffleitung des Wasserstoff-Kernnetzes über Emsbüren nach Wettringen, die Ende 2027 in Betrieb gehen soll.",
     "points": [
       {
         "label": "Oude Statenzijl",
@@ -578,7 +578,7 @@
     "lat": 50.7856,
     "lon": 9.7884,
     "position_method": "single",
-    "description": "Verdichter- und Leitungsknoten bei Eiterfeld in Hessen, an dem das OGE-Netz mit dem System der GASCADE (Kreuzungspunkt MIDAL/STEGAL) verschaltet ist. Dient dem inländischen, großvolumigen Lastausgleich.",
+    "description": "Netzkopplung zwischen OGE und GASCADE am GASCADE-Verdichterstandort Reckrod bei Eiterfeld in Osthessen. Dort treffen STEGAL, MIDAL-Mitte, MIDAL-Süd und MIDAL-Süd Loop zusammen, Gas lässt sich in alle Richtungen verteilen. Bis zur Bildung von THE 2021 war Reckrod I Marktgebietsübergang zwischen GASPOOL und NCG und ab 2016 mit Lampertheim I zu einer gemeinsamen Ein- und Ausspeisezone zusammengefasst. Die elektrisch angetriebene Verdichterstation Reckrod 2 ging ab Herbst 2025 schrittweise in Betrieb und erhöht die Kapazität Richtung Süden, vor allem nach Baden-Württemberg. Nach Fertigstellung der Spessart-Odenwald-Leitung soll die MIDAL-Süd zwischen Reckrod und Lampertheim auf Wasserstoff umgestellt werden.",
     "points": [
       {
         "label": "Reckrod I",
@@ -601,7 +601,7 @@
     "lat": 49.5323,
     "lon": 6.3655,
     "position_method": "single",
-    "description": "Physischer Grenzübergang zur Versorgung des Großherzogtums Luxemburg. Das H-Gas wird am Standort Remich aus dem OGE-Netz an den luxemburgischen Netzbetreiber Creos übergeben; es gibt an diesem Punkt keine physische Rückspeisung nach Deutschland.",
+    "description": "Grenzübergang zum luxemburgischen Netz von Creos. Angebunden ist der Punkt über eine seit 2000 betriebene OGE-Leitung, die vom Knoten Mittelbrunn an der Kreuzung von TENP und MEGAL durch das Saarland an die Mosel führt. Physisch fließt Gas nur Richtung Luxemburg, die Gegenrichtung ist rein virtuell. Seit der Bildung des belgisch-luxemburgischen Marktgebiets BeLux 2015 wird Luxemburg überwiegend über Belgien versorgt. Creos vermarktet hier ein konditioniertes, gebündeltes Kapazitätsprodukt von THE nach ZTP, das an Tagen mit hoher Last in Luxemburg Nominierungspflichten auslöst. Im Gasjahr 2025/26 praktisch kein Fluss, nur an einzelnen Tagen geringe Ausspeisung nach Luxemburg.",
     "points": [
       {
         "label": "Remich",
@@ -624,7 +624,7 @@
     "lat": 48.1945,
     "lon": 12.8672,
     "position_method": "single",
-    "description": "Bidirektionaler physischer Grenzübergang im bayerischen Chemiedreieck (Burghausen). Verbindet das süddeutsche OGE-Netz mit der Penta-West-Pipeline der Gas Connect Austria und dient dem regionalen sowie grenzüberschreitenden Lastausgleich.",
+    "description": "Grenzübergang zu Österreich bei Burghausen an der Salzach. Auf österreichischer Seite endet hier die Penta West der Gas Connect Austria, die bei Oberkappel von der WAG abzweigt; Richtung Österreich teilen sich Überackern und Oberkappel damit die WAG-Kapazität. Auf deutscher Seite sind OGE und bayernets gemeinsam an den Punkt angeschlossen, daneben betreibt bayernets mit Überackern 2 einen eigenen Übergang; einen VIP gibt es hier nicht. Im Gasjahr 2025/26 durchgehend Ausspeisung nach Österreich. In der Nähe liegt der Netzknoten Haiming mit den Anschlüssen der Speicher Haidach und 7Fields. Im Wasserstoff-Kernnetz ist Überackern als Grenzübergang nach Österreich vorgesehen.",
     "points": [
       {
         "label": "Überackern",
@@ -647,7 +647,7 @@
     "lat": 50.881,
     "lon": 10.06,
     "position_method": "single",
-    "description": "Innerdeutsche Systemkopplung an der Grenze zwischen Hessen und Thüringen. Physischer Übergabepunkt für H-Gas zwischen dem OGE-Netz und der Ferngas-Leitung EGL 401.",
+    "description": "Netzkopplung zwischen OGE und der EGL 401 der Ferngas bei Eisenach an der hessisch-thüringischen Grenze. Die EGL 401 führt quer durch Thüringen nach Ronneburg und schließt dort an das GASCADE-Netz an. Die Übernahmestation ging 1992 als erste große Verbindung des west- mit dem ostdeutschen Ferngasnetz in Betrieb und brachte westeuropäisches Gas nach Thüringen und Sachsen. Bis 2018 hatte OGE die EGL 401 gepachtet und betrieben, seitdem betreibt und vermarktet Ferngas sie selbst. Bis zur Bildung von THE 2021 war Vitzeroda Marktgebietsübergang zwischen GASPOOL und NCG. Heute dient die Leitung vor allem der Versorgung des Ferngas-Verteilnetzes in Thüringen.",
     "points": [
       {
         "label": "Vitzeroda MÜP",
@@ -670,7 +670,7 @@
     "lat": 51.9943,
     "lon": 6.8094,
     "position_method": "single",
-    "description": "Einer der verbleibenden L-Gas-Importpunkte (Kopplung Winterswijk/Vreden, VIP TTF-THE-L) aus dem niederländischen GTS-System. Sichert operativ den L-Gas-Bedarf im nordwestdeutschen Verteilnetz, verliert jedoch mit dem nahenden Abschluss der Marktraumumstellung seine Funktion.",
+    "description": "L-Gas-Grenzübergang zum GTS-Netz bei Winterswijk; auf deutscher Seite ist allein OGE angebunden, das Gas geht im Westmünsterland in das L-Gas-System von OGE. Wie Elten ist der Punkt im VIP TTF-THE-L gebündelt. Seit dem Ende der Groningen-Förderung ist das gelieferte L-Gas überwiegend in den Niederlanden konvertiertes H-Gas. Im Gasjahr 2025/26 ausschließlich Einspeisung aus den Niederlanden, Schwerpunkt im Winterhalbjahr bis in den April, im Sommer 2026 geringe Mengen mit einzelnen Tagen ohne Fluss. Am VIP gibt es ab 2026/27 keine Jahreskapazität mehr, ab April 2027 nur noch unterbrechbare Kurzfristkapazität. Mit dem Ende der niederländischen L-Gas-Exporte im Oktober 2029 entfällt die Funktion des Punkts.",
     "points": [
       {
         "label": "Vreden",
@@ -693,7 +693,7 @@
     "lat": 49.6582,
     "lon": 12.5357,
     "position_method": "single",
-    "description": "Bidirektionaler Grenzübergangspunkt (VIP Waidhaus) zum tschechischen NET4GAS-System und östlicher Startpunkt der MEGAL-Nord-Pipeline. Historisch war Waidhaus eine zentrale Hauptschlagader für Gasflüsse aus Osteuropa; seit 2022 hat sich die Rolle durch die Neuordnung der europäischen Gasflüsse deutlich verändert.",
+    "description": "Grenzübergang zu Tschechien in der Oberpfalz und östlicher Startpunkt der MEGAL Nord, die von hier als Doppelleitung bis Medelsheim verläuft; am Standort liegt eine MEGAL-Verdichterstation. Gegenüber schließt das NET4GAS-Netz an, unter anderem die Gazela aus Brandov. Bis 2022 kam hier russisches Gas an, über das tschechische Transitsystem und ab 2013 auch über Nord Stream, OPAL und Gazela. Seit 2017 ist auch Ausspeisung nach Tschechien möglich; sie wurde nach dem Ausfall der Nord-Stream-Lieferungen 2022 zeitweise genutzt. Seit Ende 2024 praktisch kein Fluss mehr, auch im Gasjahr 2025/26 nicht. Tschechien bezieht Gas aus Deutschland heute über Brandov.",
     "points": [
       {
         "label": "Waidhaus",
@@ -716,7 +716,7 @@
     "lat": 47.5728,
     "lon": 7.8964,
     "position_method": "single",
-    "description": "Südlicher Endpunkt der TENP-Pipeline und Grenzübergang zum Schweizer Transitgas-System (VIP Germany-CH). Der bidirektionale Punkt ist essenziell für den Nord-Süd-Transit nach Italien, ermöglicht aber auch Importe aus dem Süden in das THE-Marktgebiet.",
+    "description": "Südlicher Endpunkt der TENP am Hochrhein und Übergang in das Schweizer Transitgas-System, das über den Griespass nach Italien führt. OGE und Fluxys TENP sind hier beide Netzbetreiber; die Kapazität vermarktet Fluxys TENP gebündelt am VIP Germany-CH. Im Gasjahr 2025/26 überwiegend Ausspeisung Richtung Schweiz und Italien, phasenweise, vor allem im Herbst 2025 und im Februar 2026, auch Einspeisung aus der Schweiz. Odoriertes Gas aus Süden wird seit Ende 2020 in der Deodorierungsanlage Schwörstadt aufbereitet. Seit Juli 2025 ersetzt TENP III die nach Korrosionsschäden 2017 stillgelegten Abschnitte der TENP I und erhöht die Kapazität Richtung Schweiz.",
     "points": [
       {
         "label": "Wallbach",
@@ -739,7 +739,7 @@
     "lat": 53.0743,
     "lon": 8.1719,
     "position_method": "single",
-    "description": "Zentraler inländischer H-Gas-Knotenpunkt und Standort einer wichtigen OGE-Verdichterstation auf der NETRA-Pipeline. Dient primär der Übergabe und Übernahme von Mengen zum/vom angrenzenden System der Gasunie Deutschland (GUD).",
+    "description": "H-Gas-Kopplung zwischen OGE und Gasunie Deutschland in Oberlethe südwestlich von Oldenburg. OGE betreibt hier die NETRA-Verdichterstation, an der die Leitung Wardenburg–Werne nach Süden abgeht; Gasunie hat direkt daneben eine eigene Verdichterstation. Die NETRA gehört OGE und Gasunie gemeinsam. Bis zur Bildung von THE 2021 war der Punkt Marktgebietsübergang zwischen GASPOOL und NCG, seither ist er interne Kopplung im Marktgebiet THE. Seit Ende 2025 bringt die neue OGE-Leitung Etzel–Wardenburg zusätzlich Speicher- und Wilhelmshavener LNG-Mengen zur Station. Die anschließende Leitung Wardenburg–Drohne ist im Bau, soll Ende 2026 in Betrieb gehen und NETRA sowie Wardenburg–Werne entlasten.",
     "points": [
       {
         "label": "Wardenburg",
@@ -762,7 +762,7 @@
     "lat": 53.6346,
     "lon": 8.1192,
     "position_method": "mean",
-    "description": "Zentraler Einspeisepunkt für regasifiziertes Flüssigerdgas an der Nordseeküste, der die FSRU-Terminals Wilhelmshaven 1 und 2 bündelt. Das Gas fließt über die Wilhelmshavener Anbindungsleitung (WAL) direkt in Richtung des Speicher- und Leitungsknotens Etzel in das THE-Netz.",
+    "description": "Einspeisepunkt für regasifiziertes LNG der beiden schwimmenden Terminals vor Wilhelmshaven: Wilhelmshaven 1 mit der FSRU Höegh Esperanza seit Ende 2022 und Wilhelmshaven 2 mit der Excelsior seit 2025. Die Excelsior ist über die kurze WAL II an die Einspeisestelle von Wilhelmshaven 1 angebunden; von dort geht das Gas gemeinsam über die Wilhelmshavener Anbindungsleitung (WAL) nach Etzel auf die NETRA und seit Ende 2025 auch in die OGE-Leitung Etzel–Wardenburg. Kommerziell sind beide Terminals in einer LNG-Zone zusammengefasst. Im Gasjahr 2025/26 durchgehend Einspeisung, nur durch kurze Wartungen gemindert. WAL und WAL II sind für Wasserstoff ausgelegt.",
     "points": [
       {
         "label": "Wilhelmshaven, LNG-Terminal 1",
